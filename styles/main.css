@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+section {
+  height: 100vh;
+}
+.content {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+button {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+}
