@@ -4,8 +4,12 @@
 body {
   margin: 0;
 }
+:root {
+  --accent: #1a67ff;
+  --light-accent: #e8efff;
+}
 section {
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 .content {
   margin: 0 auto;
@@ -24,4 +28,12 @@ h5,
 h6 {
   font-weight: 400;
   margin: 0;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 800;
+}
+p {
+  font-size: 18px;
 }
