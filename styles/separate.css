@@ -1,0 +1,7 @@
+.separate__block {
+  background-color: var(--accent);
+  height: inherit;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}

@@ -20,17 +20,20 @@
   align-items: center;
 }
 .nav-item {
+  font-size: 16px;
   margin-right: 30px;
 }
 .nav-button {
+  font-size: 16px;
   color: white;
   padding: 15px 30px;
-  background: rgb(111, 233, 255);
+  background-color: var(--accent);
+  /* background: rgb(111, 233, 255);
   background: linear-gradient(
     0deg,
     rgba(111, 233, 255, 1) 0%,
     rgba(0, 255, 229, 1) 100%
-  );
+  ); */
 }
 
 .head {
