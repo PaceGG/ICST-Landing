@@ -1,0 +1,27 @@
+.advantages__title {
+  text-align: center;
+}
+.advantages__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 30px;
+}
+.advantages__item {
+  display: flex;
+  gap: 20px;
+}
+.advantages__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  padding: 14px;
+}
+.advantages__icon img {
+  width: 100%;
+  height: 100%;
+}
+.advantages__text {
+  max-width: 280px;
+}

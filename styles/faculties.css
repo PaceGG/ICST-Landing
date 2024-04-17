@@ -5,10 +5,6 @@
 .faculties-content {
   max-width: 800px;
 }
-.faculties__title {
-  text-align: center;
-  margin-bottom: 50px;
-}
 .faculties__item {
   background-color: var(--light-accent);
   border: 2px solid var(--accent);
