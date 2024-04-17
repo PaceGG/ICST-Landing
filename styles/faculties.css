@@ -34,3 +34,11 @@
 .facultie__info__item__pts_info {
   font-size: 15px;
 }
+.facultie__info {
+  display: flex;
+  align-items: center;
+}
+.facultie__info__item__new {
+  font-size: 20px;
+  font-weight: 500;
+}
