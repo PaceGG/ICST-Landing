@@ -12,8 +12,9 @@
   gap: 20px;
 }
 .advantages__icon {
-  width: 60px;
-  height: 60px;
+  --advantages-icon-size: 70px;
+  width: var(--advantages-icon-size);
+  height: var(--advantages-icon-size);
   border-radius: 50%;
   background-color: var(--accent);
   padding: 14px;
