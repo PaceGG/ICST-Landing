@@ -10,7 +10,7 @@ body {
   --light-accent: #e8efff;
 }
 section {
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
 }
 .content {
   margin: 0 auto;
