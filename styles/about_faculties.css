@@ -86,8 +86,20 @@
   z-index: -1;
 }
 .about_faculties__animation_apply .about_faculties__text {
-  right: 0;
+  animation-name: about_faculties__animation;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
+@keyframes about_faculties__animation {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
 /* Анимация для правого позиционирования */
 .about_faculties__item__left .about_faculties__animation_area {
   border-left: none;
@@ -104,8 +116,20 @@
 .about_faculties__item__left
   .about_faculties__animation_apply
   .about_faculties__text {
-  left: 0;
+  animation-name: about_faculties__right_animation;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
+@keyframes about_faculties__right_animation {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
 /* Выезд сверху */
 .about_faculties__top_animation_area {
   display: flex;
@@ -120,8 +144,20 @@
   transition: 1s;
 }
 .about_faculties__animation_apply .about_faculties__text_box {
-  bottom: 0;
+  animation-name: about_faculties__top_animation;
+  animation-duration: 2s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
 }
+@keyframes about_faculties__top_animation {
+  from {
+    bottom: 100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
 /* Выезд сверху ддя правого края */
 .about_faculties__item__left .about_faculties__top_animation_area {
   justify-content: flex-end;
