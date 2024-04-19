@@ -106,3 +106,23 @@
   .about_faculties__text {
   left: 0;
 }
+/* Выезд сверху */
+.about_faculties__top_animation_area {
+  display: flex;
+  overflow: hidden;
+  /* width: 1000px; */
+  width: 100%;
+  position: relative;
+}
+.about_faculties__text_box {
+  position: absolute;
+  bottom: 100%;
+  transition: 1s;
+}
+.about_faculties__top_animation_area:hover .about_faculties__text_box {
+  bottom: 0;
+}
+/* Выезд сверху ддя правого края */
+.about_faculties__item__left .about_faculties__top_animation_area {
+  justify-content: flex-end;
+}
