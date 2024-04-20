@@ -1,5 +1,6 @@
 .about {
-  margin-bottom: 100px;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #94b8ff, rgba(0, 0, 0, 0));
 }
 .about__content {
   display: flex;
@@ -13,6 +14,7 @@
   position: relative;
   width: 505px;
   height: 505px;
+  z-index: 2;
 }
 .about__img::after {
   content: "";
