@@ -1,3 +1,6 @@
+.about_faculties {
+  padding-top: 80px;
+}
 .about_faculties__item {
   display: flex;
   flex-direction: column;
