@@ -1,0 +1,21 @@
+.specialities {
+  padding: 80px 0;
+}
+.specialities__box {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-row-gap: 30px;
+  justify-content: space-evenly;
+}
+.specialities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.specialities__icon {
+  padding-bottom: 7px;
+}
+.specialities__icon img {
+  width: 100%;
+}
