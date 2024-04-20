@@ -24,6 +24,7 @@
   height: 160px;
   display: block;
   border-radius: 50%;
+  object-fit: cover;
 }
 .curriculum__text {
   flex-grow: 1;
