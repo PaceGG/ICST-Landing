@@ -11,6 +11,8 @@
 }
 .about__img {
   position: relative;
+  width: 505px;
+  height: 505px;
 }
 .about__img::after {
   content: "";
