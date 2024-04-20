@@ -6,15 +6,31 @@
   max-width: 800px;
 }
 .faculties__item {
-  background-color: var(--light-accent);
   border: 2px solid var(--accent);
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px 40px 23px;
+  padding-right: 50px;
   margin-bottom: 30px;
   gap: 10px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+.faculties__item:nth-child(2) {
+  background-image: url("../img/faculties_bg/1.png");
+}
+.faculties__item:nth-child(3) {
+  background-image: url("../img/faculties_bg/2.png");
+}
+.faculties__item:nth-child(4) {
+  background-image: url("../img/faculties_bg/3.png");
+}
+.faculties__item:nth-child(5) {
+  background-image: url("../img/faculties_bg/4.png");
 }
 .facultie__name {
   font-size: 21px;
@@ -37,4 +53,5 @@
 .facultie__info__item__new {
   font-size: 20px;
   font-weight: 500;
+  margin-right: -40px;
 }
