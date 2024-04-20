@@ -11,7 +11,7 @@ body {
 }
 section {
   /* height: calc(100vh - 100px); */
-  margin: 80px 0;
+  /* margin: 80px 0; */
 }
 .content {
   margin: 0 auto;
