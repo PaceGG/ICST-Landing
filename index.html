@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/specialities.css" />
     <link rel="stylesheet" href="styles/partners.css" />
     <link rel="stylesheet" href="styles/comment.css" />
+    <link rel="stylesheet" href="styles/write_us.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -67,7 +68,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav" id="menu">
         <div class="content nav-content">
           <img src="img/logo.png" alt="logo" class="logo" />
           <div class="nav-bar">
@@ -94,6 +95,7 @@
         </div>
       </div>
     </header>
+    <script src="script/menu.js"></script>
     <section class="about" id="about">
       <div class="content about__content">
         <div class="about__img">
@@ -332,9 +334,8 @@
                       Отрасли: Machine Learning, Data science
                     </p>
                     <p class="about_faculties__text__p">
-                      Траектория обучения позволяет получить актуальные знания в
-                      программировании, анализе данных, математическом
-                      моделировании и искусственном интеллекте.
+                      Траектория обучения позволяет получить актуальные знания в программировании, 
+                      анализе данных, математическом моделировании и искусственном интеллекте
                     </p>
                   </div>
                 </div>
@@ -364,12 +365,11 @@
                       Код направления: 02.03.02
                     </p>
                     <p class="about_faculties__text__p">
-                      Отрасли: Data analysis, Development
+                      Отрасли: Software engineering, Technology Sector
                     </p>
                     <p class="about_faculties__text__p">
-                      Направление предоставляет возможность изучать анализ и
-                      проектированию информационных систем, программирование,
-                      разработку ПО
+                      Направление позволяет изучить навыки для разработки и поддержки ПО, 
+                      методы тестирования и отладки программ, принципы разработки программных продуктов
                     </p>
                   </div>
                 </div>
@@ -386,8 +386,7 @@
           </div>
           <div
             class="about_faculties__top_animation_area"
-            id="about_faculties__top_animation_area_3"
-          >
+            id="about_faculties__top_animation_area_3">
             <div class="about_faculties__text_box">
               <div class="about_faculties__animation_area">
                 <div class="about_faculties__text">
@@ -399,9 +398,12 @@
                       Код направления: 09.03.02
                     </p>
                     <p class="about_faculties__text__p">
-                      Отрасли: Project management, IT Operations and Support
+                      Отрасли: IT Operations and Support, System Analysis
                     </p>
-                    <p class="about_faculties__text__p">Направление</p>
+                    <p class="about_faculties__text__p">Основная задача трека - автоматизация процессов разработки и 
+                      администрирование информационных систем, усовершенствование прикладных решений и обслуживание 
+                      программного обеспечения
+                    </p>
                   </div>
                 </div>
               </div>
@@ -428,9 +430,12 @@
                       Код направления: 09.03.03
                     </p>
                     <p class="about_faculties__text__p">
-                      Отрасли: QA, Robotics
+                      Отрасли: QA, Networking technologies
                     </p>
-                    <p class="about_faculties__text__p">Направление</p>
+                    <p class="about_faculties__text__p">Направление нацелено на комплексное изучение операционных систем, 
+                      низкоуровневое программирование, взаимодействие с аппаратными компонентами для оптимизации 
+                      производительности и эффективности
+                    </p>
                   </div>
                 </div>
               </div>
@@ -659,6 +664,11 @@
       </div>
       <script src="script/comment.js"></script>
     </section>
-    
+    <section id="modal-message">
+        <span id="message">Если у вас остались вопросы, то пишите нам!</span>
+        <button class="modal-button" id="write-button">Написать</button>
+        <span class="close-button" onclick="closeModal()">✖</span>
+    </section>
+    <script src="script/write_us.js"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+#modal-message {
+    position: fixed;
+    bottom: -100px; 
+    left: 0;
+    width: 100%;
+    background-color: #1a67ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.5s ease;
+    z-index: 98;
+    font-size: 25px;
+  }
+
+  .modal-button {
+    background-color: #1a67ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 18px;
+    right: 62px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .show {
+    bottom: 0px !important; 
+  }
