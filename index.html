@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/about_entering.css" />
     <link rel="stylesheet" href="styles/specialities.css" />
     <link rel="stylesheet" href="styles/partners.css" />
+    <link rel="stylesheet" href="styles/comment.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -606,5 +607,47 @@
         <img src="img/partners/VK.svg" alt="" height="200px" />
       </div>
     </section>
+    <section class="comment_container">
+      <h2>Отзывы</h2>
+      <div class="comment_view">
+        <div class="comment_list">
+          <div class="comment">
+            <div class="comment_border_ava">
+              <div class="comment_avatar">
+                <img src="avatar1.jpg">
+              </div>
+            </div>
+            <p class="comment_text">Для меня главное на ИКНТ — люди вокруг. На потоке более 300 человек, среди которых очень много крутых активных ребят. Ты можешь завести кучу классных знакомств, обмениваться опытом, звать людей в свои проекты, на хакатоны и другие соревнования.
+              Также не могу не отметить проектную практику и частые митапы с профессионалами из ИТ-индустрии.
+              Я уже прошёл стажировку Java-разработчиком и успел поучаствовать в нескольких кейс-чемпионатах. ИКНТ — это место, где ты можешь реализовывать свои идеи в окружении таких же заряженных людей!</p>
+          </div>
+          <div class="comment">
+            <div class="comment_border_ava">
+              <div class="comment_avatar">
+                <img src="avatar2.jpg" >
+              </div>
+            </div>
+            <p class="comment_text">Отзыв 2</p>
+          </div>
+          <div class="comment">
+            <div class="comment_border_ava"></div>
+              <div class="comment_avatar">
+                <img src="avatar3.jpg">
+              </div>
+            </div>
+            <p class="comment_text">Отзыв 3</p>
+          </div>
+        </div>
+      </div>
+      <div class="arrow arrow-left" onclick="showPrevcomment()">&#8249;</div>
+      <div class="arrow arrow-right" onclick="showNextcomment()">&#8250;</div>
+      <div class="comment_points">
+        <div class="comment_point active" onclick="showcomment(0)"></div>
+        <div class="comment_point" onclick="showcomment(1)"></div>
+        <div class="comment_point" onclick="showcomment(2)"></div>
+      </div>
+      <script src="script/comment.js"></script>
+    </section>
+    
   </body>
 </html>
