@@ -8,7 +8,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 890px;
+    height: auto;
   }
   .comment_list {
     display: flex;
