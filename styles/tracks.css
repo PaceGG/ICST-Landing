@@ -28,8 +28,6 @@
   display: flex;
   width: 100%;
 }
-.tracks__item {
-}
 .tracks__item:nth-child(1) {
   text-align: right;
   border-right: 2.5px solid var(--accent);
