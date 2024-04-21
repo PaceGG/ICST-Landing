@@ -29,3 +29,9 @@
 .advantages__text {
   max-width: 280px;
 }
+.advantages__text__p {
+  font-size: 20px;
+}
+.advantages__shors_text {
+  max-width: 230px;
+}
