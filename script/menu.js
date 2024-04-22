@@ -1,4 +1,5 @@
 var onMenu = false;
+var high = true;
 document.addEventListener("DOMContentLoaded", function() 
 {
     var menu = document.getElementById('menu');
@@ -8,14 +9,19 @@ document.addEventListener("DOMContentLoaded", function()
         clearTimeout(timer);
         if (window.scrollY === 0) 
         {
+            high = true;
             return; // пользователь в самом верху страницы то не скрывать
+        }else{
+            high = false;
         }
-        menu.style.transform = "translateY(0)";
-        menu.style.transition = "transform 0.5s ease"; 
-        timer = setTimeout(function(){
-            menu.style.transform = "translateY(-100%)";
-        }, 3000);
-        //console.log(timer);
+        if(!high){
+            menu.style.transform = "translateY(0)";
+            menu.style.transition = "transform 0.5s ease"; 
+            timer = setTimeout(function(){
+                menu.style.transform = "translateY(-100%)";
+            }, 3000);
+            //console.log(timer);
+        }
     });
     
 // для отслеживания мыши ( если наведена то не скрывать )
@@ -24,11 +30,13 @@ document.addEventListener("DOMContentLoaded", function()
     });
     menu.addEventListener("mouseleave", function() {// мышь ливнула
     //console.log(timer);
-        onMenu = false;
-        timer = setTimeout(function() 
-        {
-            menu.style.transform = "translateY(-100%)";
-        }, 3000); 
+        if(!high){
+            onMenu = false;
+            timer = setTimeout(function() 
+            {
+                menu.style.transform = "translateY(-100%)";
+            }, 3000); 
+        }
     });
     
     
@@ -41,13 +49,14 @@ document.addEventListener("DOMContentLoaded", function()
                 clearTimeout(timer); 
                 menu.style.transform = "translateY(0)";
             }else{
-            
-                menu.style.transform = "translateY(0)";
-                clearTimeout(timer);
-                timer = setTimeout(function(){
-                    menu.style.transform = "translateY(-100%)";
-                }, 3000);
-                //console.log(timer);
+                if(!high){
+                    menu.style.transform = "translateY(0)";
+                    clearTimeout(timer);
+                    timer = setTimeout(function(){
+                        menu.style.transform = "translateY(-100%)";
+                    }, 3000);
+                    //console.log(timer);
+                }
             }
         }
     });
