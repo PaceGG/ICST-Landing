@@ -1,5 +1,5 @@
 .comment_view {
-    width: 50%;
+    width: 60%;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -34,12 +34,13 @@
   }
 
   .comment_border_ava{
-        width: 200px;
-        height: 200px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
         margin: 0 auto 10px;
         overflow: hidden;
-        background: radial-gradient(circle at center, #42aaff, transparent), white;
+        background: #42aaff;
+        opacity: 0.1;
   }
   .comment_avatar img {
     width: 100%;
@@ -49,7 +50,7 @@
 
   .arrow {
     position: absolute;
-    top: 50%;
+    top: 75%;
     transform: translateY(-50%);
     font-size: 50px;
     cursor: pointer;
@@ -63,11 +64,11 @@
   }
 
   .arrow-left {
-    left: 18%;
+    left: 11%;
   }
 
   .arrow-right {
-    right: 18%;
+    right: 11%;
   }
 
   .comment_points {
