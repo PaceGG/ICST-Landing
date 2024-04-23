@@ -1,6 +1,11 @@
+@font-face{
+  font-family: "PSUFont";
+  src: url("fonts/PermianSansTypeface.otf");
+}
 * {
   box-sizing: border-box;
   font-size: 18px;
+  font-family: "PSUFont", sans-serif;
 }
 body {
   margin: 0;
