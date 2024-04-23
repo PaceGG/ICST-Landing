@@ -74,3 +74,30 @@ const observer2 = new IntersectionObserver(entries => {
 itemsToObserve2.forEach(item => {
     observer2.observe(item);
 });
+
+/* для работы меню*/
+document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll('.menu-link');
+  
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const targetId = this.getAttribute('href'); 
+        const targetElement = document.querySelector(targetId);
+        scrollTo(targetElement); 
+        closeMobileMenu(); 
+      });
+    });
+    function scrollTo(element) {
+      window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop
+      });
+    }
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('menu');
+      mobileMenu.classList.remove('active');
+    }
+  });
+  
