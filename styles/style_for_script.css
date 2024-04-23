@@ -1,0 +1,21 @@
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  .show {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  } 
+
+  .hidden_left_right {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  
+  .show_left_right {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  } 

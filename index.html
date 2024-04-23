@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="styles/partners.css" />
     <link rel="stylesheet" href="styles/comment.css" />
     <link rel="stylesheet" href="styles/write_us.css" />
+    <link rel="stylesheet" href="styles/style_for_script.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -116,7 +117,7 @@
     <section class="faculties" id="faculties">
       <div class="content faculties-content">
         <h2 class="faculties__title">Направления</h2>
-        <div class="faculties__item">
+        <div class="faculties__item hidden" id="faculties__item1">
           <div class="facultie__name">Прикладная математика и информатика</div>
           <div class="facultie__info">
             <div class="facultie__info__item">
@@ -133,7 +134,7 @@
             </div>
           </div>
         </div>
-        <div class="faculties__item">
+        <div class="faculties__item hidden"  id="faculties__item2">
           <div class="facultie__name">
             Фундаментальная информатика и информационные технологии
           </div>
@@ -152,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="faculties__item">
+        <div class="faculties__item hidden"  id="faculties__item3">
           <div class="facultie__name">Информационные системы и технологии</div>
           <div class="facultie__info">
             <div class="facultie__info__item">
@@ -169,7 +170,7 @@
             </div>
           </div>
         </div>
-        <div class="faculties__item">
+        <div class="faculties__item hidden"  id="faculties__item4">
           <div class="facultie__name">Прикладная информатика</div>
           <div class="facultie__info">
             <div class="facultie__info__item">
@@ -190,10 +191,10 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title1">
                 Обучение по вашим правилам
               </h3>
-              <p class="advantages__text__p">
+              <p class="advantages__text__p hidden_left_right" id="advantages__text__p1">
                 вы сами формируете четверть учебной программы, подстраивая её
                 под свои интересы
               </p>
@@ -204,8 +205,8 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">Практика, а не теория</h3>
-              <p class="advantages__text__p">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title2">Практика, а не теория</h3>
+              <p class="advantages__text__p hidden_left_right" id="advantages__text__p2">
                 почти половина учебного времени посвящена практическим занятиям
                 и стажировкам
               </p>
@@ -216,10 +217,10 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title3">
                 Адаптация под потребности рынка
               </h3>
-              <p class="advantages__text__p advantages__shors_text">
+              <p class="advantages__text__p advantages__shors_text hidden_left_right" id="advantages__text__p3">
                 учебный план составлен на основе вакансий крупных IT-компаний
               </p>
             </div>
@@ -229,8 +230,8 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">Работа с профессионалами</h3>
-              <p class="advantages__text__p">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title4">Работа с профессионалами</h3>
+              <p class="advantages__text__p hidden_left_right" id="advantages__text__p4">
                 участие в командных проектах с первого курса под руководством
                 опытных менторов
               </p>
@@ -241,10 +242,10 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title5">
                 Необходимые базовые знания
               </h3>
-              <p class="advantages__text__p">
+              <p class="advantages__text__p hidden_left_right" id="advantages__text__p5">
                 фундамент, состоящий из навыков и умений, необходимых для любого
                 IT- направления
               </p>
@@ -255,10 +256,10 @@
               <img src="img/terminal.svg" alt="" />
             </div>
             <div class="advantages__text">
-              <h3 class="advantages__text__title">
+              <h3 class="advantages__text__title hidden_left_right" id="advantages__text__title6">
                 Готовое портфолио уже в вузе
               </h3>
-              <p class="advantages__text__p advantages__shors_text">
+              <p class="advantages__text__p advantages__shors_text hidden_left_right" id="advantages__text__p6">
                 индивидуальные карьерные рекомендации и сборка портфолио
               </p>
             </div>
@@ -280,9 +281,9 @@
             предлагаются на выбор различные треки:
           </p>
         </div>
-        <div class="tracks__separate_blocks">
+        <div class="tracks__separate_blocks" id="tracks__separate_blocks">
           <div class="tracks__item">
-            <ul>
+            <ul class="tracks__animation_text  hidden_left" id="tracks__item_left">
               <li>FullStack</li>
               <li>Робототехника</li>
               <li>Беспилотные авиационные системы</li>
@@ -293,7 +294,7 @@
             </ul>
           </div>
           <div class="tracks__item">
-            <ul>
+            <ul class="tracks__animation_text  hidden_right" id="tracks__item_right">
               <li>Backend</li>
               <li>Frontend</li>
               <li>Проектное управление в ИТ-сфере</li>
@@ -305,6 +306,7 @@
           </div>
         </div>
       </div>
+      <script src="script/tracks.js"></script>
     </section>
     <section class="about_faculties">
       <div class="content">
@@ -449,7 +451,7 @@
       <div class="content">
         <h2>Учебные планы</h2>
         <div class="curriculum__blocks">
-          <div class="curruculum__item">
+          <div class="curruculum__item hidden" id="curruculum__item1">
             <div class="curriculum__img">
               <img src="img/curriculum/img1.png" alt="" />
             </div>
@@ -465,7 +467,7 @@
               <button class="curriculum__button_b">Учебный план</button>
             </div>
           </div>
-          <div class="curruculum__item">
+          <div class="curruculum__item hidden"  id="curruculum__item2">
             <div class="curriculum__img">
               <img src="img/curriculum/img2.png" alt="" />
             </div>
@@ -482,7 +484,7 @@
               <button class="curriculum__button_b">Учебный план</button>
             </div>
           </div>
-          <div class="curruculum__item">
+          <div class="curruculum__item hidden"  id="curruculum__item3">
             <div class="curriculum__img">
               <img src="img/curriculum/img3.png" alt="" />
             </div>
@@ -670,5 +672,6 @@
         <span class="close-button" onclick="closeModal()">✖</span>
     </section>
     <script src="script/write_us.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>

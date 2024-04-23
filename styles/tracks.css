@@ -32,12 +32,36 @@
   text-align: right;
   border-right: 2.5px solid var(--accent);
   padding-right: 20px;
+  overflow: hidden;
 }
 .tracks__item:nth-child(2) {
   border-left: 2.5px solid var(--accent);
   padding-left: 20px;
+  overflow: hidden;
 }
 .tracks__item ul li {
   font-size: 20px;
   line-height: 30px;
 }
+.tracks__animation_text{
+  
+}
+/* анимация */
+
+.tracks__animation_text.hidden_right{
+  transform: translateX(-500px);
+}
+
+.tracks__animation_text.hidden_left{
+  transform: translateX(500px);
+}
+
+.tracks__animation_text.show_right{
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.tracks__animation_text.show_left{
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+} 
