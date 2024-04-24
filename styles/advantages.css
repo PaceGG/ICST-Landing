@@ -17,6 +17,10 @@
 .advantages__item {
   display: flex;
   gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0px 5px 10px #0000002e;
 }
 .advantages__icon {
   --advantages-icon-size: 70px;
@@ -40,4 +44,3 @@
 .advantages__shors_text {
   max-width: 230px;
 }
-
