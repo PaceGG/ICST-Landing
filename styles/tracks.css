@@ -1,10 +1,15 @@
 .tracks {
   /* padding: 100px 0; */
-  /* padding: 100px 0; */
-  background: rgb(135, 176, 255);
   display: flex;
   align-items: center;
+  background-image: url(../img/tracks_bg-right.png), url(../img/tracks_bg-left.png);
+  background-color: rgb(135, 176, 255);
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left;
 }
+
 .tracks__content {
   display: flex;
   flex-direction: column;
@@ -35,9 +40,10 @@
   padding-left: 20px;
   overflow: hidden;
 }
-.tracks__item ul li {
-  font-size: 20px;
-  line-height: 30px;
+
+.tracks__backgraund_right{
+  width: 100%;
+  height: 30%;
 }
 /* анимация */
 
