@@ -2,7 +2,7 @@
   /* padding: 80px 0; */
   background: rgb(135, 176, 255);
   background: linear-gradient(
-    135deg,
+    180deg,
     rgba(135, 176, 255, 1) 0%,
     rgba(217, 230, 255, 1) 100%
   );
@@ -109,7 +109,7 @@
   }
 }
 .about_faculties__animation_apply .about_faculties__text {
-  animation-timing-function: cubic-bezier(0.42, 0, 0, 1); 
+  animation-timing-function: cubic-bezier(0.42, 0, 0, 1);
 }
 /* Анимация для правого позиционирования */
 .about_faculties__item__left .about_faculties__animation_area {
