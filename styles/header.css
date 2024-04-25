@@ -26,10 +26,11 @@
   font-size: 16px;
   margin-right: 30px;
 }
-
+.bg_head {
+  background-image: url("../img/head_bg_long.webp");
+  background-repeat: no-repeat;
+}
 .head {
-  background-color: #e9f1ff;
-  background-image: url("../img/head bg.jpg");
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
