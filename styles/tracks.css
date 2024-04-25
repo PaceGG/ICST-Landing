@@ -1,5 +1,5 @@
 .tracks {
-  padding: 100px 0;
+  /* padding: 100px 0; */
   background: rgb(135, 176, 255);
   background: linear-gradient(
     135deg,
@@ -47,18 +47,22 @@
 
 .tracks__animation_text.hidden_right{
   transform: translateX(-500px);
+  opacity: 0;
 }
 
 .tracks__animation_text.hidden_left{
   transform: translateX(500px);
+  opacity: 0;
 }
 
 .tracks__animation_text.show_right{
   transform: translateX(0);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out, transform 1.25s cubic-bezier(0.42, 0, 0, 1);
 }
 
 .tracks__animation_text.show_left{
   transform: translateX(0);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out, transform 1.25s cubic-bezier(0.42, 0, 0, 1);
 } 
