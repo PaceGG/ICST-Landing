@@ -1,14 +1,9 @@
 .advantages {
-<<<<<<< HEAD
-  padding-top: 120px;
-  padding-bottom: 280px;
+  /* padding-top: 120px;
+  padding-bottom: 280px; */
   background-image: url("../img/circle_bg.png");
   background-size: 90px;
   background-attachment: fixed;
-=======
-  /* padding-top: 120px; */
-  /* padding-bottom: 280px; */
->>>>>>> 016b3718f3ade3406ac5c80544c434e14888921d
 }
 .advantages__content {
   max-width: 1400px;
