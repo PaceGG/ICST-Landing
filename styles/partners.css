@@ -1,11 +1,10 @@
 .partners__content_main {
   display: flex;
-  overflow-x: hidden; /* Обрезаем содержимое, выходящее за пределы контейнера по горизонтали */
 }
 
 .partners__content {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, 300px);
   justify-content: space-between;
   align-items: center;
 }
@@ -15,5 +14,30 @@
 }
 
 .partners__content#partners__content2 {
-  margin-left: -100%; /* Сдвигаем второй контейнер за пределы экрана */
+  position: absolute;
+  margin-left: 111%; 
 }
+
+.partners__content_main{
+  animation: partnersAnimation 6s infinite;
+}
+
+@keyframes partnersAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  34% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  84% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  
+}
+
