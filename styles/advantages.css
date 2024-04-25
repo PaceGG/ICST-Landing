@@ -30,7 +30,8 @@
   width: var(--advantages-icon-size);
   height: var(--advantages-icon-size);
   border-radius: 50%;
-  background-color: var(--accent);
+  /* background-color: var(--accent); */
+  background-color: #2e5bae;
   padding: 14px;
   z-index: 3;
 }
