@@ -16,7 +16,7 @@ childElements.forEach(function (childElement) {
 
 // Анимация при скролле
 window.addEventListener("scroll", function () {
-  var screenPosition = window.innerHeight;
+  var screenPosition = window.innerHeight -200;
 
   var block1 = document.getElementById("about_faculties__top_animation_area_1");
   var block1Position = block1.getBoundingClientRect().top;

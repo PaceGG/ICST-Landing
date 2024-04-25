@@ -24,7 +24,7 @@
   position: relative;
   height: 900px;
   text-align: center;
-  padding: 10%;
+  /* padding: 10%; */
 }
 .text_on_img {
   position: absolute;

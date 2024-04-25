@@ -56,11 +56,12 @@
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
-    background: #f5f5f5;
+    background: #1a67ff;
     width: 55px; 
     height: 55px;
     line-height: 28px;
     text-align: center;
+    color: #fff;
   }
 
   .arrow-left {
