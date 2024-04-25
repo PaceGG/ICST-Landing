@@ -1,3 +1,8 @@
+.partners__content_main {
+  display: flex;
+  overflow-x: hidden; /* Обрезаем содержимое, выходящее за пределы контейнера по горизонтали */
+}
+
 .partners__content {
   display: grid;
   grid-template-columns: repeat(4, 200px);
@@ -7,4 +12,8 @@
 
 .partners__content img {
   width: 200px;
+}
+
+.partners__content#partners__content2 {
+  margin-left: -100%; /* Сдвигаем второй контейнер за пределы экрана */
 }
