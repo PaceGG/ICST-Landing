@@ -1,6 +1,9 @@
 .advantages {
   padding-top: 120px;
   padding-bottom: 280px;
+  background-image: url("../img/circle_bg.png");
+  background-size: 90px;
+  background-attachment: fixed;
 }
 .advantages__content {
   max-width: 1400px;

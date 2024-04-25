@@ -1,11 +1,5 @@
 .tracks {
   padding: 100px 0;
-  background: rgb(135, 176, 255);
-  background: linear-gradient(
-    135deg,
-    rgba(135, 176, 255, 1) 0%,
-    rgba(217, 230, 255, 1) 100%
-  );
   display: flex;
   align-items: center;
 }
@@ -45,20 +39,20 @@
 }
 /* анимация */
 
-.tracks__animation_text.hidden_right{
+.tracks__animation_text.hidden_right {
   transform: translateX(-500px);
 }
 
-.tracks__animation_text.hidden_left{
+.tracks__animation_text.hidden_left {
   transform: translateX(500px);
 }
 
-.tracks__animation_text.show_right{
+.tracks__animation_text.show_right {
   transform: translateX(0);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.tracks__animation_text.show_left{
+.tracks__animation_text.show_left {
   transform: translateX(0);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-} 
+}
