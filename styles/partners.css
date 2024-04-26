@@ -7,7 +7,7 @@
 
 .partners__content {
   display: flex;
-  position: relative; /* Добавляем относительное позиционирование */
+  position: relative;
   width: 2750px;
 }
 
@@ -16,25 +16,11 @@
   margin-left: 100px;
   display: flex;
   align-items: center;
-  position: relative; /* Добавляем относительное позиционирование */
+  position: relative; 
 }
 
 .partner img {
   width: 250px;
-  display: block;
-  margin: 0 auto;
-}
-
-.partner_ {
-  width: 300px;
-  margin-left: 10%;
-  display: flex;
-  align-items: center;
-  position: relative; /* Добавляем относительное позиционирование */
-}
-
-.partner_ img {
-  width: 300px;
   display: block;
   margin: 0 auto;
 }
