@@ -29,7 +29,12 @@
 .bg_head {
   background-image: url("../img/head_bg_long.webp");
   background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: top center; 
+  width: 100%; 
 }
+
+
 .head {
   background-size: contain;
   background-position: bottom;
