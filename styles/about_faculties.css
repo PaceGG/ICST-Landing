@@ -29,7 +29,10 @@
   max-width: 800px;
   color: white;
   text-shadow: 3px 3px 0 var(--accent);
+  opacity: 0;
+  position: relative;
 }
+
 .about_faculties__text {
   display: flex;
   flex-direction: column;
@@ -84,7 +87,7 @@
 }
 .about_faculties__animation_area {
   border-left: 5px solid var(--accent);
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   /* display: flex; вроде без него работает, но в примере он был */
   margin-top: 10px;
@@ -92,22 +95,25 @@
 }
 .about_faculties__text {
   position: absolute;
-  right: 100%;
+  right: 10%;
   transition: 0.5s;
+  opacity: 0;
   /* z-index: -1; */
 }
 .about_faculties__animation_apply .about_faculties__text {
   animation-name: about_faculties__animation;
   animation-duration: 0.7s;
-  animation-delay: 0.5s;
+  /* animation-delay: 0.5s; */
   animation-fill-mode: forwards;
 }
 @keyframes about_faculties__animation {
   from {
-    right: 100%;
+    right: 10%;
+    opacity: 0;
   }
   to {
     right: 0;
+    opacity: 1;
   }
 }
 .about_faculties__animation_apply .about_faculties__text {
@@ -123,7 +129,8 @@
 .about_faculties__item__left
   .about_faculties__animation_area
   .about_faculties__text {
-  left: 100%;
+  left: 10%;
+  opacity: 0;
 }
 
 .about_faculties__item__left
@@ -131,29 +138,31 @@
   .about_faculties__text {
   animation-name: about_faculties__right_animation;
   animation-duration: 0.7s;
-  animation-delay: 0.5s;
+  /* animation-delay: 0.5s; */
   animation-fill-mode: forwards;
 }
 @keyframes about_faculties__right_animation {
   from {
-    left: 100%;
+    left: 10%;
+    opacity: 0;
   }
   to {
     left: 0;
+    opacity: 1;
   }
 }
 
 /* Выезд сверху */
 .about_faculties__top_animation_area {
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* width: 1000px; */
   width: 100%;
   position: relative;
 }
 .about_faculties__text_box {
   position: absolute;
-  bottom: 100%;
+  bottom: 0;
   transition: 1s;
 }
 .about_faculties__animation_apply .about_faculties__text_box {
@@ -161,16 +170,50 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
-@keyframes about_faculties__top_animation {
+/* @keyframes about_faculties__top_animation {
   from {
     bottom: 100%;
   }
   to {
     bottom: 0;
   }
-}
+} */
 
 /* Выезд сверху ддя правого края */
 .about_faculties__item__left .about_faculties__top_animation_area {
   justify-content: flex-end;
+}
+
+.about_faculties__animation_h3_left{
+  animation-name: about_faculties__animation_h3_left;
+  animation-duration: 0.7s;
+  /* animation-delay: 0.5s; */
+  animation-fill-mode: forwards;
+}
+.about_faculties__animation_h3_right{
+  animation-name: about_faculties__animation_h3_right;
+  animation-duration: 0.7s;
+  /* animation-delay: 0.5s; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes about_faculties__animation_h3_right {
+  from {
+    left: 5%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes about_faculties__animation_h3_left {
+  from {
+    right: 5%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
