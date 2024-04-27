@@ -12,7 +12,7 @@ body {
   background-color: var(--light-accent);
 }
 :root {
-  --accent: #2e5bae;
+  --accent: #1a67ff;
   --light-accent: #f3f6ff;
 }
 section {
