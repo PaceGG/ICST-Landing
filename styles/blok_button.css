@@ -47,6 +47,7 @@
   color: white;
   background-color: var(--accent);
   box-shadow: none;
+  transition: 0.5s;
 }
 
 .button:not(.active):hover {
