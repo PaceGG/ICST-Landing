@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function()
             menu.style.transform = "translateY(0)";
             menu.style.transition = "transform 0.5s ease"; 
             timer = setTimeout(function(){
-                menu.style.transform = "translateY(-100%)";
+                menu.style.transform = "translateY(-130%)";
             }, 3000);
             //console.log(timer);
         }
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function()
             onMenu = false;
             timer = setTimeout(function() 
             {
-                menu.style.transform = "translateY(-100%)";
+                menu.style.transform = "translateY(-130%)";
             }, 3000); 
         }
     });
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function()
                     menu.style.transform = "translateY(0)";
                     clearTimeout(timer);
                     timer = setTimeout(function(){
-                        menu.style.transform = "translateY(-100%)";
+                        menu.style.transform = "translateY(-130%)";
                     }, 3000);
                     //console.log(timer);
                 }

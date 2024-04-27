@@ -38,7 +38,7 @@ function change_button(button_active, button_active1) {
         buttonClicked[button_active] = true;
         animation_change_button();
       }
-      document.getElementById("textOnImage1").innerText = "текст 1";
+      document.getElementById("textOnImage1").innerHTML = "текст 1";
       document.getElementById("change_image").src = "img/blok_button_img1.png";
       break;
     case "button2":
@@ -46,8 +46,8 @@ function change_button(button_active, button_active1) {
         buttonClicked[button_active] = true;
         animation_change_button();
       }
-      document.getElementById("textOnImage").innerText =
-        "Вступительные испытания на сетевую программу с МФТИ проходят в очном формате в ПГНИУ по двум дисциплинам (математика и информатика) в два набора: 1. Основной набор в конце июня 2. Дополнительный набор в начале сентября"; // мфти
+      document.getElementById("textOnImage").innerHTML =
+        "Вступительные испытания на сетевую программу с МФТИ <br> проходят в очном формате в ПГНИУ по двум дисциплинам (математика и информатика) в два набора: 1. Основной набор в конце июня 2. Дополнительный набор в начале сентября"; // мфти
       document.getElementById("change_image").src = "img/blok_button_img2.png";
       break;
     case "button3":
@@ -55,7 +55,7 @@ function change_button(button_active, button_active1) {
         buttonClicked[button_active] = true;
         animation_change_button();
       }
-      document.getElementById("textOnImage").innerText = "текст 3";
+      document.getElementById("textOnImage").innerHTML  = "текст 3";
       document.getElementById("change_image").src = "img/blok_button_img3.png";
       break;
     case "button4":
@@ -63,7 +63,7 @@ function change_button(button_active, button_active1) {
         buttonClicked[button_active] = true;
         animation_change_button();
       }
-      document.getElementById("textOnImage").innerText = "текст 4";
+      document.getElementById("textOnImage").innerHTML  = "текст 4";
       document.getElementById("change_image").src = "img/blok_button_img4.png";
       break;
     case "button5":
@@ -71,7 +71,7 @@ function change_button(button_active, button_active1) {
         buttonClicked[button_active] = true;
         animation_change_button();
       }
-      document.getElementById("textOnImage").innerText = "текст 5";
+      document.getElementById("textOnImage").innerHTML  = "текст 5";
       document.getElementById("change_image").src = "img/blok_button_img5.png";
       break;
   }
