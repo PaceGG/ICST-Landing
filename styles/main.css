@@ -1,11 +1,15 @@
 @font-face {
+  font-family: "PSUFont_slab";
+  src: url("fonts/PermianSlabSerifTypeface.otf");
+}
+@font-face {
   font-family: "PSUFont";
   src: url("fonts/PermianSansTypeface.otf");
 }
 * {
   box-sizing: border-box;
   font-size: 18px;
-  font-family: "PSUFont", sans-serif;
+  font-family: "PSUFont_slab", sans-serif;
 }
 body {
   margin: 0;
@@ -15,8 +19,11 @@ body {
   --accent: #1a67ff;
   --light-accent: #f3f6ff;
 }
+
 section {
-  /* height: calc(100vh - 100px); */
+  padding-bottom: 80px; 
+  padding-top: 80px; 
+    /* height: calc(100vh - 100px); */
   /* margin: 80px 0; */
 }
 .content {
@@ -40,6 +47,7 @@ h5,
 h6 {
   font-weight: 400;
   margin: 0;
+  font-family: "PSUFont", sans-serif;
 }
 p {
   margin: 0;
@@ -72,3 +80,5 @@ ul {
 li::marker {
   content: none;
 }
+
+
