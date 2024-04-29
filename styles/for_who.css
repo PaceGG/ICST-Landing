@@ -29,3 +29,7 @@
   object-fit: cover;
   justify-items: start;
 }
+
+.for_who__img.special_picture{
+  padding-bottom: 21.21px;
+}
