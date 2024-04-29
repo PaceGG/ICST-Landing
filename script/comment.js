@@ -38,3 +38,35 @@ function updatepoints() {
 }
 
 showcomment(curIndex);
+
+
+const avatar = document.getElementById("comment_avatar2");
+const avatarImg1 = document.getElementById("avatar_img21");
+const avatarImg2 = document.getElementById("avatar_img22");
+let rotated = true;
+
+avatar.addEventListener("click", function() {
+  avatar.classList.add('comment_avatar_animation');
+  setTimeout(function() {
+    if (rotated) 
+    {
+      avatarImg1.style.display = 'none';
+      avatarImg2.style.display = 'block';
+      rotated = false;
+    } else {
+      avatarImg2.style.display = 'none';
+      avatarImg1.style.display = 'block';
+      rotated = true;
+    }
+  }, 250);
+  
+  avatar.addEventListener('animationend', function(event) 
+  {
+    if (event.target === avatar) 
+    {
+      avatar.classList.remove('comment_avatar_animation');
+    }
+  });
+});
+
+

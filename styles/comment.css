@@ -26,26 +26,30 @@
   }
 
   .comment_avatar {
-    width: 145px;
-    height: 145px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     margin: 27.5px auto; /* Центрируем по вертикали (200px - 145px) / 2 = 27.5px */
     overflow: hidden;
+    border: 55px solid rgba(66, 170, 255, 0.15);
   }
-
+  .comment_avatar:hover {
+    cursor: pointer;
+  }
   .comment_border_ava{
         width: 350px;
         height: 350px;
         border-radius: 50%;
         margin: 0 auto 10px;
         overflow: hidden;
-        background: #42aaff;
+        border: 10px solid #42aaff;
         opacity: 0.1;
   }
   .comment_avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
   }
 
   .arrow {
@@ -92,3 +96,32 @@
   .comment_point:hover {
     background-color: #333;
   }
+
+  .comment_avatar_animation {
+    animation: rotateAnimation 0.5s linear forwards;
+  }
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotateX(0deg);
+      transform: rotateY(0deg);
+      
+    }
+    50% {
+      transform: rotateX(90deg);
+      transform: rotateY(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+
+
+
+
+
+
+  
+  
+  
