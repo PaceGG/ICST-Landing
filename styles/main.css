@@ -9,7 +9,7 @@
 * {
   box-sizing: border-box;
   font-size: 18px;
-  font-family: "PSUFont_slab", sans-serif;
+  font-family: "PSUFont", sans-serif;
 }
 body {
   margin: 0;
@@ -21,9 +21,9 @@ body {
 }
 
 section {
-  padding-bottom: 80px; 
-  padding-top: 80px; 
-    /* height: calc(100vh - 100px); */
+  padding-bottom: 80px;
+  padding-top: 80px;
+  /* height: calc(100vh - 100px); */
   /* margin: 80px 0; */
 }
 .content {
@@ -55,7 +55,7 @@ p {
 
 h1 {
   color: black;
- /* text-shadow: 0px 5px 10px #0000004f; */
+  /* text-shadow: 0px 5px 10px #0000004f; */
 }
 h2 {
   font-size: 45px;
@@ -80,5 +80,3 @@ ul {
 li::marker {
   content: none;
 }
-
-
