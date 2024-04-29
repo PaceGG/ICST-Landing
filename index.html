@@ -877,6 +877,9 @@
     </section>
     <section class="comment_container">
       <h2>Отзывы</h2>
+      <div class="comment__arrow_box">
+        <img src="img/arrow.svg" class="comment_arrow arrow-left" onclick="showPrevcomment()">
+      </div>
       <div class="comment_view">
         <div class="comment_list">
           <div class="comment">
@@ -933,8 +936,9 @@
           </div>
         </div>
       </div>
-      <div class="arrow arrow-left" onclick="showPrevcomment()">&#8249;</div>
-      <div class="arrow arrow-right" onclick="showNextcomment()">&#8250;</div>
+      <div class="comment__arrow_box">
+        <img src="img/arrow.svg" class="comment_arrow arrow-right" onclick="showNextcomment()">
+      </div>
       <div class="comment_points">
         <div class="comment_point active" onclick="showcomment(0)"></div>
         <div class="comment_point" onclick="showcomment(1)"></div>

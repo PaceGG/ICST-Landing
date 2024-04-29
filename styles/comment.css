@@ -51,30 +51,31 @@
     object-fit: cover;
     pointer-events: none;
   }
-
-  .arrow {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    background: #1a67ff;
-    width: 55px; 
+  .comment_arrow {
+    box-sizing: content-box;
+    width: 55px;
     height: 55px;
-    line-height: 28px;
-    text-align: center;
-    color: #fff;
+    display: block;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(75%);
   }
-
+  .comment__arrow_box {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #19c6ff;
+  }
   .arrow-left {
-    left: 11%;
+    left: 125px;
+    transform: rotate(-90deg);
   }
-
+  
   .arrow-right {
-    right: 11%;
+    right: 125px;
+    transform: rotate(90deg);
   }
+  
 
   .comment_points {
     display: flex;
