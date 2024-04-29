@@ -76,8 +76,11 @@
   align-items: center;
 
   margin-top: 15px;
-  border-radius: 0%;
   border-radius: 20px;
+
+   /* transform: translateY(-432px);  */
+
+   position: absolute;
 }
 
 #arrow_up {
@@ -97,15 +100,9 @@
   transform: translate(-285px, 245px) rotate(180deg);
 }
 
-.slide {
-  transition: transform 0.5s ease-in-out;
-}
-
-.disabled {
-  opacity: 0.6; 
-}
 
 .slider p {
   overflow-wrap: break-word;
   margin: 10px 10px;
 }
+
