@@ -80,3 +80,7 @@ ul {
 li::marker {
   content: none;
 }
+
+.highlight {
+  color: var(--accent);
+}
