@@ -4,17 +4,15 @@
 }
 .about__content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-}
-.about__content div {
+  max-width: 1400px;
 }
 .about__img {
   position: relative;
-  width: 505px;
-  height: 505px;
+  width: 700px;
+  height: 700px;
   z-index: 2;
-  width: 45%;
 }
 .about__img::after {
   /* content: ""; */
@@ -53,56 +51,8 @@
 }
 .about h2 {
   padding-bottom: 5px;
-  font-size: 45px;
-  color: white;
-  text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
-    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
-    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
-    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
-    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
-    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
-    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
-    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
-    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
-    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
-    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
-    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
-    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
-    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
-    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
-    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
-  -webkit-text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
-    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
-    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
-    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
-    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
-    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
-    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
-    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
-    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
-    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
-    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
-    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
-    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
-    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
-    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
-    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
-  -moz-text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
-    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
-    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
-    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
-    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
-    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
-    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
-    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
-    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
-    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
-    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
-    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
-    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
-    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
-    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
-    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
+  font-size: 55px;
+  color: black;
 }
 
 .slider_box {
@@ -142,7 +92,7 @@
 .about__arrow_box {
   cursor: pointer;
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: #19c6ff;
 }
 .about__arrow {
   box-sizing: content-box;
@@ -159,4 +109,6 @@
 .slider p {
   overflow-wrap: break-word;
   margin: 10px 10px;
+  font-weight: 600;
+  line-height: 30px;
 }

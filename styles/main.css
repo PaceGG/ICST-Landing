@@ -83,4 +83,5 @@ li::marker {
 
 .highlight {
   color: var(--accent);
+  font-size: 1.05em;
 }
