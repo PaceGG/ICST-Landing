@@ -51,11 +51,58 @@
   object-fit: cover;
   border-radius: 50%;
 }
-.about__text h2 {
-  border-bottom: 5px solid var(--accent);
-  text-align: right;
+.about h2 {
   padding-bottom: 5px;
   font-size: 45px;
+  color: white;
+  text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
+    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
+    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
+    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
+    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
+    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
+    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
+    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
+    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
+    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
+    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
+    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
+    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
+    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
+    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
+    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
+  -webkit-text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
+    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
+    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
+    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
+    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
+    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
+    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
+    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
+    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
+    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
+    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
+    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
+    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
+    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
+    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
+    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
+  -moz-text-shadow: 0px 1px 0 rgb(26, 103, 255), 0px -1px 0 rgb(26, 103, 255),
+    1px 0px 0 rgb(26, 103, 255), -1px 0px 0 rgb(26, 103, 255),
+    1px 1px 0 rgb(26, 103, 255), 1px -1px 0 rgb(26, 103, 255),
+    -1px 1px 0 rgb(26, 103, 255), -1px -1px 0 rgb(26, 103, 255),
+    0px 2px 0 rgb(26, 103, 255), 0px -2px 0 rgb(26, 103, 255),
+    2px 0px 0 rgb(26, 103, 255), -2px 0px 0 rgb(26, 103, 255),
+    2px 2px 0 rgb(26, 103, 255), 2px -2px 0 rgb(26, 103, 255),
+    -2px 2px 0 rgb(26, 103, 255), -2px -2px 0 rgb(26, 103, 255),
+    0px 3px 0 rgb(26, 103, 255), 0px -3px 0 rgb(26, 103, 255),
+    3px 0px 0 rgb(26, 103, 255), -3px 0px 0 rgb(26, 103, 255),
+    3px 3px 0 rgb(26, 103, 255), 3px -3px 0 rgb(26, 103, 255),
+    -3px 3px 0 rgb(26, 103, 255), -3px -3px 0 rgb(26, 103, 255),
+    0px 4px 0 rgb(26, 103, 255), 0px -4px 0 rgb(26, 103, 255),
+    4px 0px 0 rgb(26, 103, 255), -4px 0px 0 rgb(26, 103, 255),
+    4px 4px 0 rgb(26, 103, 255), 4px -4px 0 rgb(26, 103, 255),
+    -4px 4px 0 rgb(26, 103, 255), -4px -4px 0 rgb(26, 103, 255);
 }
 
 .slider_box {
