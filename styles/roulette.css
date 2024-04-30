@@ -81,7 +81,7 @@
    border-radius: 50%;
 }
 
-.body {
+.body_cat {
    position: absolute; 
    top: 52%; 
    left: 50%; 
@@ -218,7 +218,7 @@
 }
 
 .pupil.left{
-   left: 39%;
+   left: 38%;
 }
 .pupil.right{
    right: 15%;
@@ -253,7 +253,7 @@
 }
 
 .glimmer.left{
-   left: 43%;
+   left: 42%;
 }
 .glimmer.right{
    right: 22%;
