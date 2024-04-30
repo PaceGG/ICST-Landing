@@ -57,14 +57,14 @@
     height: 55px;
     display: block;
     padding: 15px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(75%);
   }
   .comment__arrow_box {
+    position: absolute;
     cursor: pointer;
     border-radius: 50%;
     background-color: #19c6ff;
+    top: 50%;
+    transform: translateY(75%);
   }
   .arrow-left {
     left: 125px;
