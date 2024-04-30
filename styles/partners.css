@@ -90,3 +90,13 @@
 #partners__content2.paused {
   animation-play-state: paused;
 }
+
+
+.partners__content {
+  cursor: grab;
+  user-select: none;
+}
+
+.partners__content:active {
+  cursor: grabbing;
+}

@@ -115,3 +115,49 @@ function resumeAnimation()
     content1.classList.remove('paused');
     content2.classList.remove('paused');
 }
+
+
+
+
+// const partnersContent1 = document.getElementById('partners__content1');
+// const partnersContent2 = document.getElementById('partners__content2');
+
+// let isDragging = false;
+// let currentX;
+// let initialX;
+// let xOffset = 0;
+
+// function dragStart(e) {
+//     initialX = e.clientX - xOffset;
+//     isDragging = true;
+//     partnersContent1.classList.remove('paused');
+//     partnersContent2.classList.remove('paused');
+// }
+
+// function dragEnd() {
+//     isDragging = false;
+//     partnersContent1.classList.add('paused');
+//     partnersContent2.classList.add('paused');
+// }
+
+// function drag(e) {
+//     if (isDragging) {
+//         e.preventDefault();
+
+//         currentX = e.clientX - initialX;
+//         xOffset = currentX;
+
+//         setTranslate(currentX, partnersContent1, partnersContent2);
+//     }
+// }
+
+// function setTranslate(xPos, el1, el2) {
+//     el1.style.left = `${xPos}px`;
+//     el2.style.left = `${xPos + el1.offsetWidth}px`;
+// }
+
+// partnersContent1.addEventListener('mousedown', dragStart);
+// partnersContent2.addEventListener('mousedown', dragStart);
+
+// document.addEventListener('mouseup', dragEnd);
+// document.addEventListener('mousemove', drag);
