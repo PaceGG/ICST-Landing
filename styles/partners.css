@@ -27,11 +27,11 @@
 
 #partners__content2 {
   transform: translate(100%, -273px);
-  animation: partners__content2 20s infinite;
+  animation: partners__content2 35s infinite;
 }
 
 #partners__content1 {
-  animation: partners__content1 20s infinite;
+  animation: partners__content1 35s infinite;
 }
 @keyframes partners__content1 {
   0% {
@@ -84,4 +84,9 @@
     opacity: 1;
     animation-timing-function: linear;
   }
+}
+
+#partners__content1.paused,
+#partners__content2.paused {
+  animation-play-state: paused;
 }

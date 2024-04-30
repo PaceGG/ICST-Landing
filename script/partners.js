@@ -97,3 +97,21 @@
 
 // // Начните анимацию
 // movePartners();
+const content1 = document.querySelector('#partners__content1');
+const content2 = document.querySelector('#partners__content2');
+content1.addEventListener('mouseenter', pauseAnimation);
+content1.addEventListener('mouseleave', resumeAnimation);
+content2.addEventListener('mouseenter', pauseAnimation);
+content2.addEventListener('mouseleave', resumeAnimation);
+
+function pauseAnimation() 
+{
+    content1.classList.add('paused');
+    content2.classList.add('paused');
+}
+
+function resumeAnimation() 
+{
+    content1.classList.remove('paused');
+    content2.classList.remove('paused');
+}
