@@ -33,7 +33,7 @@
     overflow: hidden;
     border: 55px solid rgba(66, 170, 255, 0.15);
   }
-  .comment_avatar:hover {
+  #comment_avatar2:hover {
     cursor: pointer;
   }
   .comment_border_ava{
