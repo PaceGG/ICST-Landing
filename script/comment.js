@@ -27,8 +27,8 @@ function showPrevcomment()
 }
 function updateArrowVisibility() 
 {
-  arrowLeft.style.display = curIndex === 0 ? 'none' : 'block';
-  arrowRight.style.display = curIndex === comments.length - 1 ? 'none' : 'block';
+  arrowLeft.style.opacity = curIndex === 0 ? '0.3' : '1';
+  arrowRight.style.opacity = curIndex === comments.length - 1 ? '0.3' : '1';
 }
 
 function updatepoints() {
