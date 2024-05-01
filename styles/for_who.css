@@ -33,3 +33,63 @@
 .for_who__img.special_picture{
   padding-bottom: 21.21px;
 }
+
+.for_who__item_left_animation{
+  animation-name: for_who__item_left_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes for_who__item_left_animation {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.for_who__item_right_animation{
+  animation-name: for_who__item_right_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes for_who__item_right_animation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.for_who__item_center_animation{
+  animation-name: for_who__item_center_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes for_who__item_center_animation {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#for_who__item_left{
+  transform: translateX(-200%);
+}
+
+#for_who__item_center{
+  transform: translateY(50%);
+    opacity: 0;
+}
+
+#for_who__item_right{
+  transform: translateX(200%);
+}
