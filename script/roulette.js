@@ -1,5 +1,5 @@
 
-const rouletteButton = document.querySelector('.roulette_button');
+const rouletteButton = document.querySelector('.roulette_row');
 const rouletteArr1 = document.querySelector('.roulette_arr');
 const string_arr1 = Array.from(rouletteArr1.querySelectorAll('p'));
 const min = 1;
@@ -9,7 +9,6 @@ var rouletteFlag = true;
 
 rouletteButton.addEventListener('click', () => {
     if (rouletteFlag === true){
-        rouletteButton.classList.add('used');
         rouletteArr1.removeChild(rouletteArr1.lastElementChild);
         const rouletteArr = document.querySelector('.roulette_arr');
         const string_arr = Array.from(rouletteArr.querySelectorAll('p'));
@@ -29,3 +28,23 @@ rouletteButton.addEventListener('click', () => {
 
 });
 
+
+
+const roulButton = document.querySelector('.roulette_button');
+const rouletteH2 = document.querySelector('.roulette_h2');
+const observer = new IntersectionObserver((entries)=> {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) 
+    {
+      roulButton.style.bottom = '';
+      roulButton.href = ''; // новая ссылка
+      roulButton.classList.add('roulette_animation_button');
+
+    } else {
+      roulButton.style.bottom = '80px';
+      roulButton.href = '#roulette_href';
+      roulButton.classList.remove('roulette_animation_button');
+    }
+  });
+});
+observer.observe(rouletteH2);
