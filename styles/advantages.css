@@ -65,4 +65,7 @@
   .advantages__shors_text {
     max-width: none;
   }
+  .advantages__items {
+    row-gap: 20px;
+  }
 }
