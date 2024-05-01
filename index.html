@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/comment.css" />
     <link rel="stylesheet" href="styles/write_us.css" />
     <link rel="stylesheet" href="styles/style_for_script.css" />
+    <link rel="stylesheet" href="styles/roulette.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -93,7 +94,7 @@
                 <a href="#about_entering" class="menu-link">Про поступление</a>
               </div>
               <div class="nav-item">
-                <a href="#" class="menu-link">Отзывы</a>
+                <a href="#comments" class="menu-link">Отзывы</a>
               </div>
             </div>
           </div>
@@ -638,19 +639,19 @@
       <div class="content">
         <h2>Кому подойдёт обучение в институте?</h2>
         <div class="for_who__boxes">
-          <div class="for_who__item">
+          <div class="for_who__item" id="for_who__item_left">
             <div class="for_who__img">
               <img src="img/in_school.png" />
             </div>
             <p>тем, кто углублённо занимался информатикой в школе</p>
           </div>
-          <div class="for_who__item">
+          <div class="for_who__item" id="for_who__item_center">
             <div class="for_who__img">
               <img src="img/undecided.png" />
             </div>
             <p>тем, кто не определился с будущей профессией в ИТ</p>
           </div>
-          <div class="for_who__item">
+          <div class="for_who__item" id="for_who__item_right">
             <div class="for_who__img special_picture">
               <img src="img/profession.png" />
             </div>
@@ -658,13 +659,14 @@
           </div>
         </div>
       </div>
+      <script src="script/for_who.js"></script>
     </section>
     <section class="block_button" id="about_entering">
       <div class="button_img_container">
         <h2>Про поступление</h2>
         <div>
           <button class="button active" id="button1">
-            Основные даты поступления
+            Основные <br />даты поступления
           </button>
           <button class="button" id="button2">
             Вступительные <br />испытания - МФТИ
@@ -905,7 +907,7 @@
       </div>
       <script src="script/partners.js"></script>
     </section>
-    <section class="comment_container">
+    <section class="comment_container" id="comments">
       <h2>Отзывы</h2>
       <div class="comment__arrow_box arrow-left">
         <img
@@ -918,7 +920,7 @@
         <div class="comment_list">
           <div class="comment">
             <div class="comment_avatar">
-              <img src="img/Nagiev.jpg" />
+              <img src="img/Renat.png" />
             </div>
             <p class="comment_text">
               Для меня главное на ИКНТ — люди вокруг. На потоке более 300
@@ -991,6 +993,47 @@
         <div class="comment_point" onclick="showcomment(2)"></div>
       </div>
       <script src="script/comment.js"></script>
+    </section>
+    <section class="roulette" >
+      <div class="container">
+        <div class="head_cat"></div>
+        <div class="ear right"></div>
+        <div class="ear left"></div>
+        <div class="body_cat"></div>
+        <div class="eye right"></div>
+        <div class="eye left"></div>
+        <div class="nose"></div>
+        <div class="hand right"></div>
+        <div class="hand left"></div>
+        <div class="leg right"></div>
+        <div class="leg left"></div>
+        <div class="tail"></div>
+        <div class="tail_end"></div>
+        <div class="pupil left"></div>
+        <div class="pupil right"></div>
+        <div class="glimmer left"></div>
+        <div class="glimmer right"></div>
+      </div>
+      <div class="roulette_row">
+        <div class="roulette_arr"> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+          <p>Что же будет когда поступишь к нам? Нажми туда чтобы узнать! =></p> 
+        </div>
+      </div>
+      <div class="roulette_button">
+        <p> Нажми на <br>меня пж :) </p> 
+      </div>
+      <script src="script/roulette.js"></script>
     </section>
     <section id="modal-message">
       <span id="message">Если у вас остались вопросы, то пишите нам!</span>
