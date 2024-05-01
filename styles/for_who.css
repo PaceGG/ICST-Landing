@@ -1,5 +1,6 @@
 .for_who {
   /* padding: 80px 0; */
+  overflow: hidden;
 }
 .for_who__boxes {
   display: flex;
