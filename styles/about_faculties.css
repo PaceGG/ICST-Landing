@@ -193,9 +193,13 @@
   .about_faculties__decoration {
     display: none;
   }
+  .about_faculties h2 {
+    margin-bottom: 30px;
+  }
   .about_faculties__h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 23px;
+    width: 100vw;
   }
   .about_faculties__item__left .about_faculties__title h3 {
     text-align: center;
@@ -222,5 +226,8 @@
   }
   .about_faculties__item {
     margin-top: 20px;
+  }
+  .about_faculties__text__title {
+    font-size: 19px;
   }
 }
