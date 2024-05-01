@@ -3,7 +3,7 @@
 }
 .specialities__box {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, 200px);
   grid-row-gap: 80px;
   justify-content: space-evenly;
 }
@@ -18,4 +18,11 @@
 }
 .specialities__icon img {
   height: 70px;
+}
+
+@media (max-width: 500px) {
+  .specialities__box {
+    grid-template-columns: repeat(2, 100px);
+    grid-row-gap: 20px;
+  }
 }
