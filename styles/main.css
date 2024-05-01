@@ -85,3 +85,9 @@ li::marker {
   color: var(--accent);
   font-size: 1.05em;
 }
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 28px;
+  }
+}

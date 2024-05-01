@@ -112,3 +112,18 @@
   font-weight: 600;
   line-height: 30px;
 }
+
+@media (max-width: 500px) {
+  .about h2 {
+    font-size: 28px;
+  }
+  .about__content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about__img {
+    height: 280px;
+    width: 280px;
+    margin-bottom: 30px;
+  }
+}
