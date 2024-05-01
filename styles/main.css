@@ -92,4 +92,10 @@ li::marker {
     font-size: 10vw;
     margin-bottom: 20px;
   }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }

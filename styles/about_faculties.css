@@ -40,8 +40,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 100px;
-   margin-left: 47px; 
-   margin-top: 10px; 
+  margin-left: 47px;
+  margin-top: 10px;
 }
 .about_faculties__info {
   margin-top: 15px;
@@ -184,3 +184,43 @@
   justify-content: flex-end;
 }
 
+/* Фикс анимации */
+.about_faculties__text__p:last-child {
+  padding-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .about_faculties__decoration {
+    display: none;
+  }
+  .about_faculties__h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .about_faculties__item__left .about_faculties__title h3 {
+    text-align: center;
+  }
+  .about_faculties__text {
+    padding: 0;
+    padding-left: 15px;
+  }
+  .about_faculties__animation_area {
+    margin: 0;
+  }
+  .about_faculties__animation_area,
+  .about_faculties__text {
+    width: 300px;
+  }
+  .about_faculties__item__left .about_faculties__animation_area {
+    margin: 0;
+  }
+  .about_faculties__item__left .about_faculties__text {
+    padding-right: 15px;
+  }
+  .about_faculties__item__left .about_faculties__text__title {
+    text-align: right;
+  }
+  .about_faculties__item {
+    margin-top: 20px;
+  }
+}
