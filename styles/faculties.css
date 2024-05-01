@@ -37,6 +37,7 @@
 .facultie__info__item__pts {
   font-size: 20px;
   line-height: 31px;
+  color: var(--accent);
 }
 .facultie__info__item__pts_info {
   font-size: 15px;
@@ -47,4 +48,35 @@
 }
 .facultie__info__item {
   width: 100px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .faculties-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .faculties__item {
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 0;
+    padding: 10px;
+  }
+  .facultie__name {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
+  .facultie__info {
+    min-width: 0px;
+  }
+  .facultie__info__item {
+    width: 33%;
+  }
+  .facultie__info__item__new {
+    text-align: center;
+  }
 }

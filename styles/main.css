@@ -88,6 +88,8 @@ li::marker {
 
 @media (max-width: 500px) {
   h2 {
-    font-size: 28px;
+    /* font-size: 37px; */
+    font-size: 10vw;
+    margin-bottom: 15px;
   }
 }
