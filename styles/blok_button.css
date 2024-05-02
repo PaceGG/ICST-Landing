@@ -1,6 +1,4 @@
 .button {
-  height: 30%;
-  width: 17%;
   margin: 5px;
   background-color: #ffffff;
   color: black;
@@ -77,4 +75,58 @@
 }
 #about_facultets5{
   height: 500px;
+}
+
+.button_conteiner {
+  display: grid;
+  grid-template-areas:
+    "btn1 btn2 btn3 btn4 btn5";
+  gap: 10px;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.button:nth-child(1) {
+  grid-area: btn1;
+}
+
+.button:nth-child(2) {
+  grid-area: btn2;
+}
+
+.button:nth-child(3) {
+  grid-area: btn3;
+}
+
+.button:nth-child(4) {
+  grid-area: btn4;
+}
+
+.button:nth-child(5) {
+  grid-area: btn5;
+}
+@media (max-width: 500px) {
+  .button_conteiner {
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "btn1 btn2 btn3"
+      "btn4 btn5 ."; 
+    justify-content: center;
+  }
+
+  .button {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button:nth-child(4) {
+    grid-area: btn4;
+    margin-left: 10%;
+  }
+
 }

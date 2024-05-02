@@ -3,17 +3,11 @@ const faculties__item1 = document.getElementById('faculties__item1');
 const faculties__item2 = document.getElementById('faculties__item2');
 const faculties__item3 = document.getElementById('faculties__item3');
 const faculties__item4 = document.getElementById('faculties__item4');
-const curruculum__item1 = document.getElementById('curruculum__item1');
-const curruculum__item2 = document.getElementById('curruculum__item2');
-const curruculum__item3 = document.getElementById('curruculum__item3');
 const itemsToObserve = [
     faculties__item1,
     faculties__item2,
     faculties__item3,
-    faculties__item4,
-    curruculum__item1,
-    curruculum__item2,
-    curruculum__item3
+    faculties__item4
 ];
 
 const observer1 = new IntersectionObserver(entries => {
