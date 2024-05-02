@@ -402,8 +402,8 @@
         <div class="tracks__text">
           <p>
             За каждой учебной программой закреплены треки - наборы специальных
-            дисциплин. Распределение происходит на основании предпочтений
-            обучающегося и успеваемости.
+            дисциплин, определяющих специализацию. Распределение происходит на
+            основании предпочтений обучающегося и успеваемости.
           </p>
           <p>
             Студентам всех направлений по окончании изучения базовых дисциплин
@@ -591,7 +591,7 @@
       </div>
       <script src="script/about_faculties animation.js"></script>
     </section>
-    <section class="curriculum" id="curriculum">
+    <!-- <section class="curriculum" id="curriculum">
       <div class="content">
         <h2>Учебные планы</h2>
         <div class="curriculum__blocks">
@@ -646,7 +646,82 @@
           </div>
         </div>
       </div>
+    </section> -->
+    <section class="curriculum">
+      <h2>Учебные планы</h2>
+      <div class="content curriculum__content">
+        <div class="curriculum__buttons">
+          <button class="curriculum__button" id="curriculum__button1">
+            Фундаментальный <br />учебный план
+          </button>
+          <button class="curriculum__button" id="curriculum__button2">
+            Прикладной <br />учебный план
+          </button>
+          <button class="curriculum__button" id="curriculum__button3">
+            Сетевая программа <br />с МФТИ
+          </button>
+        </div>
+        <div class="curriculum__info" id="curriculum__info1">
+          <div class="img_box">
+            <img src="img/curriculum/img1.png" alt="" />
+          </div>
+          <!-- <h3>Фундаментальный учебный план</h3> -->
+          <ul>
+            <li>План нацелен на студентов с хорошей математической базой</li>
+            <li>Изучение высшей математики начинается с 1-ого курса</li>
+            <li>
+              Студенты формируют математическое и алгоритмическое мышление,
+              используют свои навыки в программировании, математическом
+              моделировании
+            </li>
+          </ul>
+          <a href="files/fundament.pdf" class="curriculum__link" target="_blank"
+            >Учебный план</a
+          >
+        </div>
+        <div class="curriculum__info" id="curriculum__info2">
+          <div class="img_box">
+            <img src="img/curriculum/img2.png" alt="" />
+          </div>
+          <!-- <h3>Прикладной учебный план</h3> -->
+          <ul>
+            <li>План предусматривает курс введения в математический анализ</li>
+            <li>
+              Студенты получают максимум практических знаний, что помогает
+              эффективно развиваться в профессиональной сфере и успешно
+              устроиться на стажировку уже в ВУЗе
+            </li>
+            <li>
+              Изучение математических дисциплин происходит на старших курсах
+            </li>
+          </ul>
+          <a href="files/applied.pdf" class="curriculum__link" target="_blank"
+            >Учебный план</a
+          >
+        </div>
+        <div class="curriculum__info" id="curriculum__info3">
+          <div class="img_box">
+            <img src="img/curriculum/img3.png" alt="" />
+          </div>
+          <!-- <h3>Сетевая программа с МФТИ</h3> -->
+          <ul>
+            <li>
+              План составлен на основе программ факультета Прикладной математики
+              и информатики Московского Физтеха
+            </li>
+            <li>
+              Для обучения необходимо пройти дополнительные вступительные
+              испытания
+            </li>
+            <li>
+              Большинство предметов преподается преподавателями МФТИ(
+              дистанционно) при очной поддержке ПГНИУ
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
+    <script src="script/curriculum_buttons.js"></script>
     <section class="for_who">
       <div class="content">
         <h2>Кому подойдёт обучение в институте?</h2>
@@ -1036,13 +1111,14 @@
     <section class="roulette_conteiner" id="roulette_href">
       <div class="roulette_text">
         <h2>Поступайте в институт</h2>
-          <p>
-            бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
-            бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла 
-            бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла 
-            бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
-          </p> 
-          <h2 class="roulette_h2">Подать документы:</h2>
+        <p>
+          бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+          бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+          бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+          бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла
+          бла бла бла бла бла бла бла бла бла бла бла бла
+        </p>
+        <h2 class="roulette_h2">Подать документы:</h2>
       </div>
       <a class="roulette_button menu-link" href="#roulette_href">
         <p>Поступить</p>
