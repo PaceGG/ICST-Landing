@@ -77,8 +77,6 @@ if (isMobile) {
   let currentIndex = 0;
   const comments_mobal = Array.from(commentList_mobal.children);
   const maxIndex = comments_mobal.length - 1;
-  commentList_mobal.style.display = 'flex';
-  commentList_mobal.style.overflowX = 'hidden';
 
   comments_mobal.forEach((comment, index) => {
     comment.style.flexShrink = '0';

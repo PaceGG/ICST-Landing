@@ -141,6 +141,11 @@
       overflow: hidden;
       border: 55px solid rgba(66, 170, 255, 0.15);
   }
+  .comment_list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: hidden;
+  }
   }
 
 
