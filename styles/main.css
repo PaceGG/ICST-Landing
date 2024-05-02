@@ -87,6 +87,9 @@ li::marker {
   font-size: 1.05em;
 }
 
+.mobile {
+  display: none;
+}
 @media (max-width: 500px) {
   h2 {
     /* font-size: 37px; */

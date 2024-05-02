@@ -591,11 +591,14 @@
       </div>
       <script src="script/about_faculties animation.js"></script>
     </section>
-    <section class="curriculum" id="curriculum">
+    <section class="curriculum desktop" id="curriculum">
       <h2>Учебные планы</h2>
       <div class="content curriculum__content">
         <div class="curriculum__buttons">
-          <button class="curriculum__button" id="curriculum__button1">
+          <button
+            class="curriculum__button curriculum__button__active"
+            id="curriculum__button1"
+          >
             Фундаментальный <br />учебный план
           </button>
           <button class="curriculum__button" id="curriculum__button2">
@@ -605,11 +608,10 @@
             Сетевая программа <br />с МФТИ
           </button>
         </div>
-        <div class="curriculum__info" id="curriculum__info1">
+        <div class="curriculum__info curriculum__active" id="curriculum__info1">
           <div class="img_box">
             <img src="img/curriculum/img1.png" alt="" />
           </div>
-          <!-- <h3>Фундаментальный учебный план</h3> -->
           <ul>
             <li>План нацелен на студентов с хорошей математической базой</li>
             <li>Изучение высшей математики начинается с 1-ого курса</li>
@@ -627,7 +629,6 @@
           <div class="img_box">
             <img src="img/curriculum/img2.png" alt="" />
           </div>
-          <!-- <h3>Прикладной учебный план</h3> -->
           <ul>
             <li>План предусматривает курс введения в математический анализ</li>
             <li>
@@ -647,7 +648,6 @@
           <div class="img_box">
             <img src="img/curriculum/img3.png" alt="" />
           </div>
-          <!-- <h3>Сетевая программа с МФТИ</h3> -->
           <ul>
             <li>
               План составлен на основе программ факультета Прикладной математики
@@ -662,6 +662,68 @@
               дистанционно) при очной поддержке ПГНИУ
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+    <section class="curriculum mobile">
+      <h2>Учебные планы</h2>
+      <div class="curriculum__content">
+        <div class="curriculum__item">
+          <div class="curriculum__button" id="curriculum__button4">
+            Фундаментальный <br />учебный план
+          </div>
+          <div class="curriculum__info" id="curriculum__info4">
+            <ul>
+              <li>План нацелен на студентов с хорошей математической базой</li>
+              <li>Изучение высшей математики начинается с 1-ого курса</li>
+              <li>
+                Студенты формируют математическое и алгоритмическое мышление,
+                используют свои навыки в программировании, математическом
+                моделировании
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="curriculum__item">
+          <div class="curriculum__button" id="curriculum__button5">
+            Прикладной <br />учебный план
+          </div>
+          <div class="curriculum__info" id="curriculum__info5">
+            <ul>
+              <li>
+                План предусматривает курс введения в математический анализ
+              </li>
+              <li>
+                Студенты получают максимум практических знаний, что помогает
+                эффективно развиваться в профессиональной сфере и успешно
+                устроиться на стажировку уже в ВУЗе
+              </li>
+              <li>
+                Изучение математических дисциплин происходит на старших курсах
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="curriculum__item">
+          <div class="curriculum__button" id="curriculum__button6">
+            Сетевая программа <br />с МФТИ
+          </div>
+          <div class="curriculum__info" id="curriculum__info6">
+            <ul>
+              <li>
+                План составлен на основе программ факультета Прикладной
+                математики и информатики Московского Физтеха
+              </li>
+              <li>
+                Для обучения необходимо пройти дополнительные вступительные
+                испытания
+              </li>
+              <li>
+                Большинство предметов преподается преподавателями МФТИ(
+                дистанционно) при очной поддержке ПГНИУ
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

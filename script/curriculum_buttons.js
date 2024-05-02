@@ -1,6 +1,6 @@
 // Get all the c_buttons and info blocks
 const c_buttons = document.querySelectorAll(".curriculum__button");
-const infoBlocks = document.querySelectorAll(".curriculum__info");
+const c_infoBlocks = document.querySelectorAll(".curriculum__info");
 
 // Function to handle button click
 function handleButtonClick(index) {
@@ -15,7 +15,7 @@ function handleButtonClick(index) {
   });
 
   // Loop through all info blocks
-  infoBlocks.forEach((block, i) => {
+  c_infoBlocks.forEach((block, i) => {
     // If it's the selected block, add the active class, otherwise, remove it
     if (i === index) {
       block.classList.add("curriculum__active");
