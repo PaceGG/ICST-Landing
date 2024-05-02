@@ -126,4 +126,17 @@
     width: 280px;
     margin-bottom: 30px;
   }
+
+  .slider {
+    width: 200%;
+    height: 270px;
+}
+.slide {
+  height: 250px;
+  margin-left: 10px;
+}
+.slide p {
+  line-height: 1.2;
+}
+
 }

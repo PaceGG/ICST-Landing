@@ -69,7 +69,7 @@ avatar.addEventListener("click", function() {
   });
 });
 
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 
 if (isMobile) {
   const commentList_mobal = document.querySelector('.comment_list');
