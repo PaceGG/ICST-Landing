@@ -69,4 +69,75 @@ avatar.addEventListener("click", function() {
   });
 });
 
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+if (isMobile) {
+  const commentList_mobal = document.querySelector('.comment_list');
+  let startX, currentX, offsetX, direction, offsetX_prev = 0;
+  let currentIndex = 0;
+  const comments_mobal = Array.from(commentList_mobal.children);
+  const maxIndex = comments_mobal.length - 1;
+  commentList_mobal.style.display = 'flex';
+  commentList_mobal.style.overflowX = 'hidden';
+
+  comments_mobal.forEach((comment, index) => {
+    comment.style.flexShrink = '0';
+    comment.style.width = `${commentList_mobal.offsetWidth}px`;
+  });
+
+  function TouchStart(e) {
+    startX = e.touches[0].clientX;
+    offsetX = commentList_mobal.scrollLeft;
+  }
+
+  function TouchMove(e) {
+
+    currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+    commentList_mobal.scrollLeft = offsetX - diff;
+    direction = (offsetX - diff < offsetX_prev )? 1 : 0;
+    offsetX_prev = offsetX - diff;
+  }
+
+  function TouchEnd() {
+    const width = commentList_mobal.offsetWidth;
+    if (direction === 1) 
+    {
+      const targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
+      const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
+      //console.log(scrollDistance);
+      commentList_mobal.scrollBy({
+        left: scrollDistance,
+        behavior: 'smooth'
+      });
+      currentIndex = targetIndex;
+      updatePoints();
+      //console.log(targetIndex);
+      // console.log(commentList_mobal.scrollLeft);
+    }else{
+      var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
+      //console.log(targetIndex);
+      //console.log(width);
+      targetIndex = (targetIndex <= maxIndex )? targetIndex : maxIndex;
+      commentList_mobal.scrollTo({
+        left: targetIndex * width,
+        behavior: 'smooth'
+      });
+      currentIndex = targetIndex;
+      updatePoints();
+      // console.log('left');
+      // console.log(commentList_mobal.scrollLeft);
+    }
+  }
+
+  function updatePoints() {
+    const indicators = document.querySelectorAll('.comment_point');
+    indicators.forEach((indicator, index)=> {
+      indicator.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  commentList_mobal.addEventListener('touchstart', TouchStart);
+  commentList_mobal.addEventListener('touchmove', TouchMove);
+  commentList_mobal.addEventListener('touchend', TouchEnd);
+}
