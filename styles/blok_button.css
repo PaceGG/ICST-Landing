@@ -54,27 +54,15 @@
 }
 
 .image-container img {
-  /* max-width: 100%; */
-  max-height: 100%;
+  max-width: 100%;
+  /* max-height: 100%; */
   width: auto;
   height: auto;
   object-fit: cover;
+  
 }
-
-#about_facultets1{
-  height: 500px;
-}
-#about_facultets2{
-  height: 500px;
-}
-#about_facultets3{
-  height: 500px;
-}
-#about_facultets4{
-  height: 500px;
-}
-#about_facultets5{
-  height: 500px;
+.images_container{
+  align-items: center;
 }
 
 .button_conteiner {
@@ -127,6 +115,34 @@
   .button:nth-child(4) {
     grid-area: btn4;
     margin-left: 10%;
+  }
+  .text_on_img p{
+    top: 10px;
+    bottom: 10px;
+    position: relative;
+  }
+  .text_on_img {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    font-size: 24px;
+    border-radius: 100px;
+    margin: -20% 0%;
+    max-width: 1000px;
+    z-index: 10;
+    position: relative;
+    display: inline-block; 
+  }
+  .text_on_img::before {
+    content: "";
+    display: block;
+    height: 40px; /* Регулируйте эту величину для изменения высоты фона сверху */
+  }
+  
+  .text_on_img::after {
+    content: "";
+    display: block;
+    height: 40px; /* Регулируйте эту величину для изменения высоты фона снизу */
   }
 
 }
