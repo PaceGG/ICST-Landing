@@ -43,6 +43,7 @@
 .curriculum__info {
   flex-direction: column;
   width: 70%;
+  --curriculum-fz: 25px;
 }
 .curriculum ul {
   margin-top: 20px;
@@ -50,7 +51,7 @@
 }
 .curriculum li {
   position: relative;
-  font-size: 30px;
+  font-size: var(--curriculum-fz);
 }
 .curriculum li::before {
   content: "";
@@ -64,8 +65,13 @@
   top: 12px;
 }
 .curriculum__link {
-  font-size: 30px;
+  font-size: var(--curriculum-fz);
   text-align: right;
+  text-decoration: underline dotted;
+  color: var(--accent);
+  &::after {
+    content: " >";
+  }
 }
 
 /* Кнопки */
