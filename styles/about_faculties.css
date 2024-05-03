@@ -6,6 +6,7 @@
     rgba(135, 176, 255, 1) 0%,
     rgba(217, 230, 255, 1) 100%
   );
+  background-image: url(../img/about_faculties_bg.png);
 }
 .about_faculties__item {
   display: flex;

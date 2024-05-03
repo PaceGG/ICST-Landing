@@ -90,17 +90,6 @@
   border-radius: var(--default-radius);
   padding: 15px;
   box-shadow: var(--shadow);
-  &:after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 3px;
-    background: var(--accent);
-    bottom: -3px;
-    right: 0;
-    left: 0;
-    transition: all 0.5s;
-  }
   &:not(.curriculum__button__active):hover {
     color: white;
     background-color: #51bbfc;
