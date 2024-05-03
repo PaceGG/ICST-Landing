@@ -102,8 +102,8 @@ if (isMobile) {
     if (direction === 1) 
     {
       var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
-      //console.log(diff);
-      if (diff < 70){
+     // console.log(diff);
+      if (diff < 70 && diff !== 0){
         ++targetIndex;
       }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
@@ -120,7 +120,7 @@ if (isMobile) {
       var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
       //console.log(targetIndex);
       //console.log(width);
-      //console.log(diff);
+     // console.log(diff);
       if (diff > -70){
         --targetIndex;
       }
