@@ -129,7 +129,7 @@ if (isMobile) {
 
 
   const slaiderList_mobal = document.querySelector('.slider');
-  let startX, currentX, offsetX, direction, offsetX_prev = 0;
+  let startX, currentX, offsetX, direction, offsetX_prev = 0, diff = 0;
   const slaiders_mobal = Array.from(slaiderList_mobal.children);
 
   function TouchStart(e) {
@@ -137,16 +137,26 @@ if (isMobile) {
     offsetX = slaiderList_mobal.scrollLeft;
   }
 
-  function TouchMove(e) {
+  function TouchMove(e, slides) {
 
     currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
-    slaiderList_mobal.scrollLeft = offsetX - diff;
+    diff = currentX - startX;
+    //slaiderList_mobal.scrollLeft = offsetX - diff;
     direction = (offsetX - diff < offsetX_prev )? 1 : 0;
     offsetX_prev = offsetX - diff;
-    //console.log(offsetX_prev);
+    //console.log(slaiderList_mobal.scrollLeft);
+    if (direction === 1){
+      for (let i = 0; i < slides.length ; i++) 
+        {
+          slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
+        }
+    }else{
+      for (let i = 0; i < slides.length ; i++) 
+        {
+          slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
+        }
+    }
   }
-
   function TouchEnd() {
     // вправо  
     if (direction === 1) 
@@ -154,56 +164,56 @@ if (isMobile) {
       slaiderList_mobal.prepend(slaiderList_mobal.lastElementChild);
       const slides = document.querySelectorAll(".slide");
       //console.log(slidesArrPosition);
+      //console.log(diff_main);
       for (let i = 0; i < slides.length ; i++) 
       {
-        //console.log(slidesArrPosition[i] );
         const animation = slides[i].animate(
           [
-            { transform: `translateX(${slidesArrPosition[i] - slideWidth_main}px)` },
+            { transform: `translateX(${slidesArrPosition[i] - slideWidth_main + (diff)}px)` },
             { transform: `translateX(${slidesArrPosition[i]}px)`, offset: 1 } 
           ],
           {
-            duration: 500,
+            duration: 300,
             easing: 'linear'
           }
         );
         animation.onfinish = () => {
           slides[i].style.transform = `translateX(${slidesArrPosition[i]}px)`;
         };
-        //slidesArrPosition[i] = slidesArrPosition[i] - offsetX_prev;
+        //slidesArrPosition[i] = slidesArrPosition[i] + diff;
       }
     }else{// влево  
       //slaiderList_mobal.append(slaiderList_mobal.firstElementChild);
-      console.log(1);
       slaiderList_mobal.append(slaiderList_mobal.firstElementChild);
       const slides = document.querySelectorAll(".slide");
-      //console.log(slidesArrPosition);
+      //console.log(1);
+      //console.log(diff_main);
       for (let i = 0; i < slides.length ; i++) 
       {
-        //console.log(slidesArrPosition[i] );
         const animation = slides[i].animate(
           [
-            { transform: `translateX(${slidesArrPosition[i] + slideWidth_main}px)` },
+            { transform: `translateX(${slidesArrPosition[i] + slideWidth_main + diff}px)` },
             { transform: `translateX(${slidesArrPosition[i]}px)`, offset: 1 } 
           ],
           {
-            duration: 500,
+            duration: 300,
             easing: 'linear'
           }
         );
         animation.onfinish = () => {
           slides[i].style.transform = `translateX(${slidesArrPosition[i]}px)`;
         };
-        console.log(slidesArrPosition[i] + offsetX_prev);
-       // slidesArrPosition[i] = slidesArrPosition[i] + offsetX_prev;
-      }
+       // console.log(offsetX );
       
+        //slidesArrPosition[i] = slidesArrPosition[i] - diff ;
+       // console.log(slidesArrPosition[i] );
+      }
     }
   }
 
 
   slaiderList_mobal.addEventListener('touchstart', TouchStart);
-  slaiderList_mobal.addEventListener('touchmove', TouchMove);
+  slaiderList_mobal.addEventListener('touchmove', (e) => TouchMove(e, document.querySelectorAll(".slide")));
   slaiderList_mobal.addEventListener('touchend', TouchEnd);
 }
 

@@ -137,4 +137,7 @@
   .slide p {
     line-height: 1.2;
   }
+  .about__arrow_box{
+    display: none;
+  }
 }
