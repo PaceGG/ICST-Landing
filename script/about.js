@@ -154,7 +154,7 @@ if (isMobile) {
           slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
         }
     }
-    console.log(diff);
+    //console.log(diff);
   }
   function TouchEnd() { 
     // вправо  
@@ -213,8 +213,8 @@ if (isMobile) {
         const slides = document.querySelectorAll(".slide");
         //console.log(slidesArrPosition);
         //console.log(diff_main);
-        console.log(diff);
-        console.log(1);
+        //console.log(diff);
+        //console.log(1);
         for (let i = 0; i < slides.length ; i++) 
         {
           const animation = slides[i].animate(
@@ -237,8 +237,8 @@ if (isMobile) {
         const slides = document.querySelectorAll(".slide");
         //console.log(1);
         //console.log(diff_main);
-        console.log(diff);
-        console.log(2);
+        //console.log(diff);
+        //console.log(2);
         for (let i = 0; i < slides.length ; i++) 
         {
           const animation = slides[i].animate(

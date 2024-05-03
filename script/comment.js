@@ -120,7 +120,7 @@ if (isMobile) {
       var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
       //console.log(targetIndex);
       //console.log(width);
-      console.log(diff);
+      //console.log(diff);
       if (diff > -70){
         --targetIndex;
       }
