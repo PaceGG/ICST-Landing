@@ -45,30 +45,41 @@ const avatar = document.getElementById("comment_avatar2");
 const avatarImg1 = document.getElementById("avatar_img21");
 const avatarImg2 = document.getElementById("avatar_img22");
 let rotated = true;
+let isAnimating = false; 
 
-avatar.addEventListener("click", function() {
-  avatar.classList.add('comment_avatar_animation');
-  setTimeout(function() {
-    if (rotated) 
-    {
-      avatarImg1.style.display = 'none';
-      avatarImg2.style.display = 'block';
-      rotated = false;
-    } else {
-      avatarImg2.style.display = 'none';
-      avatarImg1.style.display = 'block';
-      rotated = true;
-    }
-  }, 250);
-  
-  avatar.addEventListener('animationend', function(event) 
-  {
-    if (event.target === avatar) 
-    {
-      avatar.classList.remove('comment_avatar_animation');
-    }
-  });
+avatar.addEventListener("click",function() {
+  if (!isAnimating) 
+  { 
+    isAnimating = true; 
+
+    avatar.classList.add('comment_avatar_animation');
+    setTimeout(function() {
+      if (rotated) 
+      {
+        avatarImg1.style.display = 'none';
+        avatarImg2.style.display = 'block';
+        rotated = false;
+      } else {
+        avatarImg2.style.display = 'none';
+        avatarImg1.style.display = 'block';
+        rotated = true;
+      }
+
+    }, 250);
+
+    avatar.addEventListener('animationend',function handleAnimationEnd(event) {
+      if (event.target === avatar) 
+      {
+        avatar.classList.remove('comment_avatar_animation');
+        isAnimating = false; 
+        avatar.removeEventListener('animationend',handleAnimationEnd); 
+      }
+    }, { once: true }); 
+
+  }
 });
+
+
 
 if (isMobile) {
   const commentList_mobal = document.querySelector('.comment_list');
@@ -94,7 +105,7 @@ if (isMobile) {
     commentList_mobal.scrollLeft = offsetX - diff;
     direction = (diff > 0 )? 1 : 0;
     //offsetX_prev = offsetX - diff;
-    console.log(diff);
+    //console.log(diff);
   }
 
   function TouchEnd() {
