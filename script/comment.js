@@ -93,7 +93,7 @@ if (isMobile) {
     currentX = e.touches[0].clientX;
     diff = currentX - startX;
     commentList_mobal.scrollLeft = offsetX - diff;
-    direction = (offsetX - diff < offsetX_prev )? 1 : 0;
+    direction = (diff > 0 )? 1 : 0;
     offsetX_prev = offsetX - diff;
   }
 
@@ -102,8 +102,8 @@ if (isMobile) {
     if (direction === 1) 
     {
       var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
-     // console.log(diff);
-      if (diff < 100 && diff !== 0){
+      //console.log(direction);
+      if (diff < 100 && diff !== 0 && targetIndex!==0){
         ++targetIndex;
       }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
@@ -120,7 +120,7 @@ if (isMobile) {
       var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
       //console.log(targetIndex);
       //console.log(width);
-     // console.log(diff);
+      //console.log(direction);
       if (diff > -100){
         --targetIndex;
       }
