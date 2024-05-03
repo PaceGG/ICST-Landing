@@ -73,7 +73,7 @@ avatar.addEventListener("click", function() {
 
 if (isMobile) {
   const commentList_mobal = document.querySelector('.comment_list');
-  let startX, currentX, offsetX, direction, offsetX_prev = 0;
+  let startX, currentX, offsetX, direction, offsetX_prev = 0, diff = 0;
   let currentIndex = 0;
   const comments_mobal = Array.from(commentList_mobal.children);
   const maxIndex = comments_mobal.length - 1;
@@ -91,7 +91,7 @@ if (isMobile) {
   function TouchMove(e) {
 
     currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
+    diff = currentX - startX;
     commentList_mobal.scrollLeft = offsetX - diff;
     direction = (offsetX - diff < offsetX_prev )? 1 : 0;
     offsetX_prev = offsetX - diff;
@@ -101,9 +101,13 @@ if (isMobile) {
     const width = commentList_mobal.offsetWidth;
     if (direction === 1) 
     {
-      const targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
+      var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
+      //console.log(diff);
+      if (diff < 70){
+        ++targetIndex;
+      }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
-      //console.log(scrollDistance);
+      //console.log(targetIndex);
       commentList_mobal.scrollBy({
         left: scrollDistance,
         behavior: 'smooth'
@@ -116,6 +120,11 @@ if (isMobile) {
       var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
       //console.log(targetIndex);
       //console.log(width);
+      console.log(diff);
+      if (diff > -70){
+        --targetIndex;
+      }
+     // console.log(targetIndex);
       targetIndex = (targetIndex <= maxIndex )? targetIndex : maxIndex;
       commentList_mobal.scrollTo({
         left: targetIndex * width,
@@ -126,6 +135,7 @@ if (isMobile) {
       // console.log('left');
       // console.log(commentList_mobal.scrollLeft);
     }
+    diff = 0;
   }
 
   function updatePoints() {
