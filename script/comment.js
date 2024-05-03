@@ -40,8 +40,7 @@ function updatepoints() {
 }
 
 showcomment(curIndex);
-
-
+}
 const avatar = document.getElementById("comment_avatar2");
 const avatarImg1 = document.getElementById("avatar_img21");
 const avatarImg2 = document.getElementById("avatar_img22");
@@ -70,12 +69,10 @@ avatar.addEventListener("click", function() {
     }
   });
 });
-}
-
 
 if (isMobile) {
   const commentList_mobal = document.querySelector('.comment_list');
-  let startX, currentX, offsetX, direction, offsetX_prev = 0, diff = 0;
+  let startX, currentX, offsetX, direction, targetIndex_prev = 0, diff = 0;
   let currentIndex = 0;
   const comments_mobal = Array.from(commentList_mobal.children);
   const maxIndex = comments_mobal.length - 1;
@@ -96,7 +93,8 @@ if (isMobile) {
     diff = currentX - startX;
     commentList_mobal.scrollLeft = offsetX - diff;
     direction = (diff > 0 )? 1 : 0;
-    offsetX_prev = offsetX - diff;
+    //offsetX_prev = offsetX - diff;
+    console.log(diff);
   }
 
   function TouchEnd() {
@@ -105,7 +103,7 @@ if (isMobile) {
     {
       var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
       //console.log(direction);
-      if (diff < 100 && diff !== 0 && targetIndex!==0){
+      if (diff < 100 && diff !== 0 && targetIndex_prev !== 0){
         ++targetIndex;
       }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
@@ -137,6 +135,7 @@ if (isMobile) {
       // console.log('left');
       // console.log(commentList_mobal.scrollLeft);
     }
+    targetIndex_prev = targetIndex;
     diff = 0;
   }
 
