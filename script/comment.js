@@ -1,3 +1,5 @@
+
+if (!isMobile) {
 const commentList = document.querySelector('.comment_list');
 const comments = document.querySelectorAll('.comment');
 const arrowLeft = document.querySelector('.arrow-left');
@@ -68,7 +70,7 @@ avatar.addEventListener("click", function() {
     }
   });
 });
-
+}
 
 
 if (isMobile) {
