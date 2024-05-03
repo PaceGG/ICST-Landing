@@ -5,6 +5,7 @@
   text-align: center;
   font-size: 16px;
   border-radius: 50px;
+  border-radius: var(--default-radius);
   padding: 15px;
   /* border: 3px solid var(--accent); */
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -34,7 +35,7 @@
   color: black;
   padding: 50px;
   font-size: 24px;
-  border-radius: 100px;
+  border-radius: var(--default-radius);
   margin: -20% 0%;
   max-width: 1000px;
   z-index: 10;
@@ -59,16 +60,14 @@
   width: auto;
   height: auto;
   object-fit: cover;
-  
 }
-.images_container{
+.images_container {
   align-items: center;
 }
 
 .button_conteiner {
   display: grid;
-  grid-template-areas:
-    "btn1 btn2 btn3 btn4 btn5";
+  grid-template-areas: "btn1 btn2 btn3 btn4 btn5";
   gap: 10px;
 }
 .button_container {
@@ -101,7 +100,7 @@
     grid-template-rows: auto auto;
     grid-template-areas:
       "btn1 btn2 btn3"
-      "btn4 btn5 ."; 
+      "btn4 btn5 .";
     justify-content: center;
   }
 
@@ -116,7 +115,7 @@
     grid-area: btn4;
     margin-left: 10%;
   }
-  .text_on_img p{
+  .text_on_img p {
     top: 10px;
     bottom: 10px;
     position: relative;
@@ -126,23 +125,22 @@
     color: black;
     padding: 5px;
     font-size: 24px;
-    border-radius: 100px;
+    border-radius: var(--default-radius);
     margin: -20% 0%;
     max-width: 1000px;
     z-index: 10;
     position: relative;
-    display: inline-block; 
+    display: inline-block;
   }
   .text_on_img::before {
     content: "";
     display: block;
     height: 40px; /* Регулируйте эту величину для изменения высоты фона сверху */
   }
-  
+
   .text_on_img::after {
     content: "";
     display: block;
     height: 40px; /* Регулируйте эту величину для изменения высоты фона снизу */
   }
-
 }

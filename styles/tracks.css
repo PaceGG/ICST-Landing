@@ -20,7 +20,7 @@
   text-align: center;
   font-size: 26px;
   background: #f6f8ff;
-  border-radius: 20px;
+  border-radius: var(--default-radius);
   padding: 20px;
   box-shadow: var(--shadow);
 }

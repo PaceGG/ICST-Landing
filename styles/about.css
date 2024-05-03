@@ -81,7 +81,7 @@
   justify-content: center;
   align-items: center;
 
-  border-radius: 20px;
+  border-radius: var(--default-radius);
   margin-top: 15px;
 
   /* transform: translateY(-432px);  */
@@ -130,13 +130,12 @@
   .slider {
     width: 200%;
     height: 270px;
-}
-.slide {
-  height: 250px;
-  margin-left: 10px;
-}
-.slide p {
-  line-height: 1.2;
-}
-
+  }
+  .slide {
+    height: 250px;
+    margin-left: 10px;
+  }
+  .slide p {
+    line-height: 1.2;
+  }
 }
