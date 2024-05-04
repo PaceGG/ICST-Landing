@@ -325,7 +325,7 @@ transform: translateY(-200px); */
       transform: translateX(5%) !important; 
    }
    .roulette_button {
-      right: 100px;
+      right: 60px;
    }
 
    @keyframes roulette_animation_button {
