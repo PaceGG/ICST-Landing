@@ -29,7 +29,6 @@ rouletteButton.addEventListener('click', () => {
 });
 
 
-
 const roulButton = document.querySelector('.roulette_button');
 const rouletteH2 = document.querySelector('.roulette_h2');
 const observer = new IntersectionObserver((entries)=> {
@@ -41,7 +40,11 @@ const observer = new IntersectionObserver((entries)=> {
       roulButton.classList.add('roulette_animation_button');
 
     } else {
-      roulButton.style.bottom = '80px';
+      if (!isMobile){
+        roulButton.style.bottom = '80px';
+      }else{
+        roulButton.style.bottom = '100px';
+      }
       roulButton.href = '#roulette_href';
       roulButton.classList.remove('roulette_animation_button');
     }
