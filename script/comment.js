@@ -110,11 +110,13 @@ if (isMobile) {
 
   function TouchEnd() {
     const width = commentList_mobal.offsetWidth;
-    if (direction === 1) 
+    if(diff === 0){
+
+    }else if (direction === 1) 
     {
       var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
-      //console.log(direction);
-      if (diff < 100 && diff !== 0 && targetIndex_prev !== 0){
+      //console.log(diff);
+      if (diff < 100 && targetIndex_prev !== 0){
         ++targetIndex;
       }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
