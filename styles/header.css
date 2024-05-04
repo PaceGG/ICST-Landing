@@ -79,6 +79,14 @@
   .bg_head {
     background: none;
   }
+  .head-content {
+    background-image: url(../img/mobile_head_bg_top.svg),
+      url(../img/mobile_head_bg_bottom.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top, bottom;
+    background-position-y: 20px, 100%;
+  }
   nav {
     display: none;
   }
