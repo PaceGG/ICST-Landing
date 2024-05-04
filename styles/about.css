@@ -127,9 +127,9 @@
   }
 
   .slider {
-    width: 200%;
+    width: 160%;
     height: 270px;
-  }
+}
   .slide {
     height: 250px;
     margin-left: 10px;
@@ -140,4 +140,8 @@
   .about__arrow_box{
     display: none;
   }
+  .slider_box {
+    display:block;
+    width: 45%;
+}
 }

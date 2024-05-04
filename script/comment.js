@@ -1,3 +1,5 @@
+
+if (!isMobile) {
 const commentList = document.querySelector('.comment_list');
 const comments = document.querySelectorAll('.comment');
 const arrowLeft = document.querySelector('.arrow-left');
@@ -38,42 +40,50 @@ function updatepoints() {
 }
 
 showcomment(curIndex);
-
-
+}
 const avatar = document.getElementById("comment_avatar2");
 const avatarImg1 = document.getElementById("avatar_img21");
 const avatarImg2 = document.getElementById("avatar_img22");
 let rotated = true;
+let isAnimating = false; 
 
-avatar.addEventListener("click", function() {
-  avatar.classList.add('comment_avatar_animation');
-  setTimeout(function() {
-    if (rotated) 
-    {
-      avatarImg1.style.display = 'none';
-      avatarImg2.style.display = 'block';
-      rotated = false;
-    } else {
-      avatarImg2.style.display = 'none';
-      avatarImg1.style.display = 'block';
-      rotated = true;
-    }
-  }, 250);
-  
-  avatar.addEventListener('animationend', function(event) 
-  {
-    if (event.target === avatar) 
-    {
-      avatar.classList.remove('comment_avatar_animation');
-    }
-  });
+avatar.addEventListener("click",function() {
+  if (!isAnimating) 
+  { 
+    isAnimating = true; 
+
+    avatar.classList.add('comment_avatar_animation');
+    setTimeout(function() {
+      if (rotated) 
+      {
+        avatarImg1.style.display = 'none';
+        avatarImg2.style.display = 'block';
+        rotated = false;
+      } else {
+        avatarImg2.style.display = 'none';
+        avatarImg1.style.display = 'block';
+        rotated = true;
+      }
+
+    }, 250);
+
+    avatar.addEventListener('animationend',function handleAnimationEnd(event) {
+      if (event.target === avatar) 
+      {
+        avatar.classList.remove('comment_avatar_animation');
+        isAnimating = false; 
+        avatar.removeEventListener('animationend',handleAnimationEnd); 
+      }
+    }, { once: true }); 
+
+  }
 });
 
 
 
 if (isMobile) {
   const commentList_mobal = document.querySelector('.comment_list');
-  let startX, currentX, offsetX, direction, offsetX_prev = 0;
+  let startX, currentX, offsetX, direction, targetIndex_prev = 0, diff = 0;
   let currentIndex = 0;
   const comments_mobal = Array.from(commentList_mobal.children);
   const maxIndex = comments_mobal.length - 1;
@@ -91,19 +101,26 @@ if (isMobile) {
   function TouchMove(e) {
 
     currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
+    diff = currentX - startX;
     commentList_mobal.scrollLeft = offsetX - diff;
-    direction = (offsetX - diff < offsetX_prev )? 1 : 0;
-    offsetX_prev = offsetX - diff;
+    direction = (diff > 0 )? 1 : 0;
+    //offsetX_prev = offsetX - diff;
+    //console.log(diff);
   }
 
   function TouchEnd() {
     const width = commentList_mobal.offsetWidth;
-    if (direction === 1) 
+    if(diff === 0){
+
+    }else if (direction === 1) 
     {
-      const targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
+      var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
+      //console.log(diff);
+      if (diff < 100 && targetIndex_prev !== 0){
+        ++targetIndex;
+      }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
-      //console.log(scrollDistance);
+      //console.log(targetIndex);
       commentList_mobal.scrollBy({
         left: scrollDistance,
         behavior: 'smooth'
@@ -116,6 +133,11 @@ if (isMobile) {
       var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
       //console.log(targetIndex);
       //console.log(width);
+      //console.log(direction);
+      if (diff > -100){
+        --targetIndex;
+      }
+     // console.log(targetIndex);
       targetIndex = (targetIndex <= maxIndex )? targetIndex : maxIndex;
       commentList_mobal.scrollTo({
         left: targetIndex * width,
@@ -126,6 +148,8 @@ if (isMobile) {
       // console.log('left');
       // console.log(commentList_mobal.scrollLeft);
     }
+    targetIndex_prev = targetIndex;
+    diff = 0;
   }
 
   function updatePoints() {
