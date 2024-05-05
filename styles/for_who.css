@@ -1,23 +1,40 @@
 .for_who {
-  /* padding: 80px 0; */
-  overflow: hidden;
+  padding: 0;
+  background-image: url(../img/for_who_bg_bottom.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
-.for_who__boxes {
+.for_who__title {
+  padding: 0 32px;
+  background-color: #9cbdff;
+}
+.for_who h2 {
+  margin: 0;
+  padding-top: 70px;
+  height: 326px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-image: url(../img/for_who_bg_title.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 27px;
+}
+.for_who__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: -130px;
+  gap: 15px;
 }
 .for_who__item {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 348px;
   align-items: center;
   text-align: center;
   font-size: 20px;
-  padding-top: 35px;
-  background-color: white;
-  border-radius: var(--default-radius);
-  box-shadow: 0px 5px 10px #0000002e;
 }
 .for_who__item p {
   padding: 20px 0;
@@ -27,12 +44,9 @@
 }
 .for_who__img img {
   width: 100%;
+  border-radius: 50%;
   object-fit: cover;
   justify-items: start;
-}
-
-.for_who__img.special_picture {
-  padding-bottom: 21.21px;
 }
 
 .for_who__item_left_animation {
