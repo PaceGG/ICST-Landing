@@ -36,11 +36,14 @@
     right: 20px; 
     transition: all 1s ease-in-out;
 }
-.roulette_button p{ 
-   left: 10%;
-   bottom: 40%;
-   position: absolute;
+.roulette_button p {
+   position: relative;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
+
 
 
   .roulette_arr{
@@ -67,35 +70,85 @@
    font-size: 24px;
    color: #fff;
 }
+.roulette_button_act {
+   display: flex;
+   justify-content: space-between; 
+   width: 100%;
+   align-items: center; 
+}
+ .roulette_button_act_anim {
+   animation-name: expand_padding;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+ }
+ @keyframes expand_padding {
+   0% {
+     padding-left: 0%; 
+     padding-right: 0%;
+   }
+   100% {
+     padding-left: 20%; 
+     padding-right: 20%;
+   }
+ }
 .roulette_h2{
-   transform: translateX(45%) !important; 
    color: #fff;
    margin: 8% 0 !important;
+   margin-left: auto;
 }
 
 .roulette_conteiner{
    background-color: #000;
 }
-
+#roulette_button_text2{
+   opacity: 0;
+}
 .roulette_animation_button {
    animation-name: roulette_animation_button;
    animation-duration: 1s;
    animation-fill-mode: forwards;
+   position: relative; 
+   right: 0;
  }
  @keyframes roulette_animation_button {
+   0% {
+     transform: rotate(0deg);
+     width: 110px;
+     height: 110px;
+   }
+ 
+   100% {
+     transform:rotate(-360deg);
+     width: 200px;
+     height: 200px;
+   }
+ }
+ .roulette_animation_button_text1 {
+   animation-name: roulette_animation_button_text1;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+ }
+ .roulette_animation_button_text2 {
+   animation-name: roulette_animation_button_text2;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+ }
+ @keyframes roulette_animation_button_text1 {
    from {
-      position: absolute;
-      transform: translate(0px, -200px) rotate(0deg);
-      width: 110px;
-      height: 110px;
-      font-size: 18px;
+      opacity: 1;
    }
    to {
-      position: absolute;
-      transform: translate(-300px, -240px) rotate(-360deg);
-      width: 200px;
-      height: 200px;
-      font-size: 30px;
+      opacity: 0;
+   }
+ }
+ @keyframes roulette_animation_button_text2 {
+   from {
+      transform: translate(-50%, -100%);
+      opacity: 0;
+   }
+   to {
+      transform: translate(-50%, -100%);
+      opacity: 1;
    }
  }
     /* bottom: 80px; убрать*/
@@ -318,31 +371,37 @@ transform: translateY(-200px); */
       top: 50px;
    }
    .roulette_row p{
-      margin: 25px 10px;
+      margin: 40px 10px;
    }
 
    .roulette_h2{
-      transform: translateX(5%) !important; 
+      transform: translateX(0%) !important; 
    }
    .roulette_button {
       right: 60px;
    }
-
-   @keyframes roulette_animation_button {
-      from {
-         position: absolute;
-         transform: translate(85%, -100px) rotate(0deg);
-         width: 90px;
-         height: 90px;
-         font-size: 18px;
-      }
-      to {
-         position: absolute;
-         transform: translate(85%, -100px) rotate(-360deg);
-         width: 110px;
-         height: 110px;
-         font-size: 30px;
-      }
+   .roulette_button {
+      width: 100px;
+      height: 100px;
+      right: 25%;
+      transition: all 0s ease-in-out;
+   }
+   .roulette_animation_button {
+      animation-name: roulette_animation_button;
+      animation-duration: 0s;
+      animation-fill-mode: forwards;
+      position: relative; 
+      right: 0;
+    }
+    .roulette_animation_button_text1 {
+      animation-name: roulette_animation_button_text1;
+      animation-duration: 0s;
+      animation-fill-mode: forwards;
+    }
+    .roulette_animation_button_text2 {
+      animation-name: roulette_animation_button_text2;
+      animation-duration: 0s;
+      animation-fill-mode: forwards;
     }
     .roulette_text p {
       text-align: left;
@@ -351,4 +410,18 @@ transform: translateY(-200px); */
       font-size: 18px;
       color: #fff;
   }
+  .roulette_button_act {
+   display: flex;
+   flex-direction: column; 
+   width: 100%;
+   align-items: center; 
+}
+
+}
+
+@media (max-width: 300px) {
+   .roulette_row p{
+      margin: 25px 10px;
+   }
+
 }

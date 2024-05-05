@@ -271,98 +271,33 @@ if (isMobile) {
 
 
 
-
-
-
-
-// if (isMobile) {
-//   const slides = document.querySelectorAll(".slide");
-//   const slideWidth = slides[0].offsetWidth;
-//   const marginValue = parseInt(window.getComputedStyle(slides[0]).marginLeft);
-//   var slideWidth_main = slideWidth + marginValue
-//   const slidesArrPosition = [];
-//   if (slides.length % 2 === 0)
-//   {
-//     var slidesWidth_main = -(slideWidth_main * (slides.length - 2)) / 2;
-//   }else{
-//     var slidesWidth_main = -(slideWidth_main * (slides.length - 1)) / 2;
-//   }
-//   for (let i = 0; i < slides.length; i++) 
-//   {
-//     slides[i].style.transform = `translateX(${slidesWidth_main}px)`;
-//     slidesArrPosition.push(slidesWidth_main);
-//     slidesWidth_main = slidesWidth_main + slideWidth_main;
-//     //console.log(1);
-//   }
-
-
-// document.addEventListener("DOMContentLoaded", function() 
-// {
-// const arrowUp = document.getElementById("arrow_up");
-// const arrowDown = document.getElementById("arrow_down");
-
-
-
-// arrowUp.addEventListener("click", function() {
-//   sliderPosition(0);
-// });
-
-// arrowDown.addEventListener("click",function() {
-//   sliderPosition(1);
-// });
-
-// function sliderPosition(direction) {
-//   const slider = document.querySelector(".slider");
-//   if(direction === 0)
-//   {
-//     // нижний вверх
-//     slider.prepend(slider.lastElementChild);
-//     const slides = document.querySelectorAll(".slide");
-//     //console.log(slidesArrPosition);
-//     for (let i = 0; i < slides.length ; i++) 
-//     {
-//       //console.log(slidesArrPosition[i] );
-//       const animation = slides[i].animate(
-//         [
-//           { transform: `translateX(${slidesArrPosition[i] - slideWidth_main}px)` },
-//           { transform: `translateX(${slidesArrPosition[i]}px)`, offset: 1 } 
-//         ],
-//         {
-//           duration: 500,
-//           easing: 'linear'
-//         }
-//       );
-//       animation.onfinish = () => {
-//         slides[i].style.transform = `translateX(${slidesArrPosition[i]}px)`;
-//       };
-//     }
-//   }else if (direction === 1)
-//   {
-//     // верхний вниз 
-//     slider.append(slider.firstElementChild);
-
-
-//     const slides = document.querySelectorAll(".slide");
-//     //console.log(slidesArrPosition);
-//     for (let i = 0; i < slides.length ; i++) 
-//     {
-//       //console.log(slidesArrPosition[i] );
-//       const animation = slides[i].animate(
-//         [
-//           { transform: `translateX(${slidesArrPosition[i] + slideWidth_main}px)` },
-//           { transform: `translateX(${slidesArrPosition[i]}px)`, offset: 1 } 
-//         ],
-//         {
-//           duration: 500,
-//           easing: 'linear'
-//         }
-//       );
-//       animation.onfinish = () => {
-//         slides[i].style.transform = `translateX(${slidesArrPosition[i]}px)`;
-//       };
-//     }
-//   }
-// }
-
-// });
-// }
+const aboutImages = document.querySelectorAll('.about__img img');
+let currIndex = 0;
+function show_img(){
+  const currentImage = aboutImages[currIndex];
+  let nextIndex = currIndex + 1;
+  if (nextIndex >= aboutImages.length)
+  {
+    nextIndex = 0; 
+  }
+  const nextImage = aboutImages[nextIndex];
+  currentImage.animate([
+    { opacity: 1, transform:'translateX(0)'},
+    { opacity: 0, transform: 'translateX(-10%)' }
+  ], {
+    duration:500,
+    fill:'forwards'
+  }).onfinish = function() {
+    currentImage.style.display = 'none'; 
+  };
+  nextImage.style.display ='block';
+  nextImage.animate([
+    { opacity: 0, transform: 'translateX(10%)'},
+    {opacity: 1, transform: 'translateX(0)' }
+  ], {
+    duration:500,
+    fill: 'forwards'
+  });
+  currIndex = nextIndex;
+}
+setInterval(show_img, 5000);
