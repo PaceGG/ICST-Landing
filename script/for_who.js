@@ -12,5 +12,5 @@ const observer_for_who = new IntersectionObserver(entries => {
     rootMargin: '-200px' 
 });
 
-const elements_for_who = document.querySelector('.for_who__boxes');
+const elements_for_who = document.querySelector('.for_who__content');
 observer_for_who.observe(elements_for_who);
