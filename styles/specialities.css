@@ -1,20 +1,58 @@
 .specialities {
   /* padding: 150px 0; */
 }
-.specialities__box {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-row-gap: 80px;
-  justify-content: space-evenly;
+.specialities__content {
+  display: flex;
+  justify-content: center;
+  height: 260px;
+  gap: 20px;
 }
 .specialities__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 120px;
+  gap: 25px;
+}
+.specialities__item:nth-child(even) {
+  align-self: flex-end;
 }
 .specialities__icon {
   padding-bottom: 7px;
+  --specialities__icon__size: 100px;
+  width: var(--specialities__icon__size);
+  height: var(--specialities__icon__size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+.specialities__item:nth-child(1) {
+  .specialities__icon {
+    background-color: #cc0256;
+  }
+}
+.specialities__item:nth-child(2) {
+  .specialities__icon {
+    background-color: var(--accent);
+  }
+}
+.specialities__item:nth-child(3) {
+  .specialities__icon {
+    background-color: #2e5bae;
+  }
+}
+.specialities__item:nth-child(4) {
+  .specialities__icon {
+    background-color: var(--accent);
+  }
+}
+.specialities__item:nth-child(5) {
+  .specialities__icon {
+    background-color: #cc0256;
+  }
 }
 .specialities__icon img {
   height: 70px;
@@ -25,7 +63,7 @@
     grid-template-columns: repeat(2, 100px);
     grid-row-gap: 20px;
   }
-  .specialities{
+  .specialities {
     margin-top: 40%;
   }
 }
