@@ -1,5 +1,12 @@
 
 if (!isMobile) {
+document.addEventListener('DOMContentLoaded', function() {
+    var showMoreButtons = document.querySelectorAll('.show-more-button');
+    showMoreButtons.forEach(function(button){
+        button.remove();
+    });
+});
+
 const commentList = document.querySelector('.comment_list');
 const comments = document.querySelectorAll('.comment');
 const arrowLeft = document.querySelector('.arrow-left');
@@ -84,7 +91,6 @@ avatar.addEventListener("click",function() {
 if (isMobile) {
   document.addEventListener('DOMContentLoaded', function() {
     var showMoreButtons = document.querySelectorAll('.show-more-button');
-    
     showMoreButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             var commentText = this.previousElementSibling;
@@ -94,9 +100,15 @@ if (isMobile) {
             } else {
                 this.textContent = 'Показать больше';
             }
+            showMoreButtons.forEach(function(btn) {
+                var txt = btn.previousElementSibling;
+                txt.classList.toggle('expanded', commentText.classList.contains('expanded'));
+                btn.textContent = commentText.classList.contains('expanded') ? 'Скрыть' : 'Показать больше';
+            });
         });
     });
-  });
+});
+
   
   const commentList_mobal = document.querySelector('.comment_list');
   let startX, currentX, offsetX, direction, targetIndex_prev = 0, diff = 0;
