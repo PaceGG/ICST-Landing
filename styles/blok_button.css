@@ -16,7 +16,7 @@
   white-space: nowrap;
   &:not(.entering__button__active):hover {
     color: white;
-    background-color: #51bbfc;
+    background-color: var(--accent);
   }
 }
 .entering__item {
@@ -41,7 +41,7 @@
 
 .entering__button__active {
   color: white;
-  background-color: var(--accent);
+  background-color: #2e5bae;
   box-shadow: none;
   transition: 0.5s;
 }

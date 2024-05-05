@@ -92,12 +92,12 @@
   box-shadow: var(--shadow);
   &:not(.curriculum__button__active):hover {
     color: white;
-    background-color: #51bbfc;
+    background-color: var(--accent);
   }
 }
 .curriculum__button__active {
   color: white;
-  background-color: var(--accent);
+  background-color: #2e5bae;
   box-shadow: none;
   transition: 0.5s;
 }
