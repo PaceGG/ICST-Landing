@@ -144,4 +144,14 @@
   .comment_point:not(.active):hover {
     background-color: #ccc;
   }
+  .comment_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 140px; 
+    transition: max-height 0.3s ease;
+}
+
+.comment_text.expanded {
+    max-height: none;
+}
 }

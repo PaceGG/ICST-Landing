@@ -82,6 +82,22 @@ avatar.addEventListener("click",function() {
 
 
 if (isMobile) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var showMoreButtons = document.querySelectorAll('.show-more-button');
+    
+    showMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var commentText = this.previousElementSibling;
+            commentText.classList.toggle('expanded');
+            if (commentText.classList.contains('expanded')) {
+                this.textContent = 'Скрыть';
+            } else {
+                this.textContent = 'Показать больше';
+            }
+        });
+    });
+  });
+  
   const commentList_mobal = document.querySelector('.comment_list');
   let startX, currentX, offsetX, direction, targetIndex_prev = 0, diff = 0;
   let currentIndex = 0;
