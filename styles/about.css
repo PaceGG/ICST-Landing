@@ -1,6 +1,6 @@
 .about {
   padding-top: 120px;
-  margin-left: -100px;
+  /* margin-left: -100px; */
 }
 .about__content {
   display: flex;
@@ -81,6 +81,23 @@
   margin: 10px 10px;
   font-weight: 600;
   line-height: 30px;
+}
+
+@media (max-width: 1520px) {
+  .head-text {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+  .about {
+    padding-top: 0;
+  }
+  .about__content {
+    justify-content: space-evenly;
+  }
+  .about__img {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 @media (max-width: 500px) {
