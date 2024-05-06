@@ -116,10 +116,7 @@
       bottom: -40px;
     }
   }
-  .slider_box {
-    display: block;
-     width: 90%;
-  }
+
   .about h2 {
     font-size: 28px;
   }
@@ -133,7 +130,10 @@
     width: 280px;
     margin-bottom: 30px;
   }
-
+  .slider_box {
+    display: block;
+     width: 90%;
+  }
   .slider {
     width: 99%;
     height: 270px;
