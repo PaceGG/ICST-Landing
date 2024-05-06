@@ -117,7 +117,8 @@
     }
   }
   .slider_box {
-    /* width: 90%; */
+    display: block;
+     width: 90%;
   }
   .about h2 {
     font-size: 28px;
@@ -134,7 +135,7 @@
   }
 
   .slider {
-    width: 160%;
+    width: 100%;
     height: 270px;
   }
   .slide {
@@ -147,8 +148,5 @@
   .about__arrow_box {
     display: none;
   }
-  .slider_box {
-    display: block;
-    width: 45%;
-  }
+
 }

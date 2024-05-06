@@ -38,3 +38,9 @@
   .show {
     bottom: 0px !important; 
   }
+
+  @media (max-width: 500px) {
+    #message{
+      padding: 5px;
+    }
+  }

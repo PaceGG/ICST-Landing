@@ -18,3 +18,8 @@ window.addEventListener("scroll", function() {
     modal.classList.add("show");
   }
 });
+
+if (isMobile){
+  document.getElementById('message').innerHTML = 'Если у вас остались вопросы, <br> то пишите нам!';
+
+}
