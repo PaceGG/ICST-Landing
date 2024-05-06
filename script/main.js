@@ -55,11 +55,23 @@ const itemsToObserve2 = [
 
 ];
 
+if (isMobile){
+    itemsToObserve2.forEach(item => {
+        item.classList.remove("hidden_left_right");
+        item.classList.add("hidden");
+    });
+}
+
 const observer2 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show_left_right');
-            observer2.unobserve(entry.target);
+            if (!isMobile){
+                entry.target.classList.add('show_left_right');
+                observer2.unobserve(entry.target);
+            }else{
+                entry.target.classList.add('show');
+                observer2.unobserve(entry.target);
+            }
         }
     });
 });

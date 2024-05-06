@@ -383,7 +383,7 @@ transform: translateY(-200px); */
    .roulette_button {
       width: 100px;
       height: 100px;
-      right: 25%;
+      right: 3%;
       transition: all 0s ease-in-out;
    }
    .roulette_animation_button {
