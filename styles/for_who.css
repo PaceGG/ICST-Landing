@@ -25,7 +25,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: -130px;
+  margin-top: 20px;
   gap: 15px;
   overflow: hidden;
 }
@@ -121,5 +121,6 @@
   }
   #for_who__item_center {
     opacity: 1;
+    transform: translateY(0%);
   }
 }

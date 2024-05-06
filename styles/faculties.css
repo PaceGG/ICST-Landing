@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
 }
 .faculties-content {
-  max-width: 800px;
+  max-width: 900px;
 }
 .faculties__title {
   color: white;
@@ -28,12 +28,14 @@
 }
 .facultie__name {
   font-size: 21px;
+  max-width: 50%;
 }
 .facultie__info {
   display: flex;
   min-width: 320px;
   justify-content: space-between;
   align-items: center;
+  width: 50%;
 }
 .facultie__info__item__pts {
   font-size: 20px;
@@ -48,7 +50,7 @@
   font-weight: 500;
 }
 .facultie__info__item {
-  width: 100px;
+  width: 130px;
   text-align: center;
 }
 
