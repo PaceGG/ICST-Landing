@@ -3,7 +3,8 @@
   /* background-size: cover; */
   /* padding-top: 50px;
   padding-bottom: 80px; */
-  background-image: url("../img/circle_bg.png");
+  /* background-image: url("../img/circle_bg.png"); */
+  background-color: #fff;
   background-size: 90px;
   background-attachment: fixed;
 }
