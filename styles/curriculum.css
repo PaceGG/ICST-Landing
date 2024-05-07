@@ -10,7 +10,7 @@
 }
 .curriculum__content {
   background-color: white;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   display: flex;
   justify-content: space-between;
   padding: 20px;
