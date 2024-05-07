@@ -36,7 +36,6 @@
     right: 20px; 
     transition: all 1s ease-in-out;
     margin-left: auto;
-    z-index: 200;
 }
 .roulette_button p {
    position: relative;
@@ -46,12 +45,18 @@
    transform: translate(-50%, -50%);
 }
 
-
+.roulette_items{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
   .roulette_arr{
     background-color: #fff;
   }
-
+  .roulette_text{
+   width: 125%;
+  }
   .roulette_arr p{
     margin: 15px;
   }
@@ -63,7 +68,6 @@
 
 .roulette_text h2{
    text-align: left; 
-   max-width: 75%; 
    margin: 0 30px; 
    color: #fff;
 }
@@ -71,7 +75,6 @@
    text-align: left; 
    max-width: 60%; 
    margin: 60px 30px;
-   font-size: 24px;
    color: #fff;
 }
 .roulette_button_act {
@@ -79,12 +82,12 @@
    justify-content: space-between; 
    width: 100%;
    align-items: center; 
-   height: 275px;
+   height: 210px;
 }
 
 .roulette_h2{
    color: #fff;
-   margin: 8% 0 !important;
+   margin-top: 5% !important;
    margin-left: auto;
 }
 
@@ -370,51 +373,28 @@ transform: translateY(-200px); */
    .roulette_h2{
       transform: translateX(0%) !important; 
    }
+   .big_h2{
+      font-size: 50px;
+     }
    .roulette_button {
-      right: 60px;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      right: 0px;
+      margin-left: 0;
+      z-index: 200;
    }
-   .roulette_button {
-      width: 100px;
-      height: 100px;
-      right: 3%;
-      transition: all 0s ease-in-out;
+   #roulette_button_text1{
+      display: none;
    }
-   @keyframes roulette_animation_button {
-      0% {
-        transform: rotate(0deg);
-        width: 110px;
-        height: 110px;
-        right: 0%; 
-      }
-    
-      100% {
-        transform: rotate(-360deg);
-        width: 200px;
-        height: 200px;
-        right: 30%;
-      }
-    }
-   .roulette_animation_button {
-      animation-name: roulette_animation_button;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      position: relative; 
-    }
-    .roulette_animation_button_text1 {
-      animation-name: roulette_animation_button_text1;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-    }
-    .roulette_animation_button_text2 {
-      animation-name: roulette_animation_button_text2;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-    }
+   #roulette_button_text2{
+      display: block;
+      opacity: 1;
+   }
     .roulette_text p {
       text-align: left;
       max-width: 100%;
       margin: 60px 30px;
-      font-size: 18px;
       color: #fff;
   }
   .roulette_button_act {
@@ -430,5 +410,14 @@ transform: translateY(-200px); */
    .roulette_row p{
       margin: 25px 10px;
    }
+   .roulette_items{
+      display: flex;
+      flex-direction: column; 
+     justify-content: space-between;
+     align-items: center;
+   }
+   .roulette_text {
+      width: 110%;
+  }
 
 }

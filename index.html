@@ -97,7 +97,38 @@
                 <a href="#comments" class="menu-link">Отзывы</a>
               </div>
             </div>
+            <button href="#roulette_href" class="go_iknt menu-link"> <p>Поступить</p> </button> 
+            <div class="box_menu" onclick="menu_active()"> 
+              <div class="menubar menubar1"></div> 
+              <div class="menubar menubar2"></div> 
+              <div class="menubar menubar3"></div> 
+            </div> 
           </div>
+          <!-- для мобилы начало -->
+          <div class="nav-bar-mobile">
+            <div class="nav-item">
+              <a href="#about" class="menu-link">Об институте</a>
+            </div>
+            <div class="nav-item">
+              <a href="#faculties" class="menu-link">Направления</a>
+            </div>
+            <div class="nav-item">
+              <a href="#advantages" class="menu-link">Преимущества</a>
+            </div>
+            <div class="nav-item">
+              <a href="#tracks" class="menu-link">Треки</a>
+            </div>
+            <div class="nav-item">
+              <a href="#curriculum" class="menu-link">Учебные планы</a>
+            </div>
+            <div class="nav-item">
+              <a href="#about_entering" class="menu-link">Про поступление</a>
+            </div>
+            <div class="nav-item">
+              <a href="#comments" class="menu-link">Отзывы</a>
+            </div>
+          </div>
+          <!-- для мобилы конец -->
         </nav>
         <div class="head">
           <div class="head-content">
@@ -115,6 +146,7 @@
           </div>
         </div>
       </header>
+      <div class="overlay"></div>
       <script src="script/menu.js"></script>
       <section class="about" id="about">
         <h2 class="about__h2">Об институте</h2>
@@ -763,7 +795,7 @@
       </div>
       <script src="script/for_who.js"></script>
     </section>
-    <section class="about_entering">
+    <section class="about_entering" id="about_entering">
       <h2>Про поступление</h2>
       <div class="content entering__content">
         <div class="entering__buttons">
@@ -1186,18 +1218,21 @@
       <script src="script/comment.js"></script>
     </section>
     <section class="roulette_conteiner" id="roulette_href">
-      <div class="roulette_text">
-        <h2 class="big_h2">Поступайте <br> в ИКНТ!</h2>
-        <p>
-         Вдохновляющая фраза
-        </p>
+      <div class="roulette_items">
+        <div class="roulette_text">
+          <h2 class="big_h2">Поступайте в ИКНТ!</h2>
+          <p>
+          Вдохновляющая фраза
+          </p>
+        </div>
+        <div class="roulette_button_act" id="roulette_flag_button">
+          <a class="roulette_button menu-link" href="#roulette_href">
+            <p id="roulette_button_text1" >Поступить</p>
+            <p id="roulette_button_text2" >Подать<br> документы</p> 
+          </a>
+        </div> 
       </div>
-      <div class="roulette_button_act" id="roulette_flag_button">
-        <a class="roulette_button menu-link" href="#roulette_href">
-          <p id="roulette_button_text1" >Поступить</p>
-          <p id="roulette_button_text2" >Подать<br> документы</p> 
-        </a>
-      </div> 
+
       <h2 class="roulette_h2">Поступив в институт вы:</h2>
       <div class="roulette">
         <div class="container_cat">

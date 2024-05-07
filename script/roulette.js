@@ -28,34 +28,36 @@ rouletteButton.addEventListener('click', () => {
 
 });
 
+if (!isMobile){
+  const roulButton = document.querySelector('.roulette_button');
+  const rouletteH2 = document.querySelector('#roulette_flag_button');
+  const button_text1 = document.getElementById('roulette_button_text1');
+  const button_text2 = document.getElementById('roulette_button_text2');
+  const observer = new IntersectionObserver((entries)=> {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting || (entry.boundingClientRect.top < 0 && entry.boundingClientRect.bottom > 0)) 
+      {
+        roulButton.style.bottom = '';
+        roulButton.href = ''; // новая ссылка
+        roulButton.classList.add('roulette_animation_button');
+        button_text1.classList.add('roulette_animation_button_text1');
+        button_text2.classList.add('roulette_animation_button_text2');
 
-const roulButton = document.querySelector('.roulette_button');
-const rouletteH2 = document.querySelector('#roulette_flag_button');
-const button_text1 = document.getElementById('roulette_button_text1');
-const button_text2 = document.getElementById('roulette_button_text2');
-const observer = new IntersectionObserver((entries)=> {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting || (entry.boundingClientRect.top < 0 && entry.boundingClientRect.bottom > 0)) 
-    {
-      roulButton.style.bottom = '';
-      roulButton.href = ''; // новая ссылка
-      roulButton.classList.add('roulette_animation_button');
-      button_text1.classList.add('roulette_animation_button_text1');
-      button_text2.classList.add('roulette_animation_button_text2');
-
-    } else if(entry.boundingClientRect.top >= 0){
-      if (!isMobile){
+      } else if(entry.boundingClientRect.top >= 0){
         roulButton.style.bottom = '80px';
-      }else{
-        roulButton.style.bottom = '10px';
+        button_text1.classList.remove('roulette_animation_button_text1');
+        button_text2.classList.remove('roulette_animation_button_text2');
+        button_text2.style.opacity = 0;
+        button_text1.style.opacity = 1;
+        roulButton.href = '#roulette_href';
+        roulButton.classList.remove('roulette_animation_button');
       }
-      button_text1.classList.remove('roulette_animation_button_text1');
-      button_text2.classList.remove('roulette_animation_button_text2');
-      button_text2.style.opacity = 0;
-      button_text1.style.opacity = 1;
-      roulButton.href = '#roulette_href';
-      roulButton.classList.remove('roulette_animation_button');
-    }
+    });
   });
-});
-observer.observe(rouletteH2);
+  observer.observe(rouletteH2);
+}
+
+if (isMobile){
+  const roulButton = document.querySelector('.roulette_button');
+  roulButton.href = ''; // новая ссылка
+}
