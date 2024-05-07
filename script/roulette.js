@@ -47,7 +47,7 @@ const observer = new IntersectionObserver((entries)=> {
       if (!isMobile){
         roulButton.style.bottom = '80px';
       }else{
-        roulButton.style.bottom = '50px';
+        roulButton.style.bottom = '10px';
       }
       button_text1.classList.remove('roulette_animation_button_text1');
       button_text2.classList.remove('roulette_animation_button_text2');

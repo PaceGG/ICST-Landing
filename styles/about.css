@@ -128,11 +128,12 @@
   .about__img {
     height: 280px;
     width: 280px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   .slider_box {
     display: block;
      width: 90%;
+     margin-bottom: 30px;
   }
   .slider {
     width: 99%;
