@@ -5,14 +5,14 @@
 }
 .entering__button {
   background-color: #ffffff;
-  margin: 10px;
+  margin: 7px;
   color: black;
   text-align: center;
   font-size: 16px;
   border-radius: var(--default-radius);
-  padding: 15px;
+  padding: 12px;
   box-shadow: var(--shadow);
-  width: 200px;
+  width: 179px;
   white-space: nowrap;
   &:not(.entering__button__active):hover {
     color: white;
