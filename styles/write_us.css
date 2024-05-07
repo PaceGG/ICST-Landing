@@ -43,4 +43,19 @@
     #message{
       padding: 5px;
     }
+
+    #modal-message {
+      position: relative;
+       bottom: 60px;  
+      left: 0;
+      width: 100%;
+      background-color: #1a67ff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      transition: bottom 0.5s ease;
+      z-index: 98;
+      font-size: 25px;
+    }
+  
   }

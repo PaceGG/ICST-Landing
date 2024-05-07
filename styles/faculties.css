@@ -93,4 +93,10 @@
   .facultie__info__item__pts_info {
     font-size: 10px;
   }
+  .facultie__info {
+    width: 70%;
+  }
+  .facultie__name {
+    max-width: 70%;
+}
 }

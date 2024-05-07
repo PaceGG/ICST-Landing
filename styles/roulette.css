@@ -35,6 +35,8 @@
     /* bottom: 80px; */
     right: 20px; 
     transition: all 1s ease-in-out;
+    margin-left: auto;
+    z-index: 200;
 }
 .roulette_button p {
    position: relative;
@@ -54,7 +56,9 @@
     margin: 15px;
   }
 
-
+  .big_h2{
+   font-size: 80px;
+  }
 
 
 .roulette_text h2{
@@ -75,22 +79,9 @@
    justify-content: space-between; 
    width: 100%;
    align-items: center; 
+   height: 275px;
 }
- .roulette_button_act_anim {
-   animation-name: expand_padding;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
- }
- @keyframes expand_padding {
-   0% {
-     padding-left: 0%; 
-     padding-right: 0%;
-   }
-   100% {
-     padding-left: 20%; 
-     padding-right: 20%;
-   }
- }
+
 .roulette_h2{
    color: #fff;
    margin: 8% 0 !important;
@@ -115,12 +106,14 @@
      transform: rotate(0deg);
      width: 110px;
      height: 110px;
+     right: 20px; 
    }
  
    100% {
-     transform:rotate(-360deg);
+     transform: rotate(-360deg);
      width: 200px;
      height: 200px;
+     right: 43%;
    }
  }
  .roulette_animation_button_text1 {
@@ -386,21 +379,35 @@ transform: translateY(-200px); */
       right: 3%;
       transition: all 0s ease-in-out;
    }
+   @keyframes roulette_animation_button {
+      0% {
+        transform: rotate(0deg);
+        width: 110px;
+        height: 110px;
+        right: 0%; 
+      }
+    
+      100% {
+        transform: rotate(-360deg);
+        width: 200px;
+        height: 200px;
+        right: 30%;
+      }
+    }
    .roulette_animation_button {
       animation-name: roulette_animation_button;
-      animation-duration: 0s;
+      animation-duration: 1s;
       animation-fill-mode: forwards;
       position: relative; 
-      right: 0;
     }
     .roulette_animation_button_text1 {
       animation-name: roulette_animation_button_text1;
-      animation-duration: 0s;
+      animation-duration: 1s;
       animation-fill-mode: forwards;
     }
     .roulette_animation_button_text2 {
       animation-name: roulette_animation_button_text2;
-      animation-duration: 0s;
+      animation-duration: 1s;
       animation-fill-mode: forwards;
     }
     .roulette_text p {
