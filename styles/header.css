@@ -118,10 +118,10 @@
     box-shadow: var(--shadow);
     padding: 10px 0;
     z-index: 1000;
-    position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     max-height: 100px;
+    position: fixed;
   }
   .nav-content {
     display: flex;
@@ -141,47 +141,55 @@
     align-items: flex-end;
     flex-direction: column;
     background-color: white;
-    max-width: 80%;
-    margin-left: auto;
+    width: 60vw;
     border-bottom-left-radius: 20px;
-    transform: translateX(120%);
-    height: 1000px;
+    /* height: 1000px; */
+    position: absolute;
+    right: -100%;
+    top: 100px;
+    box-shadow: var(--shadow);
   }
   .nav-item {
+    display: flex;
     font-size: 16px;
-    margin-right: 50px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 90%;
+    width: 100%;
+    margin: 0;
+    padding-right: 20px;
+    height: 50px;
     text-align: right;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-item:nth-child(even) {
+    background-color: #eee;
   }
 
   .nav_bar_anim {
     animation-name: nav_bar_anim;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
   }
   .nav_bar_anim_return {
     animation-name: nav_bar_anim_return;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
   }
 
   @keyframes nav_bar_anim {
     from {
-      transform: translateX(120%);
+      right: -100%;
     }
     to {
-      transform: translateX(0);
+      right: 0;
     }
   }
 
   @keyframes nav_bar_anim_return {
     from {
-      transform: translateX(0%);
+      right: 0;
     }
     to {
-      transform: translateX(120%);
+      right: -100%;
     }
   }
   /* .nav_anim{
@@ -237,7 +245,6 @@
   .box_menu {
     height: 60px;
     width: 60px;
-    border: 2px solid black;
     border-radius: 20px;
     padding-top: 5px;
     display: block;
