@@ -3,6 +3,7 @@
 }
 .specialities__content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   height: 260px;
   gap: 20px;
@@ -59,11 +60,7 @@
 }
 
 @media (max-width: 500px) {
-  .specialities__box {
-    grid-template-columns: repeat(2, 100px);
-    grid-row-gap: 20px;
-  }
-  .specialities {
-    margin-top: 40%;
+  .specialities__content {
+    height: auto;
   }
 }
