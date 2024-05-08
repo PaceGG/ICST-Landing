@@ -116,6 +116,9 @@
 }
 
 @media (max-width: 500px) {
+  .comment_container{
+    padding-top: 30px;
+  }
   .comment_view {
     width: 100%;
     height: auto;

@@ -102,6 +102,9 @@
 }
 
 @media (max-width: 500px) {
+  .partners{
+    padding-bottom: 30px;
+  }
   #partners__content2 {
     animation: none;
   }
@@ -149,4 +152,10 @@
   margin: 0 auto;
 }
 
+}
+
+@media (max-width: 500px) {
+  .partners_slide img {
+    width: 150px;
+  }
 }
