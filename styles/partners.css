@@ -128,8 +128,8 @@
     margin-bottom: 15px;
   }
   .partners_slide {
-    height: 250px;
-    width: 85%;
+    height: 150px;
+    width: 60%;
     margin-left: 10px;
     text-align: center;
     background-color: white;
@@ -142,4 +142,11 @@
     margin-top: 15px;
     position: absolute;
   }
+
+  .partners_slide img {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
 }
