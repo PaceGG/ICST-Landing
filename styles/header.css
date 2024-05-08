@@ -222,16 +222,16 @@
   } */
 
   .menubar {
-    height: 7px;
-    width: 50px;
+    height: 5px;
+    width: 45px;
     background-color: black;
     border-radius: 10px;
-    margin: 7px 4px;
+    margin: 10px 4px;
     transition: 0.7s;
   }
 
   .menubar1_anim {
-    transform: translate(0, 14px) rotate(40deg);
+    transform: translate(0, 15px) rotate(40deg);
   }
 
   .menubar2_anim {
@@ -239,12 +239,13 @@
   }
 
   .menubar3_anim {
-    transform: translate(0, -14px) rotate(-40deg);
+    transform: translate(0, -15px) rotate(-40deg);
   }
 
   .box_menu {
     height: 60px;
     width: 60px;
+    /* border: 2px solid black; */
     border-radius: 20px;
     padding-top: 5px;
     display: block;
