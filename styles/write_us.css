@@ -39,12 +39,15 @@
     bottom: 0px !important; 
   }
 
+  #modal-message-mobile{
+    display: none;
+  }
   @media (max-width: 500px) {
     #message{
       padding: 5px;
     }
 
-    #modal-message {
+    #modal-message-mobile {
       position: relative;
        bottom: 60px;  
       left: 0;
@@ -56,6 +59,10 @@
       transition: bottom 0.5s ease;
       z-index: 98;
       font-size: 25px;
+      display: block;
+    }
+    .modal-message{
+      display: none;
     }
   
   }

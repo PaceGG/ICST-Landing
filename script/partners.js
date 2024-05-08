@@ -35,9 +35,9 @@ if (isMobile)
     const slidesArrPosition = [];
     if (slides.length % 2 === 0)
     {
-      var slidesWidth_main = -(slideWidth_main * (slides.length - 2)) / 2;
+      var slidesWidth_main = -(slideWidth_main * (slides.length - 2)) / 2 + slideWidth * 0.3;
     }else{
-      var slidesWidth_main = -(slideWidth_main * (slides.length - 1)) / 2;
+      var slidesWidth_main = -(slideWidth_main * (slides.length - 1)) / 2 + slideWidth * 0.3;
     }
     for (let i = 0; i < slides.length; i++) 
     {
