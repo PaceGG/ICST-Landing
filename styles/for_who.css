@@ -7,7 +7,7 @@
 }
 .for_who__title {
   padding: 0 32px;
-  background-color: #9cbdff;
+  background-color: var(--accent);
 }
 .for_who h2 {
   margin: 0;
@@ -16,10 +16,11 @@
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  background-image: url(../img/for_who_bg_title.svg);
+  /* background-image: url(../img/for_who_bg_title.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position-y: 27px;
+  color: white;
 }
 .for_who__content {
   display: flex;
@@ -111,19 +112,47 @@
 }
 
 @media (max-width: 500px) {
+  .for_who {
+    background-image: none;
+  }
+  .for_who__title {
+    padding: 0 10px;
+  }
+  .for_who__title h2 {
+    font-size: 24px;
+    padding-top: 10px;
+    height: 408px;
+  }
+  .for_who__content {
+    margin-top: -317px;
+    gap: 0;
+  }
   .for_who__boxes {
     flex-direction: column;
     align-items: center;
   }
   .for_who__item {
     width: 90%;
-    margin-bottom: 20px;
+  }
+  .for_who__img {
+    width: 160px;
+  }
+  .for_who p {
+    padding: 0;
+    border-radius: 100px;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 10px 0;
+  }
+  .for_who__item:nth-child(odd) p {
+    background-color: #331acf;
+  }
+  .for_who__item:nth-child(even) p {
+    background-color: var(--accent);
   }
   #for_who__item_center {
     opacity: 1;
     transform: translateY(0%);
-  }
-  .for_who__content {
-    margin-top: 20px;
   }
 }
