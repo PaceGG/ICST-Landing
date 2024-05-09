@@ -1,7 +1,7 @@
 .about {
   padding-top: 120px;
   /* margin-left: -100px; */
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .about__content {
   display: flex;
@@ -23,11 +23,23 @@
   position: absolute;
 }
 
-.slide img {
+.about__item__dec {
   width: auto;
-  height: 75%;
-  object-fit: cover;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 50%;
+}
+#about_dec1,
+#about_dec4 {
+  background-color: #cc0256;
+}
+#about_dec2,
+#about_dec5 {
+  background-color: var(--accent);
+}
+#about_dec3,
+#about_dec6 {
+  background-color: #331acf;
 }
 .about h2 {
   padding-bottom: 5px;
@@ -89,16 +101,11 @@
 .slider p {
   overflow-wrap: break-word;
   margin: 10px 10px;
-  font-weight: 600;
   line-height: 30px;
 }
 
 @media (max-width: 1520px) {
   .head-text {
-    padding-top: 0;
-    padding-bottom: 120px;
-  }
-  .about {
     padding-top: 0;
   }
   .about__content {
