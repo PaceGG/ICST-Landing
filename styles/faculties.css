@@ -1,11 +1,7 @@
 .faculties {
   display: flex;
   align-items: center;
-  background-image: url("../img/faculties_bg.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--accent);
 }
 .faculties-content {
   max-width: 900px;
