@@ -64,7 +64,6 @@
   .faculties__item {
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
     padding: 0;
     padding: 10px;
   }
@@ -87,9 +86,9 @@
     /* changefont */
   }
   .facultie__info {
-    width: 70%;
+    width: 100%;
   }
   .facultie__name {
-    max-width: 70%;
+    max-width: 100%;
   }
 }
