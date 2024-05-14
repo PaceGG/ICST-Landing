@@ -92,6 +92,7 @@ li {
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 40px;
+    height: auto;
   }
   .tracks__title {
     width: 100%;
