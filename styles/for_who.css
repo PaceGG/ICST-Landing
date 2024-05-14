@@ -118,7 +118,7 @@
     padding: 0 10px;
   }
   .for_who__title h2 {
-    /* changefont */
+    font-size: 24px;
     padding-top: 10px;
     height: 408px;
   }
