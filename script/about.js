@@ -1,5 +1,6 @@
 
 const slidesArrPosition = [];
+var point_index = 2;
  if (!isMobile){
  const slides = document.querySelectorAll(".slide");
         const slideHeight = slides[0].offsetHeight;
@@ -172,6 +173,8 @@ if (isMobile) {
         };
         //slidesArrPosition[i] = slidesArrPosition[i] + diff;
       }
+      point_index--
+      updateActivePoint();
     }else if(direction === 0 && diff <= -70){// влево  
       //slaiderList_mobal.append(slaiderList_mobal.firstElementChild);
       slaiderList_mobal.append(slaiderList_mobal.firstElementChild);
@@ -199,6 +202,8 @@ if (isMobile) {
         //slidesArrPosition[i] = slidesArrPosition[i] - diff ;
        // console.log(slidesArrPosition[i] );
       }
+      point_index++
+      updateActivePoint();
     }else if (direction === 1 && diff < 70) 
       {
         const slides = document.querySelectorAll(".slide");
@@ -253,12 +258,27 @@ if (isMobile) {
       }
       diff = 0;
       flag_avto_slider = false;
+      
   }
 
 
   slaiderList_mobal.addEventListener('touchstart', TouchStart);
   slaiderList_mobal.addEventListener('touchmove', (e) => TouchMove(e, document.querySelectorAll(".slide")));
   slaiderList_mobal.addEventListener('touchend', TouchEnd);
+
+  const points = document.querySelectorAll('.about_point');
+  function updateActivePoint() {
+  points.forEach(point => point.classList.remove('active'));
+  if (point_index > points.length-1) {
+    point_index = 0;
+  }
+  if (point_index < 0)
+  {
+    point_index = points.length-1;
+  }
+  //console.log(point_index);
+  points[point_index].classList.add('active');
+}
 }
 
 
@@ -336,6 +356,8 @@ function avto_slider()
             slides[i].style.transform = `translateX(${slidesArrPosition[i]}px)`;
           };
         }
+        point_index++
+        updateActivePoint();
       }else if(!isMobile && flag_avto_slider){
         const slider = document.querySelector(".slider");
         slider.append(slider.firstElementChild);
@@ -358,6 +380,7 @@ function avto_slider()
             slides[i].style.transform = `translateY(${slidesArrPosition[i]}px)`;
           };
         }
+      
       }
       
   }
@@ -366,4 +389,11 @@ function start_interval()
 {
   setInterval(avto_slider, 5000);
 }
+
+
+
+
+
+
+
 
