@@ -1,10 +1,12 @@
 .tracks {
   background-image: url(../img/tracks_bg.svg);
   background-repeat: no-repeat;
+  background-position: center;
   height: 705px;
 }
 .tracks__title {
   margin: 0;
+  padding-top: 80px;
 }
 .tracks__content {
   display: flex;

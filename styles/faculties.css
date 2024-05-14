@@ -1,8 +1,6 @@
 .faculties {
   display: flex;
   align-items: center;
-  padding-top: 50px;
-  padding-bottom: 70px;
   background-image: url("../img/faculties_bg.png");
   background-size: cover;
   background-attachment: fixed;
@@ -98,5 +96,5 @@
   }
   .facultie__name {
     max-width: 70%;
-}
+  }
 }
