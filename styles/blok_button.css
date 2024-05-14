@@ -41,7 +41,7 @@
 
 .entering__button__active {
   color: white;
-  background-color: #2e5bae;
+  background-color: #331acf;
   box-shadow: none;
   transition: 0.5s;
 }
@@ -51,10 +51,13 @@
 
 @media (max-width: 500px) {
   .about_entering img {
-    width: 100%;
-    height: auto;
+    display: none;
+  }
+  .entering__button {
+    width: 90%;
   }
   .entering__text {
-    width: 100%;
+    width: 90%;
+    margin-top: 0;
   }
 }
