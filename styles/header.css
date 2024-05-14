@@ -100,15 +100,16 @@
   }
   .h2-head {
     margin-bottom: 15px;
-    /* changefont */
+    font-size: 12px;
   }
   .h1-head {
     /* changefont */
+    font-size: 26px;
     margin-top: 0;
   }
   .h3-head {
     margin-top: 20px;
-    /* changefont */
+    font-size: 12px;
   }
   .head-content {
     justify-content: center;
