@@ -110,7 +110,13 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
+  .about__item__dec {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
   .about {
     padding: 0;
     margin: 0;
