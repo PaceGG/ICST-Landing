@@ -103,6 +103,11 @@
   }
   .curriculum__button {
     /* changefont */
+    width: 100%;
+  }
+  .curriculum__item {
+    flex-direction: column;
+    gap: 10px;
   }
   .curriculum__info {
     display: flex;
@@ -113,6 +118,6 @@
     transition: height 0.5s ease;
   }
   .curriculum__info.curriculum__active {
-    height: 320px;
+    height: 260px;
   }
 }
