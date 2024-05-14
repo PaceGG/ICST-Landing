@@ -1,10 +1,6 @@
 @font-face {
-  font-family: "PSUFont_slab";
-  src: url("fonts/PermianSlabSerifTypeface.otf");
-}
-@font-face {
   font-family: "PSUFont";
-  src: url("fonts/PermianSansTypeface.otf");
+  src: url("fonts/PermianSansTypeface.woff");
 }
 * {
   box-sizing: border-box;
@@ -93,7 +89,6 @@ ul {
 }
 @media (max-width: 500px) {
   h2 {
-    /* font-size: 37px; */
     font-size: 10vw;
     margin-bottom: 20px;
   }

@@ -19,12 +19,12 @@
 .tracks__text {
   max-width: 750px;
   text-align: center;
-  font-size: 26px;
+  /* changefont */
   padding: 20px;
 }
 .tracks__text p {
   margin-top: 20px;
-  font-size: 22px;
+  /* changefont */
 }
 .tracks__text p:first-child {
   margin-top: 0;
@@ -54,7 +54,7 @@
 }
 
 li {
-  font-size: 22px;
+  /* changefont */
 }
 /* анимация */
 
@@ -101,7 +101,7 @@ li {
     align-items: center;
   }
   .tracks h2 {
-    font-size: 25px;
+    /* changefont */
     padding-right: 11px;
     width: 60%;
     margin: 0;
@@ -118,10 +118,10 @@ li {
     width: 100%;
   }
   .tracks__text p {
-    font-size: 16px;
+    /* changefont */
   }
   .tracks li {
-    font-size: 16px;
+    /* changefont */
   }
   .tracks__item:nth-child(1) {
     border-right: 5px solid var(--accent);

@@ -22,7 +22,7 @@
 }
 
 .comment_text {
-  font-size: 25px;
+  /* changefont */
 }
 
 .comment_avatar {
@@ -116,7 +116,7 @@
 }
 
 @media (max-width: 500px) {
-  .comment_container{
+  .comment_container {
     padding-top: 30px;
   }
   .comment_view {
@@ -129,7 +129,7 @@
     display: none;
   }
   .comment_text {
-    font-size: 18px;
+    /* changefont */
   }
   .comment_avatar {
     width: 250px;
@@ -150,11 +150,11 @@
   .comment_text {
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 140px; 
+    max-height: 140px;
     transition: max-height 0.3s ease;
-}
+  }
 
-.comment_text.expanded {
+  .comment_text.expanded {
     max-height: none;
-}
+  }
 }

@@ -38,7 +38,7 @@
 }
 .curriculum__button {
   background-color: transparent;
-  font-size: 30px;
+  /* changefont */
   padding: 0;
   text-align: left;
 }
@@ -47,7 +47,6 @@
 }
 .curriculum li {
   position: relative;
-  font-size: var(--curriculum-fz);
 }
 .curriculum li::before {
   content: "";
@@ -61,10 +60,9 @@
   top: 8px;
 }
 .curriculum__link {
-  font-size: var(--curriculum-fz);
   text-decoration: underline dotted;
   color: var(--accent);
-  font-size: 20px;
+  /* changefont */
   &::after {
     content: " >";
   }
@@ -81,7 +79,7 @@
   background-color: #ffffff;
   color: black;
   text-align: center;
-  font-size: 30px;
+  /* changefont */
   border-radius: 50px;
   border-radius: var(--default-radius);
   padding: 15px;
@@ -104,7 +102,7 @@
     gap: 20px;
   }
   .curriculum__button {
-    font-size: 20px;
+    /* changefont */
   }
   .curriculum__info {
     display: flex;

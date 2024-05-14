@@ -135,7 +135,7 @@
   }
 
   .about h2 {
-    font-size: 28px;
+    /* changefont */
   }
   .about__content {
     flex-direction: column;

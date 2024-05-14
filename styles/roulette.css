@@ -1,423 +1,417 @@
+.roulette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px;
+}
 
-  
-  .roulette {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0px; 
-  }
-  
-  .roulette_row {
-    height: 50px;
-    width: 60%;
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border: 3px solid #000;
-    background-color: #fff;
-    top: 22px;
-    margin: 210px auto;
-    cursor: pointer;
-  }
-  
+.roulette_row {
+  height: 50px;
+  width: 60%;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 3px solid #000;
+  background-color: #fff;
+  top: 22px;
+  margin: 210px auto;
+  cursor: pointer;
+}
+
 .roulette_button {
-    background-color: var(--accent);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 110px; 
-    height: 110px;
-    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    /* bottom: 80px; */
-    right: 20px; 
-    transition: all 1s ease-in-out;
-    margin-left: auto;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  /* bottom: 80px; */
+  right: 20px;
+  transition: all 1s ease-in-out;
+  margin-left: auto;
 }
 .roulette_button p {
-   position: relative;
-   text-align: center;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.roulette_items{
-   display: flex;
+.roulette_items {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-  .roulette_arr{
-    background-color: #fff;
-  }
-  .roulette_text{
-   width: 125%;
-  }
-  .roulette_arr p{
-    margin: 15px;
-  }
+.roulette_arr {
+  background-color: #fff;
+}
+.roulette_text {
+  width: 125%;
+}
+.roulette_arr p {
+  margin: 15px;
+}
 
-  .big_h2{
-   font-size: 80px;
-  }
+.big_h2 {
+  /* changefont */
+}
 
-
-.roulette_text h2{
-   text-align: left; 
-   margin: 0 30px; 
-   color: #fff;
+.roulette_text h2 {
+  text-align: left;
+  margin: 0 30px;
+  color: #fff;
 }
 .roulette_text p {
-   text-align: left; 
-   max-width: 60%; 
-   margin: 60px 30px;
-   color: #fff;
+  text-align: left;
+  max-width: 60%;
+  margin: 60px 30px;
+  color: #fff;
 }
 .roulette_button_act {
-   display: flex;
-   justify-content: space-between; 
-   width: 100%;
-   align-items: center; 
-   height: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 210px;
 }
 
-.roulette_h2{
-   color: #fff;
-   margin-top: 5% !important;
-   margin-left: auto;
+.roulette_h2 {
+  color: #fff;
+  margin-top: 5% !important;
+  margin-left: auto;
 }
 
-.roulette_conteiner{
-   background-color: #000;
+.roulette_conteiner {
+  background-color: #000;
 }
-#roulette_button_text2{
-   opacity: 0;
+#roulette_button_text2 {
+  opacity: 0;
 }
 .roulette_animation_button {
-   animation-name: roulette_animation_button;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
-   position: relative; 
-   right: 0;
- }
- @keyframes roulette_animation_button {
-   0% {
-     transform: rotate(0deg);
-     width: 110px;
-     height: 110px;
-     right: 20px; 
-   }
- 
-   100% {
-     transform: rotate(-360deg);
-     width: 200px;
-     height: 200px;
-     right: 43%;
-   }
- }
- .roulette_animation_button_text1 {
-   animation-name: roulette_animation_button_text1;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
- }
- .roulette_animation_button_text2 {
-   animation-name: roulette_animation_button_text2;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
- }
- @keyframes roulette_animation_button_text1 {
-   from {
-      opacity: 1;
-   }
-   to {
-      opacity: 0;
-   }
- }
- @keyframes roulette_animation_button_text2 {
-   from {
-      transform: translate(-50%, -100%);
-      opacity: 0;
-   }
-   to {
-      transform: translate(-50%, -100%);
-      opacity: 1;
-   }
- }
-    /* bottom: 80px; убрать*/
+  animation-name: roulette_animation_button;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  right: 0;
+}
+@keyframes roulette_animation_button {
+  0% {
+    transform: rotate(0deg);
+    width: 110px;
+    height: 110px;
+    right: 20px;
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    width: 200px;
+    height: 200px;
+    right: 43%;
+  }
+}
+.roulette_animation_button_text1 {
+  animation-name: roulette_animation_button_text1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.roulette_animation_button_text2 {
+  animation-name: roulette_animation_button_text2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes roulette_animation_button_text1 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes roulette_animation_button_text2 {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -100%);
+    opacity: 1;
+  }
+}
+/* bottom: 80px; убрать*/
 /* position: absolute;
 transform: translateY(-200px); */
 
 /* кот */
 
 .container_cat {
-   position: absolute; 
-   width: 200px;
-   height: 300px; 
-   margin: 0 auto; 
-   display: flex; 
-   justify-content: center; 
-   align-items: center; 
-   /* z-index: -1; */
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: -1; */
 }
-.back_cat{
-   border-radius: 50%;
-   background-color: #fff;
-   width: 240px;
-   height: 240px; 
-   position: absolute; 
-   top: -5%;
+.back_cat {
+  border-radius: 50%;
+  background-color: #fff;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: -5%;
 }
 .head_cat {
-   position: absolute; 
-   top: 25%; 
-   left: 50%; 
-   transform: translate(-50%, -50%); 
-   width: 125px;
-   height: 125px;
-   background-color: black;
-   border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 125px;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .body_cat {
-   position: absolute; 
-   top: 52%; 
-   left: 50%; 
-   transform: translate(-50%, -50%); 
-   width: 75px;
-   height: 110px;
-   background-color: black;
-   border-radius: 50%;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 110px;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .nose {
-   position: absolute;
-   top: 28%;
-   width: 8px;
-   height: 7px;
-   background-color: pink;
-   border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  width: 8px;
+  height: 7px;
+  background-color: pink;
+  border-radius: 50%;
 }
 
 .leg {
-   position: absolute; 
-   top: 68%; 
-   transform: translate(-50%, -50%); 
-   width: 25px;
-   height: 45px;
-   background-color: black;
-   border-radius: 50%;
+  position: absolute;
+  top: 68%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 45px;
+  background-color: black;
+  border-radius: 50%;
 }
-.leg.left{
-   left: 40%;
+.leg.left {
+  left: 40%;
 }
-.leg.right{
-   right: 27%;
+.leg.right {
+  right: 27%;
 }
 
 .ear {
- position: absolute;
- width: 20px; 
- height: 28px; 
- background-color: black;
- top: 12px;
+  position: absolute;
+  width: 20px;
+  height: 28px;
+  background-color: black;
+  top: 12px;
 }
 
 .ear.left::before {
- position: absolute;
- content: "";
- width: 12px; 
- height: 16px; 
- background-color: #666; 
- border-radius: 30% 78% 0 0; 
- left: 4px;
- top: 6px;
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 16px;
+  background-color: #666;
+  border-radius: 30% 78% 0 0;
+  left: 4px;
+  top: 6px;
 }
 
 .ear.right::before {
- position: absolute;
- content: "";
- width: 12px; 
- height: 16px; 
- background-color: #666; 
- border-radius: 78% 30% 0 0; 
- left: 4px;
- top: 6px;
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 16px;
+  background-color: #666;
+  border-radius: 78% 30% 0 0;
+  left: 4px;
+  top: 6px;
 }
 
-.ear.left{
-   left: 36%;
-   transform: translate(-50%, -50%) rotate(-25deg);
-   border-radius: 33% 70% 0 0;
+.ear.left {
+  left: 36%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  border-radius: 33% 70% 0 0;
 }
-.ear.right{
-   right: 27%;
-   transform: translate(-50%, -50%) rotate(25deg);
-   border-radius: 70% 33% 0 0;
+.ear.right {
+  right: 27%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  border-radius: 70% 33% 0 0;
 }
 .tail {
- position: relative;
- width: 200px; 
- height: 200px; 
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
 .tail::before {
- content: "";
- position: absolute;
- top: -6%;
- left: 57%;
- width: 34%;
- height: 57%;
- border: 13px solid black; 
- border-top-color: transparent; 
- border-left-color: transparent; 
- border-bottom-right-radius: 66%; 
- border-top-right-radius: 38%; 
+  content: "";
+  position: absolute;
+  top: -6%;
+  left: 57%;
+  width: 34%;
+  height: 57%;
+  border: 13px solid black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-right-radius: 66%;
+  border-top-right-radius: 38%;
 }
 
 .tail_end {
-   position: absolute;
-   top: 18%;
-   transform: translate(-50%, -50%);
-   width: 13px;
-   height: 13px;
-   left: 95%;
-   background-color: black;
-   border-radius: 50%;
+  position: absolute;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  left: 95%;
+  background-color: black;
+  border-radius: 50%;
 }
 
-
 .eye {
-   position: absolute;
-   top: 20%;
-   transform: translate(-50%, -50%);
-   width: 55px;
-   height: 55px;
-   background-color: white;
-   border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .eye.left {
-   left: 38%;
+  left: 38%;
 }
 
 .eye.right {
-   right: 10%;
+  right: 10%;
 }
 
 .pupil {
-    position: absolute;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 46px;
-    height: 45px;
-    background-color: black;
-    border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 45px;
+  background-color: black;
+  border-radius: 50%;
 }
 
-.pupil.left{
-   left: 38%;
+.pupil.left {
+  left: 38%;
 }
-.pupil.right{
-   right: 15%;
+.pupil.right {
+  right: 15%;
 }
 
 .hand {
-   position: absolute; 
-   top: 48%; 
-   transform: translate(-50%, -50%); 
-   width: 25px;
-   height: 25px;
-   background-color: black;
-   border-radius: 50%;
-   z-index: 2;
+  position: absolute;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
 }
 
-.hand.left{
-   left: 28%;
+.hand.left {
+  left: 28%;
 }
-.hand.right{
-   right: 16%;
+.hand.right {
+  right: 16%;
 }
 
 .glimmer {
-    position: absolute;
-    top: 18%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
-    background: #fff;
-    border-radius: 50%;
+  position: absolute;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
 }
 
-.glimmer.left{
-   left: 42%;
+.glimmer.left {
+  left: 42%;
 }
-.glimmer.right{
-   right: 22%;
+.glimmer.right {
+  right: 22%;
 }
 
 @media (max-width: 500px) {
-   .roulette_row {
-      width: 90%;
-      height: 111px;
-      top: 50px;
-   }
-   .roulette_row p{
-      margin: 40px 10px;
-   }
+  .roulette_row {
+    width: 90%;
+    height: 111px;
+    top: 50px;
+  }
+  .roulette_row p {
+    margin: 40px 10px;
+  }
 
-   .roulette_h2{
-      transform: translateX(0%) !important; 
-   }
-   .big_h2{
-      font-size: 50px;
-     }
-   .roulette_button {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      right: 0px;
-      margin-left: 0;
-      z-index: 200;
-   }
-   #roulette_button_text1{
-      display: none;
-   }
-   #roulette_button_text2{
-      display: block;
-      opacity: 1;
-   }
-    .roulette_text p {
-      text-align: left;
-      max-width: 100%;
-      margin: 60px 30px;
-      color: #fff;
+  .roulette_h2 {
+    transform: translateX(0%) !important;
+  }
+  .big_h2 {
+    font-size: 50px;
+  }
+  .roulette_button {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    right: 0px;
+    margin-left: 0;
+    z-index: 200;
+  }
+  #roulette_button_text1 {
+    display: none;
+  }
+  #roulette_button_text2 {
+    display: block;
+    opacity: 1;
+  }
+  .roulette_text p {
+    text-align: left;
+    max-width: 100%;
+    margin: 60px 30px;
+    color: #fff;
   }
   .roulette_button_act {
-   display: flex;
-   flex-direction: column; 
-   width: 100%;
-   align-items: center; 
-}
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 @media (max-width: 300px) {
-   .roulette_row p{
-      margin: 25px 10px;
-   }
-   .roulette_items{
-      display: flex;
-      flex-direction: column; 
-     justify-content: space-between;
-     align-items: center;
-   }
-   .roulette_text {
-      width: 110%;
+  .roulette_row p {
+    margin: 25px 10px;
   }
-
+  .roulette_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .roulette_text {
+    width: 110%;
+  }
 }

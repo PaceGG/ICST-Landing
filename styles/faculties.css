@@ -21,7 +21,6 @@
   gap: 10px;
 }
 .facultie__name {
-  font-size: 21px;
   max-width: 50%;
 }
 .facultie__info {
@@ -32,15 +31,15 @@
   width: 50%;
 }
 .facultie__info__item__pts {
-  font-size: 20px;
+  /* changefont */
   line-height: 31px;
   color: var(--accent);
 }
 .facultie__info__item__pts_info {
-  font-size: 15px;
+  /* changefont */
 }
 .facultie__info__item__new {
-  font-size: 20px;
+  /* changefont */
   font-weight: 500;
 }
 .facultie__info__item {
@@ -70,7 +69,7 @@
     padding: 10px;
   }
   .facultie__name {
-    font-size: 16px;
+    /* changefont */
     text-align: center;
     width: 100%;
   }
@@ -82,10 +81,10 @@
   }
   .facultie__info__item__new {
     text-align: center;
-    font-size: 13px;
+    /* changefont */
   }
   .facultie__info__item__pts_info {
-    font-size: 10px;
+    /* changefont */
   }
   .facultie__info {
     width: 70%;

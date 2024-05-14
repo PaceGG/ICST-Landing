@@ -27,7 +27,7 @@
   align-items: center;
 }
 .nav-item {
-  font-size: 16px;
+  /* changefont */
   margin-right: 30px;
 }
 .head {
@@ -72,7 +72,7 @@
   color: #5c5c5c;
 }
 .about__h2 {
-  font-size: 45px;
+  /* changefont */
   padding-bottom: 5px;
   padding-left: 30px;
 }
@@ -100,15 +100,15 @@
   }
   .h2-head {
     margin-bottom: 15px;
-    font-size: 12px;
+    /* changefont */
   }
   .h1-head {
-    font-size: 26px;
+    /* changefont */
     margin-top: 0;
   }
   .h3-head {
     margin-top: 20px;
-    font-size: 12px;
+    /* changefont */
   }
   .head-content {
     justify-content: center;
@@ -156,7 +156,7 @@
   }
   .nav-item {
     display: flex;
-    font-size: 16px;
+    /* changefont */
     width: 100%;
     margin: 0;
     padding-right: 20px;

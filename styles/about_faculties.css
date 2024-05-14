@@ -18,7 +18,7 @@
   border-radius: 50%;
 }
 .about_faculties__h3 {
-  font-size: 40px;
+  /* changefont */
   font-weight: 600;
   max-width: 800px;
   color: var(--accent);
@@ -42,10 +42,10 @@
   padding-right: 20px;
   border-top: 5px solid var(--accent);
   max-width: 600px;
-  font-size: 20px;
+  /* changefont */
 }
 .about_faculties__text__title {
-  font-size: 23px;
+  /* changefont */
 }
 .about_faculties__text__p {
   margin-top: 4px;
@@ -191,7 +191,7 @@
   }
   .about_faculties__h3 {
     text-align: center;
-    font-size: 23px;
+    /* changefont */
     width: 100vw;
   }
   .about_faculties__item__left .about_faculties__title h3 {
@@ -221,6 +221,6 @@
     margin-top: 20px;
   }
   .about_faculties__text__title {
-    font-size: 19px;
+    /* changefont */
   }
 }
