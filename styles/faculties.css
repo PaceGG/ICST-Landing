@@ -82,6 +82,9 @@
     text-align: center;
     /* changefont */
   }
+  .facultie__info__item__pts {
+    font-size: 1.5em;
+  }
   .facultie__info__item__pts_info {
     /* changefont */
   }
