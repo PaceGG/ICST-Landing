@@ -28,11 +28,13 @@
   border-radius: 50%;
 }
 #about_dec1,
-#about_dec4 {
+#about_dec4,
+#about_dec7{
   background-color: #cc0256;
 }
 #about_dec2,
-#about_dec5 {
+#about_dec5,
+#about_dec8 {
   background-color: var(--accent);
 }
 #about_dec3,

@@ -7,7 +7,7 @@
 }
 
 .roulette_row {
-  height: 50px;
+  height: 65px;
   width: 60%;
   border-radius: 25px;
   overflow: hidden;
@@ -51,13 +51,16 @@
 
 .roulette_arr {
   background-color: #fff;
-  margin-bottom: 10px;
 }
 .roulette_text {
   width: 125%;
 }
 .roulette_arr p {
   margin-top: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали (если нужно) */
   text-align: center;
 }
 
@@ -170,16 +173,18 @@ transform: translateY(-200px); */
   object-fit: cover;
   transform: translateY(-30px);
 }
-
+.roulette_arr p {
+  height: 47px;
+}
 
 @media (max-width: 500px) {
   .roulette_row {
     width: 90%;
-    height: 111px;
-    top: 50px;
+    height: 55px;
   }
-  .roulette_row p {
-    margin: 40px 10px;
+  .roulette_arr p {
+    margin-top: 30px;
+    height: 47px;
   }
 
   .roulette_h2 {
@@ -217,10 +222,8 @@ transform: translateY(-200px); */
   }
 }
 
-@media (max-width: 300px) {
-  .roulette_row p {
-    margin: 25px 10px;
-  }
+@media (max-width: 320px) {
+
   .roulette_items {
     display: flex;
     flex-direction: column;
@@ -230,4 +233,11 @@ transform: translateY(-200px); */
   .roulette_text {
     width: 110%;
   }
+  .roulette_arr {
+    background-color: #fff;
+}
+.roulette_arr p {
+  margin-top: 30px;
+  height: 92px;
+}
 }
