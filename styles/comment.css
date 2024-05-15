@@ -9,6 +9,11 @@
   overflow: hidden;
   position: relative;
   height: auto;
+  background-image: url(../img/comments_bg_left.svg),
+    url(../img/comments_bg_right.svg);
+  background-position: top left, top right;
+  background-repeat: repeat-y;
+  background-size: 20%;
 }
 .comment_list {
   display: flex;
@@ -118,6 +123,7 @@
 @media (max-width: 500px) {
   .comment_container {
     padding-top: 30px;
+    background-image: none;
   }
   .comment_view {
     width: 100%;
