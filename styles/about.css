@@ -100,6 +100,8 @@
   font-weight: 600;
 }
 
+
+
 @media (max-width: 1520px) {
   .about__content {
     justify-content: space-evenly;
@@ -165,5 +167,30 @@
   }
   .about__arrow_box {
     display: none;
+  }
+
+  .about_points {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about_point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+  }
+  
+  .about_point.active {
+    background-color: #333;
+  }
+  
+  .about_point:hover {
+    background-color: #333;
+  }
+
+  .comment_point:not(.active):hover {
+    background-color: #ccc;
   }
 }
