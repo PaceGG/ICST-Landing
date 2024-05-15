@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   margin: 0px 0px;
+  flex-direction: column;
 }
 
 .roulette_row {
@@ -16,8 +17,7 @@
   justify-content: center;
   border: 3px solid #000;
   background-color: #fff;
-  top: 22px;
-  margin: 210px auto;
+  top: -65px;
   cursor: pointer;
 }
 
@@ -51,12 +51,14 @@
 
 .roulette_arr {
   background-color: #fff;
+  margin-bottom: 10px;
 }
 .roulette_text {
   width: 125%;
 }
 .roulette_arr p {
-  margin: 15px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .big_h2 {
@@ -150,211 +152,25 @@ transform: translateY(-200px); */
 
 /* кот */
 
-.container_cat {
-  position: absolute;
-  width: 200px;
-  height: 300px;
-  margin: 0 auto;
+
+
+.back_cat {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: -1; */
-}
-.back_cat {
   border-radius: 50%;
-  background-color: #fff;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  top: -5%;
-}
-.head_cat {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 125px;
-  height: 125px;
-  background-color: black;
-  border-radius: 50%;
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
 }
 
-.body_cat {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75px;
-  height: 110px;
-  background-color: black;
-  border-radius: 50%;
+.back_cat img {
+  width: 285px;
+  height: 220px;
+  object-fit: cover;
+  transform: translateY(-30px);
 }
 
-.nose {
-  position: absolute;
-  top: 28%;
-  width: 8px;
-  height: 7px;
-  background-color: pink;
-  border-radius: 50%;
-}
-
-.leg {
-  position: absolute;
-  top: 68%;
-  transform: translate(-50%, -50%);
-  width: 25px;
-  height: 45px;
-  background-color: black;
-  border-radius: 50%;
-}
-.leg.left {
-  left: 40%;
-}
-.leg.right {
-  right: 27%;
-}
-
-.ear {
-  position: absolute;
-  width: 20px;
-  height: 28px;
-  background-color: black;
-  top: 12px;
-}
-
-.ear.left::before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 16px;
-  background-color: #666;
-  border-radius: 30% 78% 0 0;
-  left: 4px;
-  top: 6px;
-}
-
-.ear.right::before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 16px;
-  background-color: #666;
-  border-radius: 78% 30% 0 0;
-  left: 4px;
-  top: 6px;
-}
-
-.ear.left {
-  left: 36%;
-  transform: translate(-50%, -50%) rotate(-25deg);
-  border-radius: 33% 70% 0 0;
-}
-.ear.right {
-  right: 27%;
-  transform: translate(-50%, -50%) rotate(25deg);
-  border-radius: 70% 33% 0 0;
-}
-.tail {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.tail::before {
-  content: "";
-  position: absolute;
-  top: -6%;
-  left: 57%;
-  width: 34%;
-  height: 57%;
-  border: 13px solid black;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-bottom-right-radius: 66%;
-  border-top-right-radius: 38%;
-}
-
-.tail_end {
-  position: absolute;
-  top: 18%;
-  transform: translate(-50%, -50%);
-  width: 13px;
-  height: 13px;
-  left: 95%;
-  background-color: black;
-  border-radius: 50%;
-}
-
-.eye {
-  position: absolute;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  width: 55px;
-  height: 55px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.eye.left {
-  left: 38%;
-}
-
-.eye.right {
-  right: 10%;
-}
-
-.pupil {
-  position: absolute;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  width: 46px;
-  height: 45px;
-  background-color: black;
-  border-radius: 50%;
-}
-
-.pupil.left {
-  left: 38%;
-}
-.pupil.right {
-  right: 15%;
-}
-
-.hand {
-  position: absolute;
-  top: 48%;
-  transform: translate(-50%, -50%);
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.hand.left {
-  left: 28%;
-}
-.hand.right {
-  right: 16%;
-}
-
-.glimmer {
-  position: absolute;
-  top: 18%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
-  background: #fff;
-  border-radius: 50%;
-}
-
-.glimmer.left {
-  left: 42%;
-}
-.glimmer.right {
-  right: 22%;
-}
 
 @media (max-width: 500px) {
   .roulette_row {
