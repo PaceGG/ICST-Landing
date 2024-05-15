@@ -4,8 +4,8 @@
 .specialities__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  height: 260px;
+  justify-content: space-around;
+  height: 300px;
   gap: 20px;
 }
 .specialities__item {
@@ -56,11 +56,14 @@
   }
 }
 .specialities__icon img {
-  height: 70px;
+  height: 75px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .specialities__content {
     height: auto;
+  }
+  .specialities__item:nth-child(even) {
+    align-self: flex-start;
   }
 }
