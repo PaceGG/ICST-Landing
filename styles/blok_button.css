@@ -28,7 +28,6 @@
   height: 500px;
 }
 .entering__text {
-  text-align: center;
   margin-top: -100px;
   background-color: white;
   padding: 25px;
@@ -36,7 +35,25 @@
   border-radius: var(--default-radius);
   box-shadow: var(--shadow);
   max-width: 1000px;
-  width: 70%;
+  width: 80%;
+}
+.entering__item ul {
+  padding-left: 23px;
+}
+.entering__item li {
+  position: relative;
+  text-align: left;
+}
+.entering__item li::before {
+  content: "";
+  --curriculum__li_size: 9px;
+  width: var(--curriculum__li_size);
+  height: var(--curriculum__li_size);
+  background-color: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  left: -18px;
+  top: 8px;
 }
 
 .entering__button__active {
