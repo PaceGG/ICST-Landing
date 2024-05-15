@@ -22,8 +22,8 @@
 .specialities__icon {
   padding-bottom: 7px;
   --specialities__icon__size: 100px;
-  width: var(--specialities__icon__size);
-  height: var(--specialities__icon__size);
+  min-width: var(--specialities__icon__size);
+  min-height: var(--specialities__icon__size);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,12 +58,27 @@
 .specialities__icon img {
   height: 75px;
 }
+.spec__name {
+  text-transform: uppercase;
+}
+.spec__about {
+  font-size: 0.9em;
+  width: 200%;
+  height: 0;
+  color: gray;
+}
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .specialities__content {
     height: auto;
   }
   .specialities__item:nth-child(even) {
     align-self: flex-start;
+  }
+  .spec__about {
+    font-size: 0.7em;
+    width: 100%;
+    height: 100%;
+    color: gray;
   }
 }
