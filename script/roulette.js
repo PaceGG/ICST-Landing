@@ -12,7 +12,7 @@ rouletteButton.addEventListener('click', () => {
         rouletteArr1.removeChild(rouletteArr1.lastElementChild);
         const rouletteArr = document.querySelector('.roulette_arr');
         const string_arr = Array.from(rouletteArr.querySelectorAll('p'));
-        const rowHeight = string_arr[0].offsetHeight + parseFloat(window.getComputedStyle(string_arr[0]).margin);
+        const rowHeight = string_arr[0].offsetHeight + parseFloat(window.getComputedStyle(string_arr[0]).marginTop)+ 0.6;
         const clonElements = [];
         string_arr.forEach((p, index) => {
         const clonstring = p.cloneNode(true);
