@@ -220,6 +220,15 @@ transform: translateY(-200px); */
     width: 100%;
     align-items: center;
   }
+  .roulette_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .roulette_text {
+    width: 100%;
+}
 }
 
 @media (max-width: 320px) {
