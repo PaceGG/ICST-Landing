@@ -1,4 +1,4 @@
-if (!isMobile){
+if (!isMobile_mobile){
     const tracks__item_left = document.getElementById('tracks__item_left');
     const tracks__item_right = document.getElementById('tracks__item_right');
     const tracks__separate_blocks = document.getElementById('tracks__separate_blocks');
@@ -19,7 +19,7 @@ if (!isMobile){
 }
 
 
-if (isMobile){
+if (isMobile_mobile){
     const tracks__item_left = document.getElementById('tracks__item_left');
     const tracks__item_right = document.getElementById('tracks__item_right');
     const tracks__item1 = document.getElementById('tracks__item1');
@@ -49,3 +49,4 @@ if (isMobile){
 
     observer_tracks_1.observe(tracks__item2);
 }
+
