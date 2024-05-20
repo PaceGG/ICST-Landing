@@ -1,12 +1,14 @@
 
-if (!isMobile) {
-document.addEventListener('DOMContentLoaded', function() {
-    var showMoreButtons = document.querySelectorAll('.show-more-button');
-    showMoreButtons.forEach(function(button){
-        button.remove();
-    });
-});
 
+if (!isMobile_mobile) {
+  document.addEventListener('DOMContentLoaded', function() {
+      var showMoreButtons = document.querySelectorAll('.show-more-button');
+      showMoreButtons.forEach(function(button){
+          button.remove();
+      });
+  });
+}
+if (!isMobile) {
 const commentList = document.querySelector('.comment_list');
 const comments = document.querySelectorAll('.comment');
 const arrowLeft = document.querySelector('.arrow-left');

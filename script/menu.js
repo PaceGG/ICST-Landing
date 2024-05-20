@@ -1,7 +1,7 @@
 //const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 const isMobile = window.matchMedia("(max-width: 1000px)").matches;
-  
+const isMobile_mobile = window.matchMedia("(max-width: 500px)").matches;
 
 
 if (!isMobile){

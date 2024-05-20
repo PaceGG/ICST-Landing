@@ -85,6 +85,14 @@
 .go_iknt {
   display: none;
 }
+@media (max-width: 1000px) {
+  .logo{
+    margin-right: 40px;
+  }
+  .nav-item {
+    text-align: center;
+  }
+}
 @media (max-width: 500px) {
   .bg_head {
     background: none;

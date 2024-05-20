@@ -176,11 +176,20 @@ transform: translateY(-200px); */
 .roulette_arr p {
   height: 47px;
 }
-
+@media (max-width: 1000px) {
+  .roulette_row {
+    width: 90%;
+    height: 80px;
+  }
+  .roulette_arr p {
+    margin-top: 30px;
+    height: 75px;
+  }
+}
 @media (max-width: 500px) {
   .roulette_row {
     width: 90%;
-    height: 55px;
+    height: 60px;
   }
   .roulette_arr p {
     margin-top: 30px;
@@ -232,7 +241,10 @@ transform: translateY(-200px); */
 }
 
 @media (max-width: 320px) {
-
+  .roulette_row {
+    width: 90%;
+    height: 100px;
+  }
   .roulette_items {
     display: flex;
     flex-direction: column;

@@ -164,3 +164,48 @@
     max-height: none;
   }
 }
+
+@media (max-width: 1000px) {
+  .comment_container {
+    padding-top: 30px;
+    background-image: none;
+  }
+  .comment_view {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .comment__arrow_box {
+    display: none;
+  }
+  .comment_text {
+    /* changefont */
+  }
+  .comment_avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 27.5px auto;
+    overflow: hidden;
+    border: 55px solid rgba(66, 170, 255, 0.15);
+  }
+  .comment_list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: hidden;
+  }
+  .comment_point:not(.active):hover {
+    background-color: #ccc;
+  }
+  .comment_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-height: 140px; */
+    transition: max-height 0.3s ease;
+  }
+
+  .comment_text.expanded {
+    max-height: none;
+  }
+}
