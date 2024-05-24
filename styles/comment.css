@@ -143,7 +143,7 @@
     border-radius: 50%;
     margin: 27.5px auto;
     overflow: hidden;
-    border: 55px solid rgba(66, 170, 255, 0.15);
+    border: 35px solid rgba(66, 170, 255, 0.15);
   }
   .comment_list {
     display: flex;
@@ -188,7 +188,7 @@
     border-radius: 50%;
     margin: 27.5px auto;
     overflow: hidden;
-    border: 55px solid rgba(66, 170, 255, 0.15);
+    border: 35px solid rgba(66, 170, 255, 0.15);
   }
   .comment_list {
     display: flex;

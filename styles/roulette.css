@@ -185,6 +185,14 @@ transform: translateY(-200px); */
     margin-top: 30px;
     height: 75px;
   }
+  .roulette_button {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 0px;
+    margin-left: 0;
+    z-index: 200;
+  }
 }
 @media (max-width: 500px) {
   .roulette_row {
