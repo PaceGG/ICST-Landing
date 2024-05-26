@@ -56,6 +56,8 @@
   width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
+  background-color: white;
+  border-radius: var(--default-radius);
 }
 
 .slide {
@@ -70,10 +72,7 @@
   flex-direction: column;
   justify-content: center; */
   align-items: center;
-
-  border-radius: var(--default-radius);
   margin-top: 15px;
-  background-color: white;
   padding-left: 20px;
 
   /* transform: translateY(-432px);  */
