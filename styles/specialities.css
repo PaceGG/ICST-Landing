@@ -59,7 +59,7 @@
   height: 75px;
 }
 .spec__name {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .spec__about {
   font-size: 0.9em;
