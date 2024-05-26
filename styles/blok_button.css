@@ -66,6 +66,13 @@
   display: flex;
 }
 
+.href_btn{
+  text-decoration: underline;
+  color:var(--accent);
+}
+
+
+
 @media (max-width: 500px) {
   .about_entering img {
     display: none;

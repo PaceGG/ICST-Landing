@@ -32,7 +32,7 @@ rouletteButton.addEventListener('click', () => {
 
 if (!isMobile){
   const roulButton = document.querySelector('.roulette_button');
-  const rouletteH2 = document.querySelector('#roulette_flag_button');
+  const rouletteH2 = document.getElementById('roulette_flag_button');
   const button_text1 = document.getElementById('roulette_button_text1');
   const button_text2 = document.getElementById('roulette_button_text2');
   const observer = new IntersectionObserver((entries)=> {
@@ -40,10 +40,11 @@ if (!isMobile){
       if (entry.isIntersecting || (entry.boundingClientRect.top < 0 && entry.boundingClientRect.bottom > 0)) 
       {
         roulButton.style.bottom = '';
-        roulButton.href = ''; // новая ссылка
+        roulButton.href = 'https://www.gosuslugi.ru/10077/1/form'; // новая ссылка
         roulButton.classList.add('roulette_animation_button');
         button_text1.classList.add('roulette_animation_button_text1');
         button_text2.classList.add('roulette_animation_button_text2');
+        roulButton.classList.remove('menu-link');
 
       } else if(entry.boundingClientRect.top >= 0){
         roulButton.style.bottom = '80px';
@@ -53,6 +54,7 @@ if (!isMobile){
         button_text1.style.opacity = 1;
         roulButton.href = '#roulette_href';
         roulButton.classList.remove('roulette_animation_button');
+        roulButton.classList.add('menu-link');
       }
     });
   });
@@ -61,5 +63,5 @@ if (!isMobile){
 
 if (isMobile){
   const roulButton = document.querySelector('.roulette_button');
-  roulButton.href = ''; // новая ссылка
+  roulButton.href = 'https://www.gosuslugi.ru/10077/1/form'; // новая ссылка
 }

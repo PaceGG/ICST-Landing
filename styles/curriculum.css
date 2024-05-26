@@ -1,7 +1,7 @@
 .curriculum__content {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
   justify-content: space-between;
   padding: 20px;
   border-radius: var(--default-radius);
@@ -11,6 +11,9 @@
   display: flex;
   align-items: center;
   gap: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--default-radius);
 }
 .curriculum__decoration {
   min-width: 167px;
@@ -95,6 +98,13 @@
   box-shadow: none;
   transition: 0.5s;
 }
+
+.curriculum__h3{
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}
+
 
 @media (max-width: 500px) {
   .curriculum__content {

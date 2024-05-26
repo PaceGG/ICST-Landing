@@ -80,15 +80,23 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault(); 
         const targetId = this.getAttribute('href'); 
         const targetElement = document.querySelector(targetId);
-        scrollTo(targetElement); 
+        scrollTo(targetElement, targetId); 
         closeMobileMenu(); 
       });
     });
-    function scrollTo(element) {
+    function scrollTo(element, targetId) {
+        if (targetId === '#about' || targetId === '#tracks') 
+          {
+            offset = 200;
+          } else {
+            offset = 100;
+          }
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - offset;
       window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: element.offsetTop
+        top: offsetPosition
       });
     }
     function closeMobileMenu() {
