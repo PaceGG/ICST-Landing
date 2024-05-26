@@ -27,7 +27,7 @@
   justify-content: center;
   margin-top: -140px;
   gap: 15px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .for_who__item {
   display: flex;
