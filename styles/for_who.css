@@ -3,7 +3,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
-  padding-top: 0;
 }
 .for_who__title {
   padding: 0 32px;
@@ -155,7 +154,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 740px) {
   .for_who {
     background-image: none;
   }
@@ -165,10 +164,10 @@
   .for_who__title h2 {
     font-size: 24px;
     padding-top: 10px;
-    height: 408px;
+    height: 600px;
   }
   .for_who__content {
-    margin-top: -317px;
+    margin-top: -480px;
     gap: 0;
   }
   .for_who__boxes {
@@ -187,7 +186,7 @@
     background-color: #331acf;
   }
   .for_who__item:nth-child(even) p {
-    background-color: #331acf;
+    background-color: var(--accent);
   }
   #for_who__item_center {
     opacity: 1;
