@@ -99,14 +99,20 @@
   transition: 0.5s;
 }
 
-.curriculum__h3{
+.curriculum__h3 {
   font-weight: 600;
   color: black;
   text-decoration: underline;
 }
 
+@media (max-width: 670px) {
+  .curriculum.desktop {
+    display: none;
+  }
+  .curriculum.mobile {
+    display: block;
+  }
 
-@media (max-width: 500px) {
   .curriculum__content {
     flex-direction: column;
     gap: 20px;
@@ -118,6 +124,8 @@
   .curriculum__item {
     flex-direction: column;
     gap: 10px;
+    background-color: transparent;
+    padding: 0;
   }
   .curriculum__info {
     display: flex;

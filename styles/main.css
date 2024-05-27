@@ -17,7 +17,7 @@ body {
   --shadow: 0px 5px 10px #0000002e;
   --default-radius: 50px;
 }
-img{
+img {
   pointer-events: none;
 }
 section {

@@ -20,6 +20,9 @@
   margin-bottom: 30px;
   gap: 10px;
 }
+.faculties__item:last-child {
+  margin-bottom: 0;
+}
 .facultie__name {
   max-width: 50%;
 }

@@ -3,6 +3,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
+  padding-top: 0;
 }
 .for_who__title {
   padding: 0 32px;

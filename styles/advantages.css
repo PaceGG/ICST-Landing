@@ -56,6 +56,9 @@
   .advantages {
     padding-bottom: 0px;
   }
+  .advantages__title {
+    margin-bottom: 25px;
+  }
   .advantages__items {
     box-shadow: none;
   }
