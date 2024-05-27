@@ -60,6 +60,7 @@
 }
 .spec__name {
   /* text-transform: uppercase; */
+  font-weight: 600;
 }
 .spec__about {
   font-size: 0.9em;

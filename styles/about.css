@@ -29,7 +29,7 @@
 }
 #about_dec1,
 #about_dec4,
-#about_dec7{
+#about_dec7 {
   background-color: #cc0256;
 }
 #about_dec2,
@@ -82,6 +82,7 @@
 .about__arrow_box {
   cursor: pointer;
   border-radius: 50%;
+  user-select: none;
   /* background-color: #19c6ff; */
 }
 .about__arrow {
@@ -98,11 +99,7 @@
 .slider p {
   overflow-wrap: break-word;
   margin: 10px 10px;
-  line-height: 30px;
-  font-weight: 600;
 }
-
-
 
 @media (max-width: 1520px) {
   .about__content {
@@ -175,7 +172,7 @@
     justify-content: center;
     margin-bottom: 30px;
   }
-  
+
   .about_point {
     width: 10px;
     height: 10px;
@@ -183,11 +180,11 @@
     background-color: #ccc;
     margin: 0 5px;
   }
-  
+
   .about_point.active {
     background-color: #333;
   }
-  
+
   .about_point:hover {
     background-color: #333;
   }
