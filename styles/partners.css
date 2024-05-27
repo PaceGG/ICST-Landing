@@ -104,6 +104,12 @@
   cursor: grabbing;
 }
 
+@media (max-width: 1300px) {
+  .partners {
+    padding-top: 80px;
+  }
+}
+
 @media (max-width: 500px) {
   .partners {
     padding-bottom: 30px;

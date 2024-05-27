@@ -83,7 +83,7 @@
     transform 1.25s cubic-bezier(0.42, 0, 0, 1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .tracks {
     background-image: none;
     background-image: url(../img/mobile_tracks_bg_top.svg),
