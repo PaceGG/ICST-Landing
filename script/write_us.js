@@ -3,12 +3,12 @@ if (!isMobile){
   function showModal() 
   {
     setTimeout(function() {
-      document.getElementById("modal-message").classList.add("show"); 
+      document.getElementById("modal-message").classList.add("show_modal"); 
     }, 1000); 
   }
   function closeModal() 
   {
-    document.getElementById("modal-message").classList.remove("show");
+    document.getElementById("modal-message").classList.remove("show_modal");
   }
   window.onload = showModal;
 
@@ -17,7 +17,7 @@ if (!isMobile){
       //console.log(document.body.offsetHeight);
     var modal = document.getElementById("modal-message");
     if (((window.innerHeight + window.scrollY)+10) >= document.body.offsetHeight) {
-      modal.classList.add("show");
+      modal.classList.add("show_modal");
     }
   }); 
 }
