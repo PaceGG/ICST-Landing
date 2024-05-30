@@ -12,12 +12,12 @@ function change_button(button_active) {
 
     image_container.forEach(function(block) {
         block.style.display = "none";
-        console.log(block);
+        //console.log(block);
     });
     buttons.forEach(function(button) {
       button.classList.remove("active");
     });
-console.log(button_active);
+//console.log(button_active);
     document.getElementById(button_active).classList.add("active");
     switch (button_active) {
         case "button1":

@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-.show {
+.show_modal {
   bottom: 0px !important;
   box-shadow: 0px 0px 15px #0000002e;
 }
