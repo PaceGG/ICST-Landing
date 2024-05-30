@@ -362,7 +362,7 @@ function avto_slider()
         const slider = document.querySelector(".slider");
         slider.append(slider.firstElementChild);
         const slides = document.querySelectorAll(".slide");
-        console.log(slidesArrPosition);
+        //console.log(slidesArrPosition);
         for (let i = 0; i < slides.length ; i++) 
         {
           //console.log(slidesArrPosition[i] );
