@@ -48,4 +48,7 @@
   #modal-message {
     display: none;
   }
+  #modal-message-mobile {
+    display: flex;
+  }
 }

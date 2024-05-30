@@ -115,6 +115,8 @@
     right: -100%;
     top: 100px;
     box-shadow: var(--shadow);
+    overflow: hidden;
+    padding-left: 15px;
   }
   .nav-item {
     display: flex;
