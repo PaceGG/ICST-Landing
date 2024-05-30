@@ -1176,7 +1176,6 @@ const tracks__item_right = document.getElementById('tracks__item_right');
 const tracks__separate_blocks = document.getElementById('tracks__separate_blocks');
 Создание IntersectionObserver:
 javascript
-Копировать код
 const observer3 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
