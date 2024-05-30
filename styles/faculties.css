@@ -34,15 +34,12 @@
   width: 50%;
 }
 .facultie__info__item__pts {
-  /* changefont */
   line-height: 31px;
   color: var(--accent);
 }
 .facultie__info__item__pts_info {
-  /* changefont */
 }
 .facultie__info__item__new {
-  /* changefont */
   font-weight: 500;
 }
 .facultie__info__item {
@@ -50,13 +47,7 @@
   text-align: center;
 }
 
-@media (max-width: 500px) {
-  .faculties {
-    background-attachment: local;
-    background-size: cover;
-    background-position: right;
-    background-position-x: -200px;
-  }
+@media (max-width: 890px) {
   .faculties-content {
     display: flex;
     flex-direction: column;
@@ -65,13 +56,13 @@
     width: 100%;
   }
   .faculties__item {
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
     padding: 10px;
   }
   .facultie__name {
-    /* changefont */
     text-align: center;
     width: 100%;
   }
@@ -83,13 +74,11 @@
   }
   .facultie__info__item__new {
     text-align: center;
-    /* changefont */
   }
   .facultie__info__item__pts {
     font-size: 1.5em;
   }
   .facultie__info__item__pts_info {
-    /* changefont */
   }
   .facultie__info {
     width: 100%;
