@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-if (isMobile) {
+if (isMobile || isMobile_mobile) {
   let isAnim = false;
 
   function menu_active() {

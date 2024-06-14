@@ -83,6 +83,10 @@
 }
 
 @media (max-width: 1200px) {
+  #modal-message-mobile{
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
   .nav {
     box-shadow: var(--shadow);
     padding: 10px 0;
@@ -115,6 +119,8 @@
     right: -100%;
     top: 100px;
     box-shadow: var(--shadow);
+    overflow: hidden;
+    padding-left: 15px;
   }
   .nav-item {
     display: flex;
