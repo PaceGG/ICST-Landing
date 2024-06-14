@@ -1,6 +1,6 @@
 # Документация к HTML блоку "header" - Шапка
 
-## Описаниеasdadasdasdasdasda
+## Описаниеasdadasdasdasdasdaasdadasdasdasd
 
 Блок `header` представляет собой заголовок веб-страницы Института компьютерных наук и технологий Пермского государственного национального исследовательского университета. Этот блок включает в себя навигационное меню, логотип, кнопки для мобильной и десктопной версии сайта, а также текстовую информацию о вузе.
 
@@ -75,8 +75,10 @@
 const isMobile = window.matchMedia("(max-width: 1000px)").matches;
 const isMobile_mobile = window.matchMedia("(max-width: 500px)").matches;
 ```
+
 Описание:
 Эти две строки используют метод `window.matchMedia` для проверки, соответствует ли ширина окна браузера определенным условиям. Переменная `isMobile` будет иметь значение true, если ширина окна меньше или равна 1000 пикселей, а переменная `isMobile_mobile` будет иметь значение `true`, если ширина окна меньше или равна 500 пикселей. Эти переменные будут использоваться для определения, какой код следует выполнять в зависимости от того, является ли устройство мобильным или нет.
+
 ```javascript
 // Если устройство не мобильное, выполняем этот код
 if (!isMobile) {
@@ -146,6 +148,7 @@ if (!isMobile) {
   });
 }
 ```
+
 Описание:
 Этот код выполняется только в том случае, если устройство пользователя не является мобильным (ширина окна больше 1000 пикселей).
 
@@ -168,7 +171,6 @@ if (!isMobile) {
 
 Когда мышь наводится на меню, переменная `onMenu` устанавливается в `true`.
 
-
 Добавляется обработчик события `mouseleave` (покидание мыши) для элемента меню.
 
 Когда мышь покидает меню и `high` равно `false` (пользователь не в верхней части страницы), то:
@@ -185,7 +187,6 @@ if (!isMobile) {
 Сбрасывается таймер `timer`.
 Меню становится видимым `(menu.style.transform = "translateY(0)")`.
 
-
 В противном случае, если `high` равно `false` (пользователь не в верхней части страницы), то:
 
 Меню становится видимым `(menu.style.transform = "translateY(0)")`.
@@ -193,7 +194,6 @@ if (!isMobile) {
 Устанавливается таймер `timer` для скрытия меню через 3 секунды `(setTimeout)`.
 
 Таким образом, этот код управляет видимостью меню на не мобильных устройствах. Меню скрывается через 3 секунды после прокрутки страницы, если мышь не наведена на меню и пользователь не находится в верхней части страницы. Также меню показывается, если мышь находится в верхней части экрана.
-
 
 ```javascript
 /* для работы меню*/
@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 ```
+
 Описание:
 Этот фрагмент кода выполняется после полной загрузки DOM.
 
@@ -254,22 +255,19 @@ document.addEventListener("DOMContentLoaded", function () {
 Вызывается функция `scrollTo` с передачей целевого элемента и идентификатора для плавной прокрутки страницы к этому элементу.
 Вызывается функция `closeMobileMenu` для закрытия мобильного меню (если оно открыто).
 
-
 Функция `scrollTo` принимает целевой элемент и идентификатор:
 
 Устанавливается смещение `(offset)` в зависимости от целевого идентификатора. Для `#about` и `#tracks` смещение равно 200 пикселей, для остальных - 100 пикселей.
 Получается позиция целевого элемента с учетом смещения `(elementPosition - offset)`.
 Вызывается метод `window.scroll` с параметрами behavior: "smooth" для плавной анимации прокрутки, `left: 0` для сохранения горизонтального положения и `top: offsetPosition` для установки нового вертикального положения.
 
-
 Функция `closeMobileMenu`:
 
 Получается ссылка на мобильное меню с помощью `document.getElementById("menu")`.
 У мобильного меню удаляется класс `active` с помощью `mobileMenu.classList.remove("active")`.
 
-
-
 Таким образом, этот код добавляет обработчики событий клика для ссылок меню. Когда пользователь кликает на ссылку меню, предотвращается стандартное поведение ссылки, затем получается целевой элемент, к которому нужно прокрутить страницу, вызывается функция `scrollTo` для плавной прокрутки к целевому элементу, и вызывается функция `closeMobileMenu` для закрытия мобильного меню.
+
 ```javascript
 if (isMobile) {
   let isAnim = false;
@@ -318,6 +316,7 @@ if (isMobile) {
   }
 }
 ```
+
 Описание:
 Этот фрагмент кода выполняется только на мобильных устройствах `(если isMobile равно true)`.
 
@@ -332,7 +331,6 @@ if (isMobile) {
 Получается ссылка на элемент оверлея с помощью `document.querySelector(".overlay")`.
 Проверяется состояние флага `isAnim`, который отслеживает, анимируется ли меню в данный момент.
 
-
 Если `isAnim` равно `false` (меню закрыто):
 
 Удаляется класс `nav_bar_anim_return` у элемента `nav_bar` (для предотвращения анимации закрытия меню).
@@ -341,7 +339,6 @@ if (isMobile) {
 Удаляется класс `hidden` у элемента `overlay` (для показа оверлея).
 Добавляется класс `show` к элементу `overlay` (для показа оверлея).
 Устанавливается флаг `isAnim` в `true` (меню анимируется).
-
 
 Если `isAnim` равно `true` (меню открыто):
 
@@ -352,11 +349,7 @@ if (isMobile) {
 Добавляется класс `hidden` к элементу `overlay` (для скрытия оверлея).
 Сбрасывается флаг `isAnim` в `false` (меню не анимируется).
 
-
-
 Таким образом, функция `menu_active` переключает классы `CSS` для элементов меню и оверлея, чтобы открыть или закрыть мобильное меню с анимацией. Флаг `isAnim `используется для отслеживания состояния анимации меню, чтобы избежать конфликтов при повторном вызове функции.
-
-
 
 # Документация к блоку "Об институте"
 
@@ -504,8 +497,6 @@ if (isMobile) {
 
 Класс для активной точки навигации.
 
-
-
 Основные задачи JavaScript в файле about.js
 Анимация слайдов
 Адаптивная обработка для мобильных устройств
@@ -517,6 +508,7 @@ if (isMobile) {
 const slidesArrPosition = [];
 var point_index = 2;
 ```
+
 Основной функционал для десктопной версии
 Определение высоты слайдов и их первоначальная расстановка
 Для десктопных устройств `(if (!isMobile))`, после загрузки DOM `(DOMContentLoaded)`, определяются параметры слайдов, такие как высота `(slideHeight)` и отступы `(marginValue)`:
@@ -528,69 +520,81 @@ if (!isMobile) {
     const marginValue = parseInt(window.getComputedStyle(slides[0]).marginTop);
     var slideHeight_main = slideHeight + marginValue;
 ```
+
 Расчет начальной позиции для слайдов:
 
 ```javascript
-    var slidesHeight_main = slides.length % 2 === 0 ? -(slideHeight_main * (slides.length - 2)) / 2 : -(slideHeight_main * (slides.length - 1)) / 2;
-    
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.transform = `translateY(${slidesHeight_main}px)`;
-        slidesArrPosition.push(slidesHeight_main);
-        slidesHeight_main += slideHeight_main;
-    }
+var slidesHeight_main =
+  slides.length % 2 === 0
+    ? -(slideHeight_main * (slides.length - 2)) / 2
+    : -(slideHeight_main * (slides.length - 1)) / 2;
+
+for (let i = 0; i < slides.length; i++) {
+  slides[i].style.transform = `translateY(${slidesHeight_main}px)`;
+  slidesArrPosition.push(slidesHeight_main);
+  slidesHeight_main += slideHeight_main;
+}
 ```
+
 В зависимости от количества слайдов (четное или нечетное), рассчитывается начальная позиция и устанавливается `translateY` для каждого слайда, сдвигая их по вертикали.
 
 Обработчики событий для стрелок
 После загрузки страницы, добавляются обработчики событий для кнопок "вверх" и "вниз":
 
 ```javascript
-document.addEventListener("DOMContentLoaded", function() {
-    const arrowUp = document.getElementById("arrow_up");
-    const arrowDown = document.getElementById("arrow_down");
+document.addEventListener("DOMContentLoaded", function () {
+  const arrowUp = document.getElementById("arrow_up");
+  const arrowDown = document.getElementById("arrow_down");
 
-    arrowUp.addEventListener("click", function() {
-        sliderPosition(0);
-    });
+  arrowUp.addEventListener("click", function () {
+    sliderPosition(0);
+  });
 
-    arrowDown.addEventListener("click", function() {
-        sliderPosition(1);
-    });
+  arrowDown.addEventListener("click", function () {
+    sliderPosition(1);
+  });
 });
 ```
+
 Функция смены позиции слайдов
 Функция `sliderPosition` отвечает за смену позиции слайдов:
 
 ```javascript
 function sliderPosition(direction) {
-    const slider = document.querySelector(".slider");
-    if (direction === 0) {
-        // нижний вверх
-        slider.prepend(slider.lastElementChild);
-    } else if (direction === 1) {
-        // верхний вниз
-        slider.append(slider.firstElementChild);
-    }
+  const slider = document.querySelector(".slider");
+  if (direction === 0) {
+    // нижний вверх
+    slider.prepend(slider.lastElementChild);
+  } else if (direction === 1) {
+    // верхний вниз
+    slider.append(slider.firstElementChild);
+  }
 
-    const slides = document.querySelectorAll(".slide");
-    for (let i = 0; i < slides.length; i++) {
-        const animation = slides[i].animate(
-            [
-                { transform: `translateY(${slidesArrPosition[i] + (direction === 0 ? -slideHeight_main : slideHeight_main)}px)` },
-                { transform: `translateY(${slidesArrPosition[i]}px)`, offset: 1 }
-            ],
-            {
-                duration: 500,
-                easing: 'linear'
-            }
-        );
-        animation.onfinish = () => {
-            slides[i].style.transform = `translateY(${slidesArrPosition[i]}px)`;
-        };
-    }
-    flag_avto_slider = false;
+  const slides = document.querySelectorAll(".slide");
+  for (let i = 0; i < slides.length; i++) {
+    const animation = slides[i].animate(
+      [
+        {
+          transform: `translateY(${
+            slidesArrPosition[i] +
+            (direction === 0 ? -slideHeight_main : slideHeight_main)
+          }px)`,
+        },
+        { transform: `translateY(${slidesArrPosition[i]}px)`, offset: 1 },
+      ],
+      {
+        duration: 500,
+        easing: "linear",
+      }
+    );
+    animation.onfinish = () => {
+      slides[i].style.transform = `translateY(${slidesArrPosition[i]}px)`;
+    };
+  }
+  flag_avto_slider = false;
 }
 ```
+
 Эта функция:
 
 `direction 0:` перемещает последний слайд в начало.
@@ -613,75 +617,86 @@ if (isMobile) {
         slidesWidth_main += slideWidth_main;
     }
 ```
+
 Вместо вертикального перемещения слайдов, они перемещаются по горизонтали, что подходит для мобильных устройств.
 
 Обработчики для тач-событий
 Добавляются обработчики для работы слайдов при помощи касаний:
 
 ```javascript
-const slaiderList_mobal = document.querySelector('.slider');
-let startX, currentX, offsetX, direction, offsetX_prev = 0, diff = 0;
+const slaiderList_mobal = document.querySelector(".slider");
+let startX,
+  currentX,
+  offsetX,
+  direction,
+  offsetX_prev = 0,
+  diff = 0;
 
 function TouchStart(e) {
-    startX = e.touches[0].clientX;
-    offsetX = slaiderList_mobal.scrollLeft;
+  startX = e.touches[0].clientX;
+  offsetX = slaiderList_mobal.scrollLeft;
 }
 
 function TouchMove(e, slides) {
-    currentX = e.touches[0].clientX;
-    diff = currentX - startX;
-    direction = (offsetX - diff < offsetX_prev) ? 1 : 0;
-    offsetX_prev = offsetX - diff;
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
-    }
+  currentX = e.touches[0].clientX;
+  diff = currentX - startX;
+  direction = offsetX - diff < offsetX_prev ? 1 : 0;
+  offsetX_prev = offsetX - diff;
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
+  }
 }
 
 function TouchEnd() {
-    // Обработка окончания касания, аналогичная функции sliderPosition
+  // Обработка окончания касания, аналогичная функции sliderPosition
 }
 
-slaiderList_mobal.addEventListener('touchstart', TouchStart);
-slaiderList_mobal.addEventListener('touchmove', (e) => TouchMove(e, document.querySelectorAll(".slide")));
-slaiderList_mobal.addEventListener('touchend', TouchEnd);
+slaiderList_mobal.addEventListener("touchstart", TouchStart);
+slaiderList_mobal.addEventListener("touchmove", (e) =>
+  TouchMove(e, document.querySelectorAll(".slide"))
+);
+slaiderList_mobal.addEventListener("touchend", TouchEnd);
 ```
+
 Автоматическая смена слайдов
 Для автоматической смены слайдов используется `IntersectionObserver`, который отслеживает видимость элемента:
 
 ```javascript
 var flag_avto_slider = false;
-const observer_about = new IntersectionObserver(entries => {
+const observer_about = new IntersectionObserver(
+  (entries) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
-        flag_avto_slider = true;
-        avto_slider();
-        start_interval();
-        observer_about.unobserve(entry.target);
+      flag_avto_slider = true;
+      avto_slider();
+      start_interval();
+      observer_about.unobserve(entry.target);
     }
-}, {
-    rootMargin: '-200px'
-});
+  },
+  {
+    rootMargin: "-200px",
+  }
+);
 
-const element_about = document.querySelector('.slider');
+const element_about = document.querySelector(".slider");
 observer_about.observe(element_about);
 ```
+
 Функция `avto_slider` выполняет автоматическую смену слайдов каждые 5 секунд:
 
 ```javascript
 function avto_slider() {
-    if (isMobile && flag_avto_slider) {
-        // логика для мобильных
-    } else if (!isMobile && flag_avto_slider) {
-        // логика для десктопа
-    }
+  if (isMobile && flag_avto_slider) {
+    // логика для мобильных
+  } else if (!isMobile && flag_avto_slider) {
+    // логика для десктопа
+  }
 }
 
 function start_interval() {
-    setInterval(avto_slider, 5000);
+  setInterval(avto_slider, 5000);
 }
 ```
-
-
 
 # Документация к блоку "faculties"
 
@@ -1170,6 +1185,7 @@ function start_interval() {
 Если переменная `isMobile_mobile` имеет значение `false` (т.е. это не мобильное устройство), то выполняется следующий код:
 
 Инициализация переменных:
+
 ```javascript
 const tracks__item_left = document.getElementById('tracks__item_left');
 const tracks__item_right = document.getElementById('tracks__item_right');
@@ -1187,10 +1203,13 @@ const observer3 = new IntersectionObserver(entries => {
     });
 });
 ```
+
 Начало наблюдения за элементом:
+
 ```javascript
 observer3.observe(tracks__separate_blocks);
 ```
+
 Описание работы:
 
 Когда `tracks__separate_blocks` попадает в область видимости, к элементам `tracks__item_left` и `tracks__item_right` добавляются классы `show_right` и `show_left`, соответственно, чтобы запустить анимацию.
@@ -1199,53 +1218,64 @@ observer3.observe(tracks__separate_blocks);
 Если переменная `isMobile_mobile` имеет значение true (т.е. это мобильное устройство), то выполняется следующий код:
 
 Инициализация переменных:
+
 ```javascript
-const tracks__item_left = document.getElementById('tracks__item_left');
-const tracks__item_right = document.getElementById('tracks__item_right');
-const tracks__item1 = document.getElementById('tracks__item1');
-const tracks__item2 = document.getElementById('tracks__item2');
+const tracks__item_left = document.getElementById("tracks__item_left");
+const tracks__item_right = document.getElementById("tracks__item_right");
+const tracks__item1 = document.getElementById("tracks__item1");
+const tracks__item2 = document.getElementById("tracks__item2");
 ```
+
 Удаление и добавление классов для начального состояния:
+
 ```javascript
-tracks__item_right.classList.remove('hidden_right');
-tracks__item_right.classList.add('hidden_left');
+tracks__item_right.classList.remove("hidden_right");
+tracks__item_right.classList.add("hidden_left");
 ```
+
 Создание первого `IntersectionObserver`:
+
 ```javascript
-const observer3 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            tracks__item_left.classList.add('show_left');
-            observer3.unobserve(entry.target);
-        }
-    });
+const observer3 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      tracks__item_left.classList.add("show_left");
+      observer3.unobserve(entry.target);
+    }
+  });
 });
 ```
+
 Начало наблюдения за первым элементом:
+
 ```javascript
 observer3.observe(tracks__item1);
 ```
+
 Создание второго `IntersectionObserver`:
+
 ```javascript
-const observer_tracks_1 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            tracks__item_right.classList.add('show_left');
-            observer_tracks_1.unobserve(entry.target);
-        }
-    });
+const observer_tracks_1 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      tracks__item_right.classList.add("show_left");
+      observer_tracks_1.unobserve(entry.target);
+    }
+  });
 });
 ```
+
 Начало наблюдения за вторым элементом:
+
 ```javascript
 observer_tracks_1.observe(tracks__item2);
 ```
+
 Описание работы:
 
 В мобильной версии удаляются и добавляются классы `hidden_right` и `hidden_left` для элемента `tracks__item_right` для начального состояния.
 Первый наблюдатель `(observer3)` следит за `tracks__item1` и добавляет класс `show_left` к `tracks__item_left`, когда `tracks__item1` попадает в область видимости.
 Второй наблюдатель `(observer_tracks_1)` следит за `tracks__item2` и добавляет класс `show_left` к `tracks__item_right`, когда `tracks__item2` попадает в область видимости.
-
 
 # Техническая документация для секции "Про направления"
 
@@ -1373,10 +1403,13 @@ observer_tracks_1.observe(tracks__item2);
 Структура кода
 Анимация выезда сбоку
 Поиск элементов с классом `.about_faculties__text`:
+
 ```javascript
 var childElements = document.querySelectorAll(".about_faculties__text");
 ```
+
 Установка высоты родительских элементов на основе высоты дочерних:
+
 ```javascript
 childElements.forEach(function (childElement) {
   var childHeight = childElement.clientHeight;
@@ -1384,16 +1417,20 @@ childElements.forEach(function (childElement) {
   parentElement.style.height = childHeight + "px";
 });
 ```
+
 Описание работы:
 
 Скрипт находит все элементы с классом `.about_faculties__text`.
 Для каждого найденного элемента высота дочернего элемента `(childElement.clientHeight)` устанавливается как высота его родительского элемента `(parentElement.style.height)`.
 Анимация выезда сверху
 Поиск элементов с классом `.about_faculties__text_box`:
+
 ```javascript
 var childElements = document.querySelectorAll(".about_faculties__text_box");
 ```
+
 Установка высоты родительских элементов на основе высоты дочерних:
+
 ```javascript
 childElements.forEach(function (childElement) {
   var childHeight = childElement.clientHeight;
@@ -1401,24 +1438,29 @@ childElements.forEach(function (childElement) {
   parentElement.style.height = childHeight + "px";
 });
 ```
+
 Описание работы:
 
 Скрипт находит все элементы с классом `.about_faculties__text_box`.
 Для каждого найденного элемента высота дочернего элемента `(childElement.clientHeight)` устанавливается как высота его родительского элемента `(parentElement.style.height)`.
 Анимация при скролле
 Добавление обработчика события scroll:
+
 ```javascript
 window.addEventListener("scroll", function () {
   var screenPosition = window.innerHeight - 200;
 ```
+
 Обработка анимации для каждого блока:
+
 ```javascript
-  var block1 = document.getElementById("about_faculties__top_animation_area_1");
-  var block1Position = block1.getBoundingClientRect().top;
-  if (block1Position < screenPosition) {
-    block1.classList.add("about_faculties__animation_apply");
-  }
+var block1 = document.getElementById("about_faculties__top_animation_area_1");
+var block1Position = block1.getBoundingClientRect().top;
+if (block1Position < screenPosition) {
+  block1.classList.add("about_faculties__animation_apply");
+}
 ```
+
 Аналогично для других блоков `(block2, block3, block4)`:
 
 ```javascript
@@ -1433,7 +1475,7 @@ window.addEventListener("scroll", function () {
   if (block3Position < screenPosition) {
     block3.classList.add("about_faculties__animation_apply");
   }
-  
+
   var block4 = document.getElementById("about_faculties__top_animation_area_4");
   var block4Position = block4.getBoundingClientRect().top;
   if (block4Position < screenPosition) {
@@ -1441,6 +1483,7 @@ window.addEventListener("scroll", function () {
   }
 });
 ```
+
 Описание работы:
 
 Скрипт добавляет обработчик события `scroll`, который выполняется при прокрутке страницы.
@@ -1596,29 +1639,38 @@ window.addEventListener("scroll", function () {
 Структура кода
 Инициализация переменных
 Поиск всех кнопок с классом `.curriculum__button`:
+
 ```javascript
 const c_buttons = document.querySelectorAll(".curriculum__button");
 ```
+
 Поиск всех информационных блоков с классом `.curriculum__info`:
+
 ```javascript
 const c_infoBlocks = document.querySelectorAll(".curriculum__info");
 ```
+
 Функция обработки нажатия кнопки
 Определение функции `handleButtonClick`:
+
 ```javascript
 function handleButtonClick(index) {
 ```
+
 Обработка классов для кнопок:
+
 ```javascript
-  c_buttons.forEach((button, i) => {
-    if (i === index) {
-      button.classList.add("curriculum__button__active");
-    } else {
-      button.classList.remove("curriculum__button__active");
-    }
-  });
+c_buttons.forEach((button, i) => {
+  if (i === index) {
+    button.classList.add("curriculum__button__active");
+  } else {
+    button.classList.remove("curriculum__button__active");
+  }
+});
 ```
+
 Обработка классов для информационных блоков:
+
 ```javascript
   c_infoBlocks.forEach((block, i) => {
     if (i === index) {
@@ -1629,6 +1681,7 @@ function handleButtonClick(index) {
   });
 }
 ```
+
 Описание работы:
 
 Функция `handleButtonClick` принимает индекс нажатой кнопки.
@@ -1636,6 +1689,7 @@ function handleButtonClick(index) {
 Перебирает все информационные блоки `(c_infoBlocks)`. Если индекс текущего блока совпадает с переданным индексом, к блоку добавляется класс `curriculum__active`, в противном случае класс удаляется.
 Добавление обработчиков событий для кнопок
 Перебор всех кнопок и добавление обработчика события `click`:
+
 ```javascript
 c_buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -1643,14 +1697,17 @@ c_buttons.forEach((button, index) => {
   });
 });
 ```
+
 Описание работы:
 
 Для каждой кнопки добавляется обработчик события `click`, который вызывает функцию `handleButtonClick` с соответствующим индексом.
 Установка начального состояния
 Вызов функции `handleButtonClick` с индексом 0:
+
 ```javascript
 handleButtonClick(0);
 ```
+
 Описание работы:
 
 Скрипт устанавливает первую кнопку и первый информационный блок как активные при загрузке страницы.
@@ -2057,6 +2114,7 @@ handleButtonClick(0);
   </div>
 </section>
 ```
+
 скрипт `block_button.js`
 
 Описание
@@ -2065,29 +2123,38 @@ handleButtonClick(0);
 Структура кода
 Инициализация переменных
 Поиск всех кнопок с классом `.entering__button`:
+
 ```javascript
 const e_buttons = document.querySelectorAll(".entering__button");
 ```
+
 Поиск всех информационных блоков с классом `.entering__item`:
+
 ```javascript
 const e_infoBlocks = document.querySelectorAll(".entering__item");
 ```
+
 Функция обработки нажатия кнопки
 Определение функции `e_handleButtonClick`:
+
 ```javascript
 function e_handleButtonClick(index) {
 ```
+
 Обработка классов для кнопок:
+
 ```javascript
-  e_buttons.forEach((button, i) => {
-    if (i === index) {
-      button.classList.add("entering__button__active");
-    } else {
-      button.classList.remove("entering__button__active");
-    }
-  });
+e_buttons.forEach((button, i) => {
+  if (i === index) {
+    button.classList.add("entering__button__active");
+  } else {
+    button.classList.remove("entering__button__active");
+  }
+});
 ```
+
 Обработка классов для информационных блоков:
+
 ```javascript
   e_infoBlocks.forEach((block, i) => {
     if (i === index) {
@@ -2098,6 +2165,7 @@ function e_handleButtonClick(index) {
   });
 }
 ```
+
 Описание работы:
 
 Функция `e_handleButtonClick` принимает индекс нажатой кнопки.
@@ -2105,6 +2173,7 @@ function e_handleButtonClick(index) {
 Перебирает все информационные блоки `(e_infoBlocks)`. Если индекс текущего блока совпадает с переданным индексом, к блоку добавляется класс `entering__item__active`, в противном случае класс удаляется.
 Добавление обработчиков событий для кнопок
 Перебор всех кнопок и добавление обработчика события `click`:
+
 ```javascript
 e_buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -2112,14 +2181,17 @@ e_buttons.forEach((button, index) => {
   });
 });
 ```
+
 Описание работы:
 
 Для каждой кнопки добавляется обработчик события `click`, который вызывает функцию `e_handleButtonClick` с соответствующим индексом.
 Установка начального состояния
 Вызов функции `e_handleButtonClick` с индексом 0:
+
 ```javascript
 e_handleButtonClick(0);
 ```
+
 Описание работы:
 
 Скрипт устанавливает первую кнопку и первый информационный блок как активные при загрузке страницы.
@@ -2252,7 +2324,9 @@ e_handleButtonClick(0);
   <p class="spec__about">Описание новой специальности</p>
 </div>
 ```
+
 # Техническая документация для секции "Партнеры" на сайте
+
 ```html
 <section class="partners">
   <h2>Компании партнеры ИКНТ</h2>
@@ -2267,7 +2341,9 @@ e_handleButtonClick(0);
   <script src="script/partners.js"></script>
 </section>
 ```
+
 ## CSS Классы
+
 Общие стили
 `.partners`: Основной контейнер для секции "Компании-партнеры ИКНТ".
 `.partners__content_wrap`: Обертка для содержания секции.
@@ -2317,84 +2393,94 @@ e_handleButtonClick(0);
 скрипт `partners.js`
 
 Инициализация переменных:
+
 ```javascript
 // Выбор всех элементов слайдера и контента для управления
-const content1 = document.querySelector('#partners__content1');
-const content2 = document.querySelector('#partners__content2');
+const content1 = document.querySelector("#partners__content1");
+const content2 = document.querySelector("#partners__content2");
 const slides = document.querySelectorAll(".partners_slide");
 ```
+
 Этот фрагмент кода выбирает элементы слайдов и контента, которые будут управляться скриптом.
 
 Добавление обработчиков событий:
+
 ```javascript
 // Добавление обработчиков событий для паузы анимации при наведении на контент
-content1.addEventListener('mouseenter', pauseAnimation);
-content1.addEventListener('mouseleave', resumeAnimation);
-content2.addEventListener('mouseenter', pauseAnimation);
-content2.addEventListener('mouseleave', resumeAnimation);
+content1.addEventListener("mouseenter", pauseAnimation);
+content1.addEventListener("mouseleave", resumeAnimation);
+content2.addEventListener("mouseenter", pauseAnimation);
+content2.addEventListener("mouseleave", resumeAnimation);
 
 // Добавление обработчиков событий для свайпа слайдов на мобильных устройствах
-slaiderList_mobal.addEventListener('touchstart', TouchStart);
-slaiderList_mobal.addEventListener('touchmove', (e) => TouchMove(e, document.querySelectorAll(".partners_slide")));
-slaiderList_mobal.addEventListener('touchend', TouchEnd);
+slaiderList_mobal.addEventListener("touchstart", TouchStart);
+slaiderList_mobal.addEventListener("touchmove", (e) =>
+  TouchMove(e, document.querySelectorAll(".partners_slide"))
+);
+slaiderList_mobal.addEventListener("touchend", TouchEnd);
 ```
+
 Этот блок кода устанавливает обработчики событий для слайдов и контента. При наведении мыши на контент, анимация слайдов приостанавливается `(pauseAnimation)`, и возобновляется при уходе мыши `(resumeAnimation)`. Для мобильных устройств также устанавливаются обработчики событий для жестов касания: `TouchStart` для начала касания, `TouchMove` для перемещения пальца по экрану и `TouchEnd` для завершения касания.
 
 Функции управления анимацией:
+
 ```javascript
 // Приостановка анимации слайдов
 function pauseAnimation() {
-    content1.classList.add('paused');
-    content2.classList.add('paused');
+  content1.classList.add("paused");
+  content2.classList.add("paused");
 }
 
 // Возобновление анимации слайдов
 function resumeAnimation() {
-    content1.classList.remove('paused');
-    content2.classList.remove('paused');
+  content1.classList.remove("paused");
+  content2.classList.remove("paused");
 }
 
 // Начало касания
 function TouchStart(e) {
-    startX = e.touches[0].clientX;
-    offsetX = slaiderList_mobal.scrollLeft;
+  startX = e.touches[0].clientX;
+  offsetX = slaiderList_mobal.scrollLeft;
 }
 
 // Перемещение пальца по экрану
 function TouchMove(e, slides) {
-    currentX = e.touches[0].clientX;
-    diff = currentX - startX;
-    direction = (offsetX - diff < offsetX_prev )? 1 : 0;
-    offsetX_prev = offsetX - diff;
-    // Обновление позиции слайдов
-    for (let i = 0; i < slides.length ; i++) {
-        slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
-    }
+  currentX = e.touches[0].clientX;
+  diff = currentX - startX;
+  direction = offsetX - diff < offsetX_prev ? 1 : 0;
+  offsetX_prev = offsetX - diff;
+  // Обновление позиции слайдов
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.transform = `translateX(${slidesArrPosition[i] + diff}px)`;
+  }
 }
 
 // Завершение касания
 function TouchEnd() {
-    // Обработка завершения жеста свайпа
-    if (direction === 1 && diff >= 70) {
-        // Обработка свайпа вправо
-    } else if (direction === 0 && diff <= -70) {
-        // Обработка свайпа влево
-    } else if (direction === 1 && diff < 70) {
-        // Обработка незначительного свайпа вправо
-    } else if (direction === 0 && diff > -70) {
-        // Обработка незначительного свайпа влево
-    }
-    diff = 0;
+  // Обработка завершения жеста свайпа
+  if (direction === 1 && diff >= 70) {
+    // Обработка свайпа вправо
+  } else if (direction === 0 && diff <= -70) {
+    // Обработка свайпа влево
+  } else if (direction === 1 && diff < 70) {
+    // Обработка незначительного свайпа вправо
+  } else if (direction === 0 && diff > -70) {
+    // Обработка незначительного свайпа влево
+  }
+  diff = 0;
 }
 ```
+
 Этот блок кода содержит функции для управления анимацией слайдов. `pauseAnimation` и `resumeAnimation` приостанавливают и возобновляют анимацию соответственно при наведении и уходе мыши с контента. `TouchStart`, `TouchMove` и `TouchEnd` обрабатывают жесты касания на мобильных устройствах для горизонтального скроллинга слайдов и их переключения.
 
 # Техническая документация для секции "Отзывы" на сайте
 
 ## Описание
+
 Секция "Отзывы" представляет собой часть веб-страницы, которая отображает отзывы. Она включает в себя название секции, блоки с отзывами, а также элементы управления для просмотра отзывов.
 
 ## Структура HTML
+
 ```html
 <section class="comment_container" id="comments">
   <h2>Отзывы</h2>
@@ -2431,7 +2517,9 @@ function TouchEnd() {
 </section>
 <script src="script/comment.js"></script>
 ```
+
 ## CSS Классы
+
 Общие стили
 `.comment_container`: Основной контейнер для секции "Отзывы".
 `.comment_view`: Обертка для отображения отзывов.
@@ -2474,9 +2562,7 @@ function TouchEnd() {
   <div class="comment_avatar">
     <img src="img/new_avatar.png" />
   </div>
-  <p class="comment_text">
-    Новый отзыв о продукте или услуге.
-  </p>
+  <p class="comment_text">Новый отзыв о продукте или услуге.</p>
   <button class="show-more-button">Показать еще</button>
 </div>
 ```
@@ -2484,112 +2570,128 @@ function TouchEnd() {
 скрипт `comments.js`
 
 Блок кода для удаления кнопок "Показать еще" на не мобильном устройстве:
+
 ```javascript
 if (!isMobile_mobile) {
-  document.addEventListener('DOMContentLoaded', function() {
-      var showMoreButtons = document.querySelectorAll('.show-more-button');
-      showMoreButtons.forEach(function(button){
-          button.remove();
-      });
+  document.addEventListener("DOMContentLoaded", function () {
+    var showMoreButtons = document.querySelectorAll(".show-more-button");
+    showMoreButtons.forEach(function (button) {
+      button.remove();
+    });
   });
 }
 ```
+
 Описание:
 
 Проверяем, что пользователь не использует мобильное устройство.
 При загрузке содержимого страницы удаляем все кнопки "Показать еще" для отзывов.
 Блок кода для управления отзывами на не мобильном устройстве:
+
 ```javascript
 if (!isMobile) {
   // Код управления отзывами...
 }
 ```
+
 Описание:
 
 Проверяем, что пользователь не использует мобильное устройство.
 Если условие выполнено, выполняем код управления отзывами.
 Функция `showcomment(index)` для отображения отзыва по индексу:
+
 ```javascript
-function showcomment(index) 
-{
+function showcomment(index) {
   commentList.style.transform = `translateX(-${index * 100}%)`;
   curIndex = index;
   updateArrowVisibility();
   updatepoints();
 }
 ```
+
 Описание:
 
 Функция принимает индекс отзыва и отображает соответствующий отзыв.
 Обновляет видимость стрелок навигации и точек управления просмотром отзывов.
 Функции `showNextcomment()` и `showPrevcomment()` для отображения следующего и предыдущего отзыва:
+
 ```javascript
-function showNextcomment() 
-{
+function showNextcomment() {
   if (curIndex < comments.length - 1) {
     showcomment(curIndex + 1);
   }
 }
 
-function showPrevcomment() 
-{
+function showPrevcomment() {
   if (curIndex > 0) {
     showcomment(curIndex - 1);
   }
 }
 ```
+
 Описание:
 
 Функция `showNextcomment()` отображает следующий отзыв, если текущий отзыв не последний.
 Функция `showPrevcomment()` отображает предыдущий отзыв, если текущий отзыв не первый.
 Функция `updateArrowVisibility()` для обновления видимости стрелок навигации:
+
 ```javascript
-function updateArrowVisibility() 
-{
-  arrowLeft.style.opacity = curIndex === 0 ? '0.3' : '1';
-  arrowRight.style.opacity = curIndex === comments.length - 1 ? '0.3' : '1';
+function updateArrowVisibility() {
+  arrowLeft.style.opacity = curIndex === 0 ? "0.3" : "1";
+  arrowRight.style.opacity = curIndex === comments.length - 1 ? "0.3" : "1";
 }
 ```
+
 Описание:
 
 Функция обновляет видимость стрелок навигации в зависимости от текущего отзыва.
 Функция `updatepoints()` для обновления точек управления просмотром отзывов:
+
 ```javascript
 function updatepoints() {
   points.forEach((point, index) => {
-    point.classList.toggle('active', index === curIndex);
+    point.classList.toggle("active", index === curIndex);
   });
 }
 ```
+
 Описание:
 
 Функция обновляет активность точек управления просмотром отзывов в зависимости от текущего отзыва.
 Обработчик события клика по аватару для анимации смены аватара:
+
 ```javascript
 const avatar = document.getElementById("comment_avatar2");
 const avatarImg1 = document.getElementById("avatar_img21");
 const avatarImg2 = document.getElementById("avatar_img22");
 
-avatar.addEventListener("click", function() {
+avatar.addEventListener("click", function () {
   // Код для анимации смены аватара...
 });
 ```
+
 Описание:
 
 При клике на аватар происходит анимация смены одного изображения на другое.
 
 переключение между отзывами на мобильных устройствах:
+
 ```javascript
 if (isMobile) {
-  const commentList_mobal = document.querySelector('.comment_list');
-  let startX, currentX, offsetX, direction, targetIndex_prev = 0, diff = 0;
+  const commentList_mobal = document.querySelector(".comment_list");
+  let startX,
+    currentX,
+    offsetX,
+    direction,
+    targetIndex_prev = 0,
+    diff = 0;
   let currentIndex = 0;
   const comments_mobal = Array.from(commentList_mobal.children);
   const maxIndex = comments_mobal.length - 1;
 
   // Устанавливаем ширину для каждого отзыва равной ширине контейнера отзывов
   comments_mobal.forEach((comment, index) => {
-    comment.style.flexShrink = '0';
+    comment.style.flexShrink = "0";
     comment.style.width = `${commentList_mobal.offsetWidth}px`;
   });
 
@@ -2604,58 +2706,63 @@ if (isMobile) {
     currentX = e.touches[0].clientX;
     diff = currentX - startX;
     commentList_mobal.scrollLeft = offsetX - diff;
-    direction = (diff > 0 )? 1 : 0;
+    direction = diff > 0 ? 1 : 0;
   }
 
   // Функция обработчика события "touchend"
   function TouchEnd() {
     const width = commentList_mobal.offsetWidth;
-    
+
     // Определяем направление свайпа и выбираем индекс целевого отзыва
     if (direction === 1) {
-      var targetIndex = Math.round((commentList_mobal.scrollLeft - width / 2) / width);
-      if (diff < 100 && targetIndex_prev !== 0){
+      var targetIndex = Math.round(
+        (commentList_mobal.scrollLeft - width / 2) / width
+      );
+      if (diff < 100 && targetIndex_prev !== 0) {
         ++targetIndex;
       }
       const scrollDistance = targetIndex * width - commentList_mobal.scrollLeft;
       commentList_mobal.scrollBy({
         left: scrollDistance,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
       currentIndex = targetIndex;
     } else {
-      var targetIndex = Math.round((commentList_mobal.scrollLeft + width / 2) / width);
-      if (diff > -100){
+      var targetIndex = Math.round(
+        (commentList_mobal.scrollLeft + width / 2) / width
+      );
+      if (diff > -100) {
         --targetIndex;
       }
-      targetIndex = (targetIndex <= maxIndex )? targetIndex : maxIndex;
+      targetIndex = targetIndex <= maxIndex ? targetIndex : maxIndex;
       commentList_mobal.scrollTo({
         left: targetIndex * width,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
       currentIndex = targetIndex;
     }
     targetIndex_prev = targetIndex;
     diff = 0;
-    
+
     // Обновляем активные точки под отзывами
     updatePoints();
   }
 
   // Функция для обновления активных точек под отзывами
   function updatePoints() {
-    const indicators = document.querySelectorAll('.comment_point');
-    indicators.forEach((indicator, index)=> {
-      indicator.classList.toggle('active', index === currentIndex);
+    const indicators = document.querySelectorAll(".comment_point");
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentIndex);
     });
   }
 
   // Добавляем обработчики событий "touchstart", "touchmove" и "touchend"
-  commentList_mobal.addEventListener('touchstart', TouchStart);
-  commentList_mobal.addEventListener('touchmove', TouchMove);
-  commentList_mobal.addEventListener('touchend', TouchEnd);
+  commentList_mobal.addEventListener("touchstart", TouchStart);
+  commentList_mobal.addEventListener("touchmove", TouchMove);
+  commentList_mobal.addEventListener("touchend", TouchEnd);
 }
 ```
+
 Описание:
 
 При проверке условия `if (isMobile)` этот код выполняется только на мобильных устройствах.
@@ -2671,9 +2778,11 @@ if (isMobile) {
 # Техническая документация для секции "Поступайте в ИКНТ" на сайте
 
 ## Описание
+
 Раздел "Поступайте в ИКНТ!" является ключевой частью веб-страницы, где есть ссылка на Госуслуги на поступление.
 
 ## Структура HTML
+
 ```html
 <section class="roulette_conteiner" id="roulette_href">
   <div class="roulette_items">
@@ -2709,6 +2818,7 @@ if (isMobile) {
 </section>
 <script src="script/roulette.js"></script>
 ```
+
 Для реализации интерактивных элементов данного раздела используется скрипт `roulette.js`.
 
 Особенности
@@ -2718,15 +2828,17 @@ if (isMobile) {
 скрипт `roulette.js`
 
 Определение элементов DOM:
+
 ```javascript
-const rouletteButton = document.querySelector('.roulette_row');
-const rouletteArr1 = document.querySelector('.roulette_arr');
-const string_arr1 = Array.from(rouletteArr1.querySelectorAll('p'));
+const rouletteButton = document.querySelector(".roulette_row");
+const rouletteArr1 = document.querySelector(".roulette_arr");
+const string_arr1 = Array.from(rouletteArr1.querySelectorAll("p"));
 const min = 1;
 const max = string_arr1.length - 1;
 const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 var rouletteFlag = true;
 ```
+
 `rouletteButton`: Это кнопка, по клику на которую будет происходить вращение.
 `rouletteArr1`: Это контейнер, содержащий текстовые элементы, которые будут вращаться.
 `string_arr1`: Это массив текстовых элементов (параграфов) из контейнера rouletteArr1.
@@ -2734,80 +2846,93 @@ var rouletteFlag = true;
 `randomNumber`: Это случайное число, которое будет использоваться для выбора верхнего текста на рулетке.
 `rouletteFlag`: Это флаг, который указывает, можно ли сейчас вращать рулетку.
 Обработчик события клика на кнопку "Рулетка":
+
 ```javascript
-rouletteButton.addEventListener('click', () => {
-    if (rouletteFlag === true){
-        // Удаление последнего элемента (нижнего текста) из рулетки
-        rouletteArr1.removeChild(rouletteArr1.lastElementChild);
-        // Клонирование текстовых элементов и добавление их в начало рулетки
-        const rouletteArr = document.querySelector('.roulette_arr');
-        const string_arr = Array.from(rouletteArr.querySelectorAll('p'));
-        const margin_p = parseFloat(window.getComputedStyle(string_arr[0]).marginTop);
-        const rowHeight = string_arr[0].offsetHeight + margin_p;
-        const clonElements = [];
-        string_arr.forEach((p, index) => {
-            const clonstring = p.cloneNode(true);
-            clonElements.push(clonstring.outerHTML);
-        });
-        rouletteArr.innerHTML = clonElements.join('') + rouletteArr.innerHTML;
-        // Рассчет смещения для вращения и анимация
-        const offset = (randomNumber * rowHeight) + ((max - 1) * rowHeight + 5) - margin_p/4;
-        rouletteArr.style.transition = 'transform 3s cubic-bezier(0.2, 0.8, 0.58, 1)';
-        rouletteArr.style.transform = `translateY(${offset}px)`;
-        // Установка флага в false, чтобы предотвратить повторное вращение
-        rouletteFlag = false;
-    }
+rouletteButton.addEventListener("click", () => {
+  if (rouletteFlag === true) {
+    // Удаление последнего элемента (нижнего текста) из рулетки
+    rouletteArr1.removeChild(rouletteArr1.lastElementChild);
+    // Клонирование текстовых элементов и добавление их в начало рулетки
+    const rouletteArr = document.querySelector(".roulette_arr");
+    const string_arr = Array.from(rouletteArr.querySelectorAll("p"));
+    const margin_p = parseFloat(
+      window.getComputedStyle(string_arr[0]).marginTop
+    );
+    const rowHeight = string_arr[0].offsetHeight + margin_p;
+    const clonElements = [];
+    string_arr.forEach((p, index) => {
+      const clonstring = p.cloneNode(true);
+      clonElements.push(clonstring.outerHTML);
+    });
+    rouletteArr.innerHTML = clonElements.join("") + rouletteArr.innerHTML;
+    // Рассчет смещения для вращения и анимация
+    const offset =
+      randomNumber * rowHeight + ((max - 1) * rowHeight + 5) - margin_p / 4;
+    rouletteArr.style.transition =
+      "transform 3s cubic-bezier(0.2, 0.8, 0.58, 1)";
+    rouletteArr.style.transform = `translateY(${offset}px)`;
+    // Установка флага в false, чтобы предотвратить повторное вращение
+    rouletteFlag = false;
+  }
 });
 ```
+
 Этот блок кода обрабатывает клик на кнопку "Рулетка". Если флаг `rouletteFlag` установлен в `true`, он удаляет нижний текст из рулетки, клонирует текстовые элементы и добавляет их в начало рулетки. Затем он вычисляет смещение для анимации вращения и запускает анимацию. После этого флаг устанавливается в `false`, чтобы предотвратить повторное вращение.
 
 Обработчик пересечения элементов для устройств, не являющихся мобильными:
+
 ```javascript
-if (!isMobile){
-    // Определение элементов
-    const roulButton = document.querySelector('.roulette_button');
-    const rouletteH2 = document.getElementById('roulette_flag_button');
-    const button_text1 = document.getElementById('roulette_button_text1');
-    const button_text2 = document.getElementById('roulette_button_text2');
-    const observer = new IntersectionObserver((entries)=> {
-        entries.forEach((entry) => {
-            // Проверка на пересечение элементов
-            if (entry.isIntersecting || (entry.boundingClientRect.top < 0 && entry.boundingClientRect.bottom > 0)) 
-            {
-                // Изменение свойств кнопки при прокрутке
-                roulButton.style.bottom = '';
-                roulButton.href = 'https://www.gosuslugi.ru/10077/1/form'; // новая ссылка
-                roulButton.classList.add('roulette_animation_button');
-                button_text1.classList.add('roulette_animation_button_text1');
-                button_text2.classList.add('roulette_animation_button_text2');
-                roulButton.classList.remove('menu-link');
-            } else if(entry.boundingClientRect.top >= 0){
-                // Возвращение свойств кнопки в исходное состояние при возвращении на верх страницы
-                roulButton.style.bottom = '80px';
-                button_text1.classList.remove('roulette_animation_button_text1');
-                button_text2.classList.remove('roulette_animation_button_text2');
-                button_text2.style.opacity = 0;
-                button_text1.style.opacity = 1;
-                roulButton.href = '#roulette_href';
-                roulButton.classList.remove('roulette_animation_button');
-                roulButton.classList.add('menu-link');
-            }
-        });
+if (!isMobile) {
+  // Определение элементов
+  const roulButton = document.querySelector(".roulette_button");
+  const rouletteH2 = document.getElementById("roulette_flag_button");
+  const button_text1 = document.getElementById("roulette_button_text1");
+  const button_text2 = document.getElementById("roulette_button_text2");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // Проверка на пересечение элементов
+      if (
+        entry.isIntersecting ||
+        (entry.boundingClientRect.top < 0 &&
+          entry.boundingClientRect.bottom > 0)
+      ) {
+        // Изменение свойств кнопки при прокрутке
+        roulButton.style.bottom = "";
+        roulButton.href = "https://www.gosuslugi.ru/10077/1/form"; // новая ссылка
+        roulButton.classList.add("roulette_animation_button");
+        button_text1.classList.add("roulette_animation_button_text1");
+        button_text2.classList.add("roulette_animation_button_text2");
+        roulButton.classList.remove("menu-link");
+      } else if (entry.boundingClientRect.top >= 0) {
+        // Возвращение свойств кнопки в исходное состояние при возвращении на верх страницы
+        roulButton.style.bottom = "80px";
+        button_text1.classList.remove("roulette_animation_button_text1");
+        button_text2.classList.remove("roulette_animation_button_text2");
+        button_text2.style.opacity = 0;
+        button_text1.style.opacity = 1;
+        roulButton.href = "#roulette_href";
+        roulButton.classList.remove("roulette_animation_button");
+        roulButton.classList.add("menu-link");
+      }
     });
-    observer.observe(rouletteH2);
+  });
+  observer.observe(rouletteH2);
 }
 ```
+
 Этот блок кода определяет поведение кнопки "Рулетка" при прокрутке страницы для устройств, не являющихся мобильными. Он использует IntersectionObserver для отслеживания пересечения элементов. Если кнопка или рулетка пересекают верхнюю часть окна просмотра или остаются в пределах видимости при прокрутке страницы, происходят изменения стилей кнопки и ссылки.
 
 Установка ссылки для мобильных устройств:
+
 ```javascript
-if (isMobile){
-    // Определение элемента
-    const roulButton = document.querySelector('.roulette_button');
-    // Установка новой ссылки для мобильных устройств
-    roulButton.href = 'https://www.gosuslugi.ru/10077/1/form'; // новая ссылка
+if (isMobile) {
+  // Определение элемента
+  const roulButton = document.querySelector(".roulette_button");
+  // Установка новой ссылки для мобильных устройств
+  roulButton.href = "https://www.gosuslugi.ru/10077/1/form"; // новая ссылка
 }
 ```
+
 Этот блок кода устанавливает новую ссылку для кнопки "Рулетка" на мобильных устройствах.
 
 # Техническая документация для секции "Написать нам" на сайте
@@ -2816,11 +2941,12 @@ if (isMobile){
 
 ```html
 <section id="modal-message">
-    <span id="message">Если у вас остались вопросы, то пишите нам!</span>
-    <button class="modal-button" id="write-button">Написать</button>
-    <span class="close-button" onclick="closeModal()">✖</span>
+  <span id="message">Если у вас остались вопросы, то пишите нам!</span>
+  <button class="modal-button" id="write-button">Написать</button>
+  <span class="close-button" onclick="closeModal()">✖</span>
 </section>
-<section id="modal-message">...</section>: Это контейнер, представляющий модальное окно с сообщением.
+<section id="modal-message">...</section>
+: Это контейнер, представляющий модальное окно с сообщением.
 ```
 
 <span id="message">Если у вас остались вопросы, то пишите нам!</span>: Это текстовое сообщение, которое будет отображаться в модальном окне.
@@ -2834,25 +2960,26 @@ if (isMobile){
 скрипт `write_us.js`
 
 ```javascript
-if (!isMobile){
-  function showModal() 
-  {
-    setTimeout(function() {
-      document.getElementById("modal-message").classList.add("show_modal"); 
-    }, 1000); 
+if (!isMobile) {
+  function showModal() {
+    setTimeout(function () {
+      document.getElementById("modal-message").classList.add("show_modal");
+    }, 1000);
   }
-  function closeModal() 
-  {
+  function closeModal() {
     document.getElementById("modal-message").classList.remove("show_modal");
   }
   window.onload = showModal;
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     var modal = document.getElementById("modal-message");
-    if (((window.innerHeight + window.scrollY)+10) >= document.body.offsetHeight) {
+    if (
+      window.innerHeight + window.scrollY + 10 >=
+      document.body.offsetHeight
+    ) {
       modal.classList.add("show_modal");
     }
-  }); 
+  });
 }
 ```
 
@@ -2877,89 +3004,95 @@ if (isMobile): Этот блок кода выполняется только е
 document.querySelector('.close-button').remove();: Этот код удаляет кнопку закрытия модального окна, так как на мобильных устройствах все находится в меню.
 ```
 
+## Анимация
 
-## Анимация 
 анимации для большинства элементов объединены в скрипте `main.js` (сами анимации прописаны в `style_for_script.css`):
 
 ```javascript
 /* анимация снизу вверх появления */
-const faculties__item1 = document.getElementById('faculties__item1');
-const faculties__item2 = document.getElementById('faculties__item2');
-const faculties__item3 = document.getElementById('faculties__item3');
-const faculties__item4 = document.getElementById('faculties__item4');
+const faculties__item1 = document.getElementById("faculties__item1");
+const faculties__item2 = document.getElementById("faculties__item2");
+const faculties__item3 = document.getElementById("faculties__item3");
+const faculties__item4 = document.getElementById("faculties__item4");
 const itemsToObserve = [
-    faculties__item1,
-    faculties__item2,
-    faculties__item3,
-    faculties__item4
+  faculties__item1,
+  faculties__item2,
+  faculties__item3,
+  faculties__item4,
 ];
 
 // Создание экземпляра IntersectionObserver для наблюдения за элементами
-const observer1 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Если элемент виден на экране, добавить ему класс 'show'
-            entry.target.classList.add('show');
-            // Прекратить наблюдение за этим элементом
-            observer1.unobserve(entry.target);
-        }
+const observer1 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Если элемент виден на экране, добавить ему класс 'show'
+        entry.target.classList.add("show");
+        // Прекратить наблюдение за этим элементом
+        observer1.unobserve(entry.target);
+      }
     });
-}, {
+  },
+  {
     // Установить отступы для корневого элемента (rootMargin)
-    rootMargin: '-70px 0px 0px 0px' 
-});
+    rootMargin: "-70px 0px 0px 0px",
+  }
+);
 
 // Наблюдение за каждым элементом из массива itemsToObserve
-itemsToObserve.forEach(item => {
-    observer1.observe(item);
+itemsToObserve.forEach((item) => {
+  observer1.observe(item);
 });
 
 /* анимация слево напрво */
-const advantages__text__title1 = document.getElementById('advantages__text__title1');
-const advantages__text__title2 = document.getElementById('advantages__text__title2');
+const advantages__text__title1 = document.getElementById(
+  "advantages__text__title1"
+);
+const advantages__text__title2 = document.getElementById(
+  "advantages__text__title2"
+);
 // (продолжить так же для остальных элементов)
 const itemsToObserve2 = [
-    advantages__text__title1,
-    advantages__text__title2,
-    // (продолжить так же для остальных элементов)
+  advantages__text__title1,
+  advantages__text__title2,
+  // (продолжить так же для остальных элементов)
 ];
 
 // Проверка, является ли устройство мобильным
-if (isMobile){
-    // Если устройство мобильное, скрыть элементы с классом 'hidden_left_right' и добавить класс 'hidden'
-    itemsToObserve2.forEach(item => {
-        item.classList.remove("hidden_left_right");
-        item.classList.add("hidden");
-    });
+if (isMobile) {
+  // Если устройство мобильное, скрыть элементы с классом 'hidden_left_right' и добавить класс 'hidden'
+  itemsToObserve2.forEach((item) => {
+    item.classList.remove("hidden_left_right");
+    item.classList.add("hidden");
+  });
 }
 
 // Создание второго экземпляра IntersectionObserver для наблюдения за элементами
-const observer2 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Если элемент виден на экране
-            if (!isMobile){
-                // Если не мобильное устройство, добавить класс 'show_left_right'
-                entry.target.classList.add('show_left_right');
-            } else {
-                // Если мобильное устройство, добавить класс 'show'
-                entry.target.classList.add('show');
-            }
-            // Прекратить наблюдение за этим элементом
-            observer2.unobserve(entry.target);
-        }
-    });
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Если элемент виден на экране
+      if (!isMobile) {
+        // Если не мобильное устройство, добавить класс 'show_left_right'
+        entry.target.classList.add("show_left_right");
+      } else {
+        // Если мобильное устройство, добавить класс 'show'
+        entry.target.classList.add("show");
+      }
+      // Прекратить наблюдение за этим элементом
+      observer2.unobserve(entry.target);
+    }
+  });
 });
 
 // Наблюдение за каждым элементом из массива itemsToObserve2
-itemsToObserve2.forEach(item => {
-    observer2.observe(item);
+itemsToObserve2.forEach((item) => {
+  observer2.observe(item);
 });
 ```
+
 Этот код выполняет следующие действия:
 
 Наблюдает за определенными элементами на странице и добавляет классы для анимации появления при их появлении в видимой области экрана.
 Проверяет, является ли устройство мобильным, и в зависимости от результата скрывает или показывает элементы соответственно.
 Использует `IntersectionObserver`, чтобы отслеживать появление элементов на экране и добавлять соответствующие классы для анимации.
-
-
